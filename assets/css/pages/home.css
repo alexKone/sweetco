@@ -1,0 +1,112 @@
+.title-page {
+  margin-bottom: 26px;
+  text-transform: capitalize;
+}
+.title-page > div {
+  font-family: 'Kristi', cursive;
+  text-align: center;
+  font-size: 70px;
+  color: var(--green-color);
+  margin: 25px 0;
+  line-height: 50px;
+}
+.title-page > h2 {
+  text-align: center;
+}
+.title-page > h2 > span {
+  color: var(--pink-color);
+  font-weight: 700;
+}
+
+/*.tahu.h1 .text-primary{*/
+  /*font-family: 'Kristi', cursive;*/
+  /*text-align: center;*/
+  /*font-size: 70px;*/
+  /*color: var(--green-color);*/
+  /*margin: 30px auto 0;*/
+/*}*/
+/*.titre-deco {*/
+  /*color: var(--pink-color);*/
+/*}*/
+/*.formules-list {*/
+  /*margin: 38px 0;*/
+/*}*/
+/*h3.h2.my-auto {*/
+  /*text-align: center;*/
+/*}*/
+.subtitle {
+  font-size: calc(24px + 6 * (100vw - 320px) / 1600);
+}
+.homepage > div {
+  margin: 50px 0;
+}
+.homepage .info-product {
+  text-align: center;
+}
+.homepage ul.grid h3 {
+  text-transform: inherit;
+}
+.product_link {
+  font-size: calc(16px + 6 * (100vw - 320px) / 1600);
+}
+.product_link p {
+  margin: 0;
+}
+.formules-list .h2, ul.grid h3 {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--green-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 400;
+}
+.formules-list .h2 > span {
+  color: var(--green-color);
+}
+/*ul.formules-list >li {*/
+  /*border-radius: 65px;*/
+  /*border: 2px solid rgba(0,0,0,0.1);*/
+  /*margin: 15px 0;*/
+  /*padding: 10px 0;*/
+  /*text-align: center;*/
+/*}*/
+
+.border-radius {
+  border-radius: 65px;
+  border: 2px solid rgba(0,0,0,0.1);
+  margin: 15px 0;
+  padding: 10px 0;
+  text-align: center;
+}
+/*ul.formules-list >li:hover {*/
+  /*background: var(--green-color);*/
+/*}*/
+/*ul.formules-list >li:hover h3 {*/
+  /*color: #ffffff;*/
+/*}*/
+ul.formules-list >li:hover .check {
+  background: #ffffff;
+  opacity: .6;
+}
+.ul.formules-list > li:hover .amount {
+  color: var(--pink-color);
+}
+ul.formules-list >li > a {
+  align-items: center;
+}
+.amount {
+  font-weight: 700;
+  color: var(--pink-color);
+  font-size: 22px;
+}
+.check {
+  display: none;
+}
+
+/*.check {*/
+  /*height: 19.2px;*/
+  /*width: 19.2px;*/
+  /*opacity: .1;*/
+  /*background: #2c2b29;*/
+  /*border-radius: 50%;*/
+/*}*/

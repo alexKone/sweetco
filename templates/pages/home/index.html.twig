@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  {% include('_partials/banner.html.twig') %}
+
+  <div class="container content homepage" tabindex="-1">
+
+    <div id="formules" class="row">
+      <div class="title-page col-12 pt-0 text-center wrapper--sm">
+        <div class="numero--sm tahu h1">Hello</div>
+        <h2 class="h1 titre-deco">
+          <span>Choisissez votre formule</span>
+        </h2>
+      </div>
+      <div class="col-12 mx-auto">
+        <ul class="formules-list choix-formule p-0">
+          {% for key, formule in formules %}
+            <li class="border-radius">
+              <a href="{{ path('app_formules_details', { id: formule.id }) }}" class="formule-list--link row mx-auto product_link">
+                <!-- TITRE -->
+                <div class="col-md-3">
+                  <h3 class="h2 my-auto ml-md-3">
+                    Formule {{ key + 1 }}
+                  </h3>
+                </div>
+                <!-- DESC -->
+                <div class="col-md-6">
+                  <p>{{ formule.shortDescription }}</p>
+
+                </div>
+                <!-- PRIX -->
+                <div class="col-md-2">
+                  <p>
+                    {#<span class="woocommerce-Price-amount amount">{{ formule.price|number_format(2) }}<span class="woocommerce-Price-currencySymbol">€</span></span>#}
+                    <span class="woocommerce-Price-amount amount">{{ formule.price|number_format(2) }}€</span>
+                  </p>
+                </div>
+                <!-- CHECK -->
+                <div class="col-md-1">
+                  <span class="check d-flex mx-md-auto"></span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div id="bagels" class="row">
+      <div class="title-page col-12 pt-0 text-center wrapper--sm">
+        {#<div class="numero--sm tahu h1">Hello</div>#}
+        <h2 class="h1 titre-deco">
+          <span>Les bagels</span>
+        </h2>
+      </div>
+      <div class="col-12 mx-auto">
+        <ul class="grid">
+          {% for key, bagel in bagels %}
+
+            <li>
+              <a href="{{ path('app_add_to_cart', {'bagel': bagel.id}) }}">
+
+                <div class="image-product">
+                  <img src="{{ vich_uploader_asset(bagel, 'imageFile') }}" alt="" />
+                </div>
+                <div class="info-product">
+                  <h3>{{ bagel.name }}</h3>
+                  <p>{{ bagel.shortDescription }}</p>
+                  <span class="amount">{{ bagel.price|number_format(2) }}€</span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div id="paninis" class="row">
+      <div class="title-page col-12 pt-0 text-center wrapper--sm">
+        {#<div class="numero--sm tahu h1">Hello</div>#}
+        <h2 class="h1 titre-deco">
+          <span>Les paninis</span>
+        </h2>
+      </div>
+      <div class="col-12 mx-auto">
+        <ul class="grid">
+          {% for key, panini in paninis %}
+
+            <li>
+              <a href="{{ path('app_add_to_cart', {'panini': panini.id}) }}">
+
+                <div class="image-product">
+                  <img src="{{ vich_uploader_asset(panini, 'imageFile') }}" alt="" />
+                </div>
+                <div class="info-product">
+                  <h3>{{ panini.name }}</h3>
+                  <p>{{ panini.shortDescription }}</p>
+                  <span class="amount">{{ panini.price|number_format(2) }}€</span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="boissons" class="row">
+      <div class="title-page col-12 pt-0 text-center wrapper--sm">
+        {#<div class="numero--sm tahu h1">Hello</div>#}
+        <h2 class="h1 titre-deco">
+          <span>Les boissons</span>
+        </h2>
+      </div>
+      <div class="col-12 mx-auto">
+        <ul class="grid">
+          {% for key, boisson in boissons %}
+
+            <li>
+              <a href="{{ path('app_add_to_cart', {'boisson':boisson.id }) }}">
+                <div class="image-product">
+                  <img src="{{ vich_uploader_asset(boisson, 'imageFile') }}" alt="" />
+                </div>
+                <div class="info-product">
+                  <h3>{{ boisson.name }}</h3>
+                  {#<p>{{ boisson.shortDescription }}</p>#}
+                  <span class="amount">{{ boisson.price|number_format(2) }}€</span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="desserts" class="row">
+      <div class="title-page col-12 pt-0 text-center wrapper--sm">
+        {#<div class="numero--sm tahu h1">Hello</div>#}
+        <h2 class="h1 titre-deco">
+          <span>Les desserts</span>
+        </h2>
+      </div>
+      <div class="col-12 mx-auto">
+        <ul class="grid">
+          {% for key, dessert in desserts %}
+
+            <li>
+              <a href="{{ path('app_add_to_cart', {'dessert':dessert.id}) }}">
+                <div class="image-product">
+                  <img src="{{ vich_uploader_asset(dessert, 'imageFile') }}" alt="" />
+                </div>
+                <div class="info-product">
+                  <h3>{{ dessert.name }}</h3>
+                  {#<p>{{ dessert.shortDescription }}</p>#}
+                  <span class="amount">{{ dessert.price|number_format(2) }}€</span>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
+

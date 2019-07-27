@@ -1,0 +1,104 @@
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+section#options details ul {
+  /*display: grid;*/
+  /*grid-template-columns: repeat(2, 1fr);*/
+  margin: 25px 0;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+.content img {
+  width: 116px;
+  height: 90px;
+}
+
+#options .price {
+  color: var(--pink-color);
+  font-weight: 500;
+}
+
+
+
+
+.quantity {
+  position: relative;
+  width: 100%;
+}
+.quantity input {
+  width: 100%;
+  height: 55px;
+  /*width: 50px;*/
+  /*height: 42px;*/
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+}
+.quantity input:focus {
+  outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity-nav {
+  float: left;
+  /*position: relative;*/
+  display: flex;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 40px;
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.2;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  user-select: none;
+}
+.quantity-button--up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+.quantity-button--down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
+.add-to-cart {
+  height: 55px;
+  background: none;
+  border: none;
+  background: var(--pink-color);
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}

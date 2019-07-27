@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}Accueil{% endblock %} | Sweet and co | Salad Bar</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  {#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />#}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" />
+  <link href="https://fonts.googleapis.com/css?family=Kristi&display=swap" rel="stylesheet">
+
+  {% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+  {% endblock %}
+</head>
+<body>
+  {% include '_partials/header.html.twig' %}
+
+  <main id="main" class="main-site">
+    {% block body %}{% endblock %}
+  </main>
+  {% block javascripts %}
+    {#<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>#}
+    {{ encore_entry_script_tags('app') }}
+    <script>
+      function smoothScroll(target, duration) {
+        var target = document.getElementById(target);
+        var targetPosition = target.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          var timeElapsed = currentTime - startTime;
+          var run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run);
+          if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          i++;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      const elts = document.querySelectorAll('.right.hide-on-med-and-down > li');
+      elts.forEach(elt => elt.addEventListener('click', evt => smoothScroll(elt.getAttribute('data-anchor'), 1000)))
+      // var formule = document.querySelector('.homepage__formules');
+      // var panini = document.querySelector('.homepage__paninis');
+      // var bagel = document.querySelector('.homepage__bagels');
+      // var boisson = document.querySelector('.homepage__boissons');
+      // var dessert = document.querySelector('.homepage__desserts');
+
+    </script>
+  {% endblock %}
+</body>
+</html>

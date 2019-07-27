@@ -1,0 +1,166 @@
+easy_admin:
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+    list:
+        actions: ['show']
+#    entities:
+#        # List the entity class name you want to manage
+#        - App\Entity\Salade
+#        - App\Entity\Base
+#        - App\Entity\Ingredient
+#        - App\Entity\Sauce
+    site_name: 'Sweet & CO.'
+    entities:
+        Billing:
+            class: App\Entity\Billing
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'price' }
+
+        Formule:
+            class: App\Entity\Formule
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'name' }
+                    - { property: 'description' }
+                    - { property: 'short_description' }
+                    - { property: 'price' }
+
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'description' }
+                    - { property: 'short_description' }
+                    - { property: 'price' }
+                    - { property: 'limit_base' }
+                    - { property: 'limit_ingredient' }
+                    - { property: 'limit_sauce' }
+                    - { property: 'has_salade' }
+                    - { property: 'has_bagel' }
+                    - { property: 'has_panini' }
+                    - { property: 'has_boisson' }
+                    - { property: 'has_dessert' }
+                    - { property: 'imageFile', type: 'vich_image' }
+
+
+
+        Base:
+            class: App\Entity\Base
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'is_active' }
+                    - { property: 'name' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+
+        Ingredient:
+            class: App\Entity\Ingredient
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'name' }
+                    - { property: 'subCategory' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+            form:
+                fields:
+#                    - { property: 'id' }
+                    - { property: 'name' }
+                    - { property: 'subCategory' }
+                    - { property: 'imageFile', type: 'vich_image' }
+
+        Sauce:
+            class: App\Entity\Sauce
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'name' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'is_active' }
+            form:
+                fields:
+#                    - { property: 'id' }
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+
+
+
+        SubCategory:
+            class: App\Entity\SubCategory
+
+        Bagels:
+            class: App\Entity\Bagel
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'short_description' }
+                    - { property: 'price' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+                    - { property: 'price' }
+        Paninis:
+            class: App\Entity\Panini
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'short_description' }
+                    - { property: 'price' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+        Boissons:
+            class: App\Entity\Boisson
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'price' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+        Dessert:
+            class: App\Entity\Dessert
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'price' }
+                    - { property: 'imageFile', type: 'vich_image' }
+                    - { property: 'is_active' }
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'name' }
+                    - { property: 'is_active' }
+
+        Customer:
+            class: App\Entity\Customer
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'email' }

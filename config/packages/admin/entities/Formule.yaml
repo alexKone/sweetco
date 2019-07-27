@@ -1,0 +1,35 @@
+easy_admin:
+    entities:
+    Formule:
+        class: App\Entity\Formule
+        list:
+            fields:
+                - { property: 'id' }
+                - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                - { property: 'name' }
+                - { property: 'description' }
+                - { property: 'short_description' }
+                - { property: 'price' }
+                - { property: 'limit_base' }
+                - { property: 'limit_ingredient' }
+                - { property: 'limit_sauce' }
+                - { property: 'has_bagel' }
+                - { property: 'has_panini' }
+                - { property: 'has_boisson' }
+                - { property: 'has_dessert' }
+
+        form:
+            fields:
+                - { property: 'name' }
+                - { property: 'description' }
+                - { property: 'short_description' }
+                - { property: 'price' }
+                - { property: 'limit_base' }
+                - { property: 'limit_ingredient' }
+                - { property: 'limit_sauce' }
+                - { property: 'has_bagel' }
+                - { property: 'has_panini' }
+                - { property: 'has_boisson' }
+                - { property: 'has_dessert' }
+                - { property: 'imageFile', type: 'vich_image' }
+

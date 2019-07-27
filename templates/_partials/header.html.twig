@@ -1,0 +1,48 @@
+{#{{ dump(app.session.get('items')) }}#}
+
+
+<div class="header">
+  <button class="js-menu-show header__menu-toggle material-icons">menu</button>
+  {#<div style="color: #ffffff;">LOGO</div>#}
+  <a href="{{ path('homepage') }}">
+    <img src="{{ asset('build/images/logo.png') }}" alt="">
+  </a>
+  {#<a href="{{ path('cart') }}" class="cart">#}
+    {#<button class="material-icons">shopping_cart</button>#}
+    {#<span style="color: #ffffff;">{{ app.session.get('items')|length }}</span>#}
+  {#</a>#}
+  <a href="{{ path('cart') }}" class="cart-button">
+    {#<img src="/assets/images/shopping-bag.svg" class="icon" alt="cart" title="cart" style="min-width: 24px;" />#}
+    <button class="material-icons">shopping_cart</button>
+    {% if app.session.get('items') <= 0 %}
+    {% else %}
+      <span class="cart-count">{{ app.session.get('items')|length }}</span>
+    {% endif %}
+  </a>
+</div>
+
+<aside class="js-side-nav side-nav">
+  <nav class="js-side-nav-container side-nav__container">
+    <button class="js-menu-hide side-nav__hide material-icons">close</button>
+    <header class="side-nav__header">
+      Notre carte
+    </header>
+    <ul class="side-nav__content">
+      <li>
+        <a href="/#formules">Les formules</a>
+      </li>
+      <li>
+        <a href="/#bagels">Les bagels</a>
+      </li>
+      <li>
+        <a href="/#paninis">Les paninis</a>
+      </li>
+      <li>
+        <a href="/#boissons">Les boissons</a>
+      </li>
+      <li>
+        <a href="/#desserts">Les desserts</a>
+      </li>
+    </ul>
+  </nav>
+</aside>

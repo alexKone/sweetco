@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <h1>{{ category.name }}</h1>
+  {% if category.products %}
+      <div class="row">
+        {% for product in category.products %}
+          <li class="col s6">
+            <a href="/category/{{ category.slug }}/{{ product.id }}">
+              <img class="img-list" src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="">
+              <span>{{ product.name }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </div>
+  {% else %}
+    <div>pas de produits</div>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,264 @@
+<div class="order">
+  <h3>Votre commande</h3>
+
+  <table class="table table-borderless col-sm-12 col-md-10 col-lg-8 mx-auto">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th class="product-name">Produit</th>
+      <th class="product-total">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for key, item in items %}
+      {% if item.name is same as ('formule') %}
+        <tr class="cart_item component_container_table_item">
+          <td>
+            {{ key + 1 }}
+          </td>
+          <td class="product-name">
+            {{ item.title }}&nbsp;<strong class="product-quantity">× 1</strong>
+          </td>
+          <td class="product-total">
+            <span class="woocommerce-Price-amount amount">{{ item.price|number_format(2) }}€</span>
+          </td>
+        </tr>
+
+
+        {% if item.salade is defined %}
+          <!-- Base -->
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Base :</span>
+                  <div class="component-Base component-detail">
+                    <p class="identation">{{ item.salade.base.name }}<strong class="composited_product_quantity">
+                        ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+
+          <!-- Ingredient -->
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Ingredient component-type">Ingredients :</span>
+                  <div class="component-Ingredient component-detail">
+                    {% for ingredient in item.salade.ingredients %}
+                      <p class="identation">{{ ingredient.name }}<strong class="composited_product_quantity"> ×
+                          1</strong></p>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+
+          <!-- Sauce -->
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Sauce component-type">Sauce :</span>
+                  <div class="component-Sauce component-detail">
+                    <p class="identation">{{ item.salade.sauce.name }}<strong class="composited_product_quantity">
+                        ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+
+
+        {% endif %}
+
+
+        {% if item.bagel is defined %}
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Bagel :</span>
+                  <div class="component-Base component-detail">
+                    <p class="identation">{{ item.bagel.name }}<strong class="composited_product_quantity"> ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if item.panini is defined %}
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Panini :</span>
+                  <div class="component-Base component-detail">
+                    <p class="identation">{{ item.panini.name }}<strong class="composited_product_quantity"> ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if item.boisson is defined %}
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Boisson :</span>
+                  <div class="component-Base component-detail">
+                    <p class="identation">{{ item.boisson.name }}<strong class="composited_product_quantity"> ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if item.dessert is defined %}
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Dessert :</span>
+                  <div class="component-Base component-detail">
+                    <p class="identation">{{ item.dessert.name }}<strong class="composited_product_quantity"> ×
+                        1</strong></p>
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+        {% endif %}
+
+        {% if item.addons is defined %}
+
+          <tr class="cart_item component_table_item">
+
+            <td></td>
+            <td class="product-name">
+              <div class="component-name component_table_item_indent">
+                <div class="component">
+                  <span class="component-Base component-type">Supplements :</span>
+                  <div class="component-Base component-detail">
+                    {#<p class="identation">Fusilli<strong class="composited_product_quantity"> × 1</strong></p>#}
+                  </div>
+                </div>
+              </div>
+            </td>
+
+            <td class="product-total">
+            </td>
+          </tr>
+
+          {% if item.addons.base %}
+            <tr class="supplement cart_item component_table_item">
+              <td></td>
+              <td class="product-name">
+                <div class="component-name component_table_item_indent">
+                  <div class="component">
+                    {#<span class="component-Sauce component-type">Base :</span>#}
+                    <div class="component-Sauce component-detail">
+                      <p class="identation">{{ item.addons.base.name }} (base)<strong
+                            class="composited_product_quantity">
+                          × 1</strong></p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="product-total supplement-amount">2.30€</td>
+            </tr>
+          {% endif %}
+          {% if item.addons.ingredients|length > 0 %}
+            {% for addonsIngredient in item.addons.ingredients %}
+              <tr class="supplement cart_item component_table_item">
+                <td></td>
+                <td class="product-name">
+                  <div class="component-name component_table_item_indent">
+                    <div class="component">
+                      <span class="component-type identation">{{ addonsIngredient.name }} (ingredient)</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="product-total supplement-amount">1.30€</td>
+              </tr>
+            {% endfor %}
+          {% endif %}
+
+        {% endif %}
+
+      {% else %}
+        <tr class="cart_item component_container_table_item">
+          <td>
+            {{ key + 1 }}
+          </td>
+          <td class="product-name">
+            {{ item.product_name }}&nbsp;<strong class="product-quantity">× 1</strong>
+          </td>
+          <td class="product-total">
+            <span class="woocommerce-Price-amount amount">{{ item.price|number_format(2) }}€</span>
+          </td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+      <td colspan="2">SOUS-TOTAL</td>
+      <td class="amount">{{ total_price|number_format(2) }}€</td>
+    </tr>
+    <tr>
+      <td colspan="2">TOTAL</td>
+      <td class="amount">{{ total_price|number_format(2) }}€</td>
+    </tr>
+    </tfoot>
+  </table>
+
+</div>

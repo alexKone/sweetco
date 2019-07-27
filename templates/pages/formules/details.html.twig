@@ -1,0 +1,296 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  {% if formule %}
+    {#<h1 class="center-align truncate">{{ formule.name }}</h1>#}
+    <input type="hidden" name="id[]" value="{{ formule.price }}" />
+    <input type="hidden" name="details" data-ingredients="{{ formule.limitIngredient }}">
+
+
+    <form class="container" method="post">
+
+      {% if formule.hasSalade %}
+
+        <section class="content base">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">1</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre base...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+          {#<span>1</span>#}
+          {#<h2>Choisissez la base...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for base in bases %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(base, 'imageFile') }}" alt="">
+                    <input type="radio" name="base" value="{{ base.id }}" required>
+                    <span>{{ base.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <section class="content ingredients">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">2</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez vos {{ formule.limitIngredient }} ingredients...</span>
+            </h2>
+          </div>
+
+          {#<div class="content__title">#}
+          {#<span>2</span>#}
+          {#<h2>Choisissez vos ingredients...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for ingredient in ingredients %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(ingredient, 'imageFile') }}" alt="" />
+                    <input type="checkbox" name="ingredient_{{ ingredient.id }}" value="{{ ingredient.id }}" />
+                    <span>{{ ingredient.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <section class="content sauce">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">3</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre sauce...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+          {#<span>3</span>#}
+          {#<h2>Choisissez la sauce...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for sauce in sauces %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(sauce, 'imageFile') }}" alt="">
+                    <input type="radio" name="sauce" value="{{ sauce.id }}" required>
+                    <span>{{ sauce.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+      {% endif %}
+
+      {% if formule.hasBagel %}
+        <section class="content bagel">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">+</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre bagel...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+            {#<span>3</span>#}
+            {#<h2>Choisissez le bagel...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for bagel in bagels %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(bagel, 'imageFile') }}" alt="">
+                    <input type="radio" name="bagel" value="{{ bagel.id }}" required>
+                    <span>{{ bagel.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% endif %}
+
+      {% if formule.hasPanini %}
+        <section class="content panini">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">+</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre panini...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+            {#<span>3</span>#}
+            {#<h2>Choisissez le panini...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for panini in paninis %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(panini, 'imageFile') }}" alt="">
+                    <input type="radio" name="panini" value="{{ panini.id }}" required>
+                    <span>{{ panini.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% endif %}
+
+      {% if formule.hasBoisson %}
+        <section class="content boisson">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">+</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre boisson...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+            {#<span>3</span>#}
+            {#<h2>Choisissez la boisson...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for boisson in boissons %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(boisson, 'imageFile') }}" alt="">
+                    <input type="radio" name="boisson" value="{{ boisson.id }}" required>
+                    <span>{{ boisson.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% endif %}
+
+      {% if formule.hasDessert %}
+        <section class="content dessert">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">+</div>
+            <h2 class="h1 titre-deco">
+              <span>Choisissez votre dessert...</span>
+            </h2>
+          </div>
+          {#<div class="content__title">#}
+            {#<span>3</span>#}
+            {#<h2>Choisissez le dessert...</h2>#}
+          {#</div>#}
+          <div class="content__items">
+            <ul>
+              {% for dessert in desserts %}
+                <li>
+                  <label>
+                    <img loading="lazy" src="{{ vich_uploader_asset(dessert, 'imageFile') }}" alt="">
+                    <input type="radio" name="dessert" value="{{ dessert.id }}" required>
+                    <span>{{ dessert.name }}</span>
+                  </label>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% endif %}
+
+      {% if formule.hasSalade %}
+        <section class="content addons">
+          <div class="title-page col-12 pt-0 text-center wrapper--sm">
+            <div class="numero--sm tahu h1">+</div>
+            <h2 class="h1 titre-deco">
+              <span>Au choix, les supplements...</span>
+            </h2>
+          </div>
+
+          {#<div class="content__title">#}
+          {#<span>2</span>#}
+          {#<h2>Choisissez vos ingredients...</h2>#}
+          {#</div>#}
+
+          <div>
+            <section id="options">
+              <details class="content__items" id="opt-base">
+                <summary>Les bases</summary>
+                <ul>
+                  {% for base in bases %}
+                    <li>
+                      <label>
+                        <img loading="lazy" src="{{ vich_uploader_asset(base, 'imageFile') }}" alt="">
+                        <input type="radio" name="opt_base" value="{{ base.id }}">
+                        <span>{{ base.name }}</span>
+                        <span class="price">+2.30€</span>
+                      </label>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </details>
+              <details class="content__items" id="opt-ingredients">
+                <summary>Les ingredients</summary>
+                <ul>
+                  {% for ingredient in ingredients %}
+                    <li>
+                      <label>
+                        <img loading="lazy" src="{{ vich_uploader_asset(ingredient, 'imageFile') }}" alt="" />
+                        <input type="checkbox" name="opt_ingredient_{{ ingredient.id }}" value="{{ ingredient.id }}" />
+                        <span>{{ ingredient.name }}</span>
+                        <span class="price">+1.30€</span>
+                      </label>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </details>
+              <details id="ch3">
+                <summary>Chapter III</summary>
+                Boethius falls back upon his present sense of misery. Philosophy reminds him of the brilliancy of his former fortunes.
+              </details>
+            </section>
+          </div>
+
+
+        </section>
+      {% endif %}
+
+
+      <div class="row">
+        <div class="col px-0">
+          <label class="quantity">
+            <input type="number" name="quantity" value="1" />
+          </label>
+        </div>
+        {#<div class="col px-0">#}
+          {#<label>#}
+            {#<input type="number" name="quantity" value="1" />#}
+          {#</label>#}
+        {#</div>#}
+        <div class="col px-0">
+          <button type="submit" class="col px-0 add-to-cart">ajouter au panier</button>
+        </div>
+        {#<label>#}
+          {#<input type="number" name="quantity" value="1" />#}
+        {#</label>#}
+        {#<button type="submit">Valider</button>#}
+      </div>
+
+    </form>
+
+  {% endif %}
+
+  <aside id="result-order"></aside>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  {{ encore_entry_script_tags('formule') }}
+{% endblock %}

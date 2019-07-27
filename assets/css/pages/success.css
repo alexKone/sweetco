@@ -1,0 +1,8 @@
+.jumbotron {
+  text-align: center;
+}
+.jumbotron h1 {
+  font-family: 'Kristi', cursive;
+  color: var(--pink-color);
+  /*text-align: center;*/
+}

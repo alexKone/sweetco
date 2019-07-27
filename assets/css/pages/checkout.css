@@ -1,0 +1,103 @@
+.hour-delivery input[type="radio"] {
+  visibility: visible;
+}
+
+section.checkout.container > div {
+  margin: 25px 0;
+}
+section.checkout h3 {
+  color: var(--pink-color);
+  /*text-transform: uppercase;*/
+  text-align: center;
+  margin: 24px 0;
+  font-size: 18px;
+}
+.billing-fields>div>div>label {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+}
+.billing-fields>div>div>label input {
+  height: 36px;
+  border: 1px solid black;
+}
+.checkout .delivery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* padding: 10px; */
+  grid-gap: 15px;
+}
+.checkout .delivery > button {
+  background: none;
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+
+
+
+/*
+CUSTOM STYLE
+ */
+
+.woocommerce table.shop_table {
+  border: 1px solid rgba(0,0,0,.1);
+  margin: 0 -1px 24px 0;
+  text-align: left;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 5px;
+}
+.woocommerce table.shop_table td {
+  border-top: 1px solid rgba(0,0,0,.1);
+  padding: 9px 12px;
+  vertical-align: middle;
+  line-height: 1.5em;
+}
+.bundled_table_item > td, .identation {
+  padding-left: 25px;
+  margin: 0;
+  font-size: 14px;
+}
+tr.cart_item.bundled_table_item .product-name > div {
+  padding: 0;
+}
+tr.cart_item.component_container_table_item {
+  border: 1px solid black;
+}
+tfoot > tr {
+  border: 1px solid black;
+}
+
+.mode-delivery {
+  margin: 15px 0;
+}
+.mode-delivery button {
+  border-radius: 25px;
+  text-transform: capitalize;
+}
+section#tmpl h3 {
+  color: inherit;
+}
+.component-type {
+  font-weight: 500;
+}
+
+.submit-btn {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.submit-btn button, .submit-btn a {
+  text-align: center;
+  border: none;
+  background: #000;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  width: 70%;
+}
+
+.supplement > td {
+  padding: 0 0 0 20px;
+}

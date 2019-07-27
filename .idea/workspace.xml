@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="19b6468c-ca7e-4b7a-84ac-a58de9263d9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/628aaf31-b6bb-4c93-ab32-332daa82ba88.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sweet_and_co.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/__app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/_reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/_variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/components/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/components/sidenav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/formules.details.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/pages/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/pages/checkout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/pages/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/pages/success.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/banniere.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Detabinator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/Sidenav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/SmoothScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/__app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/formule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/react/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/react/utils/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/console" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/admin/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/admin/entities/Formule.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/debug.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/mjml.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/mjml.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/monolog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/routing.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/twig_extensions.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/api_platform.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/dev/twig.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/easy_admin.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/liip_imagine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/02957e26506423e86643154f65b8fa4165d536e2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/02c6f62c86d1a61a54b9bf641bbeaa1e3e5ca128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/043ec3dee9e4c3671d0f920bc87939be13ae8091.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/06849da3f63ff3c4cc74b8ea29362e7d0c1c4fc6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/0a9402ab6f60fa883a66f52f798984c4b0a1195d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/0ddc284690227f6dbe7819831b2122bb854439ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/0f76f1e5b949497d5c45a79bc6eb1febab6f6c02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/0ffca1d125413fc97ea405fe270cf06c5195b2d9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/148dd67631b98280cc03b5c67ac69121377b7b2a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/159185bdb5020ddcb29d9e0593e3b93e9b19b7bb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/181ceb632fcdde65c93c831b19c0b36a32dc3d9f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/19d16b05cb548a1e68e9d3c752d3b8f3dea42ca0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/209d942debcbb168fb11bec502eda91cfad56dc8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/25e7ad2e207d93a05c79d05cb877ca7d11904923.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/2dcb3f3d570c04a0d585abcab85cdfda66c87a65.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/2f3a7441c88162d83d913ce2f0fd520ff13423cb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/31102aacef28e5c276756482053c804a38ca950b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/3664f37a619b737670acc70325642a306fa48f0f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/37324ebf1a93604473a8504a1841ceb4feb44856.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/378d5b29278cedd14c23c7dc994b4f37b7e3367f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/3b898e7b72ac1fab8bdab0fcd9dd63e7d9440e59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/3e8a8678ecba2cf4abfb71da83903f896a16a5b7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/433a174eb1726dc388ed31164a733d9ae17aacf4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/45c2101ffdf46c046115c9e55d1cb21add5e40b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/477cb7cee534c98231b11587ed29ecb8a4915523.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/47d5f4a5e7fba329c20ef93ee95a2d3c1caf0951.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/4cb8d9cb28379ccd945ce382a1858df9a390d072.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/5228e30a9e4a89e0a6741d166931cfa53424c477.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/541ed38fb4da68a32ebeaf76c3fdcac027587f72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/5511567e6836b6c9c1f6bcd1435790bbda3166cb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/563dcb8cb96c1381b6327d242ea64a247512a6b3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/5992b2adf1ff498cc731b78f73cc0073bb0c6f89.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/5abf2e47c085b6dfc94615a28db334d63525773a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/5ee0d8a140edabdd460c331afd7c18a58a83dcac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/67a0edbfa62849b6d8c5753f58af5e9556c93d61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/695abbca50a85e522e95c99b9043958fdd143a6b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/6a3ea80c2c8b212c24c1f18636d10b1b2634d7c4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/6e1c65c7e5b5b200aa218cbbab6f99923abf3da7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/6f351ba4fb086405351938fc7ab476137b962662.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/70641f08fcfec37b934bd6b228786a6270d3c905.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/754e9bf807eec93409a809d420caf529a41bcb15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/7a5856ae0f8029a37410136429ed0c3e87afe087.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/7dac67d265ce64c4aeecb4838e233e6da3862d46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/7dffe6d3bb7fd6a39c7586aa2c483a1efc26361a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/81680f12ff3787f08ffd5465b29e423dcf81adb7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/828d4175baefc7fc616061fef3bb59f417f7c58f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/83fb0391973f6cd24cee6f115b05f236c79998eb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/86c4fcb80f9b2d19330025b97c6754219d9838c2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/87ccccf8908e492fdc74fff91333b6675250032a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/89dc6682297a73f53fa2074531bb9d89d343f187.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/8c33260b70981d152aac53c014af45ef25fc64d3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/8eb119437ce77f031df4b3077c513804e1ee6d4e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/922fb2ea9de0f762fb003d91217912ce368d6a3b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/92e1572b5155343fdf27ef123118ea9c81381bf7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/9342f1a36ab9af9751ffa42d18fa62a6777d0a4a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/945472fd6e0c4c9230f254ff6b9a15e62ca8711c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/957373c218f07dd92341134720b3d72ed4c2fe83.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/98b39b516ee2da2c101a9aa535b18a0dc4975210.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/9f3c00ead1416f32c7bf0151a1d065ec918cde25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/a20af5c86aba6ac841f6370f2fd0654c0797fedd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/a2514403e6e5c0bc3d0c21b197d96f7e54b3ed02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/a81a7fde2abc51f6a88903c4d6175f45d150f8d7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/a8c0ef532bd9c065a72b9d1100918f3319401d8b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/af7f561e71dce5126d7775408ea03065c7377bd8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/b0bdfe77e447c43206eacfde788c4619da885d81.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/b0ec24b4738fd1929a346d82f20b44a98e1331ad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/b4d635de6f33d3e3d5fcb7e2e0a3f70cc10a88c9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/b74b387cbb8f463eb919a9da66bcb76bd2143077.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/b99f5cb150ab203c5d6dda1ed5f341dff798322c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/bb90210ed7a29b1946340b13673def7afa89e618.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/bc8de3516f5e9a4cb8c4d54efdc410aeffefdf9d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/bd3f82ddaa0c1f41ccaedbc12502a4cadfcbd2d8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/c0077de135647d953b162920c750e606a86edd85.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/c63596790069db9e2b28d39ad11534c093013d68.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/ca12ff2f06bad2ecd0e589b462bceeeef02bd6af.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/ca181785f76eb55c08f1e48af1278dc5acc5e78a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/cb1d47d5cbfb7a4bdf34ed1b8a6a359f44a33d44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/cbeaaf174b20efc514d4cad49b87ded04f6de2dc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/ce3ddd2ed3e0a5d52a4317cdd845cc2cc46d9a0c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/ce8d5020c2c1c419f765039a458db403ddd80d9e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d0f61563030a6d192ad75dc60dd066de8c799445.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d58199e5e7d0301af2d69b112c54dd224591e8a3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d61e065c2eacac7e2d103e7c37be4cfb79936994.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d6664548c4a7984def353e03533d30171b788729.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d751e134614dc436937e28c4957552b438754eea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/d76de92e122f7cace5d052b82d88f7ee02f9b4db.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e0855653fcd221cd659d09c6a481b089aeda2376.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e1020ced58956dc4b82fd641cdccd12a677ac35b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e320f05ad47e75e82d4df84342e82f6f25fc2321.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e449cf7df18e63fa4e9e90ceb565fd094c71679f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e522290fd28a559fc49935b2afb0bfa213abba21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e5a3b53203c988177c566465b2bffd11b871cc6d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/e8646efc43636d9ed09a5f6e13da608d378920d9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/ee8ceb358ec5bcd4b156f5992c5a073f0bc7f8eb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/f1bd9a2dce8c305bac9fa80dfa84f6873b5908c3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/f38d7b73524897c4ab7ec488a4160a1e571e4e7c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/f90fea1d2a584c03d8592fabed957193c300311e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/f931f6621caf6a161bb0b0436b98cb8d4f62efbd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/fa2e131eaa56697a1095f6a4ebbba301c613a93f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/fc163b10a5949e3467860b73fecf8d2d93b6db60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/products/fda16b62e85ec3477fa2374a918eaa989994a1e7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CategoriesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CheckoutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CreateSaladeBase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FormuleCollectionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FormulesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/HomepageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ListSubCategories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CustomerFixture.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Addons.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Bagel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Base.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Billing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Boisson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Dessert.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Formule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Ingredient.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Panini.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Salade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Sauce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/SubCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Supplement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Events.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/BaseType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/IngredientType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SaladeType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SauceType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711111440.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711113340.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711124202.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711124425.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711163913.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190711211955.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190712114823.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190712115805.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713091949.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713092821.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713094723.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713100818.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713141131.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713142616.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713151302.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713151408.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190713151522.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190715114411.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190715122001.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190716154814.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190717101530.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190717114224.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190721095911.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190721201904.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190723102604.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190723110501.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190723143820.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190723151435.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190723152040.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190725175132.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190725180019.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190725184600.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/AddonsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BagelRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BaseRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BillingRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BoissonRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CartRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CustomerRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/DessertRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FormuleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/IngredientRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PaniniRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SaladeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SauceRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SubCategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/SupplementRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/CustomMailService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/PaymentGateway.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Twig/AppExtension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/_partials/banner.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/_partials/header.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/registration.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/cart/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/category/details.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/category/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/checkout/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/checkout/success.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/formules/details.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/home/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/products/bagel.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/products/boisson.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/products/dessert.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pages/products/panini.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <executablePath>C:\Users\User\AppData\Roaming\Composer\vendor\bin</executablePath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweet_db@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweet_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweet_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweet_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.local">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="103" selection-start-line="103" selection-end-line="118" selection-end-column="11" />
+              <folding>
+                <element signature="e#34#56#0#PHP" expanded="true" />
+                <element signature="e#1047#2344#0#PHP" />
+                <element signature="e#2347#2578#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="e#39#54#0#PHP" expanded="true" />
+                <element signature="e#1352#1712#0#PHP" />
+                <element signature="e#1833#2458#0#PHP" />
+                <element signature="e#2775#2796#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>text-prima</find>
+      <find>content sauce</find>
+      <find>amoun</find>
+      <find>&lt;img</find>
+      <find>table</find>
+      <find>a</find>
+      <find>$addonsIngredients</find>
+      <find>Sauce</find>
+      <find>pick</find>
+      <find>checkou</find>
+      <find>button</find>
+      <find>cart_item bundled</find>
+      <find>h3</find>
+      <find>supplements :</find>
+      <find>&lt;td&gt;X&lt;/td&gt;</find>
+      <find>X&lt;/</find>
+      <find>&lt;button class=&quot;delete-item&quot; data-item=&quot;{{ key }}&quot;&gt;X&lt;/button&gt;</find>
+      <find>X</find>
+      <find>stop</find>
+      <find>Supplements</find>
+      <find>&lt;td&gt;&lt;/td&gt;</find>
+      <find>suppleme</find>
+      <find>&lt;butt</find>
+      <find>persist</find>
+      <find>item</find>
+      <find>flush</find>
+      <find>Fus</find>
+      <find>&lt;button</find>
+      <find>&lt;button class=&quot;clear_item&quot; data-session-id=&quot;{{ key }}&quot;&gt;X&lt;/button&gt;</find>
+      <find>fus</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/formule.css" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/assets/js/formule.js" />
+        <option value="$PROJECT_DIR$/assets/js/utils/index.js" />
+        <option value="$PROJECT_DIR$/src/Repository/BoissonRepository.php" />
+        <option value="$PROJECT_DIR$/templates/pages/products/bagel.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pages/products/panini.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pages/products/dessert.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pages/products/boisson.html.twig" />
+        <option value="$PROJECT_DIR$/assets/css/pages/checkout.css" />
+        <option value="$PROJECT_DIR$/src/Controller/SessionController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Addons.php" />
+        <option value="$PROJECT_DIR$/public/.htaccess" />
+        <option value="$PROJECT_DIR$/config/deploy_prod.php" />
+        <option value="$PROJECT_DIR$/config/prod/deploy.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/packages/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/assets/js/Sidenav.js" />
+        <option value="$PROJECT_DIR$/templates/admin/billing/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/_partials/header.html.twig" />
+        <option value="$PROJECT_DIR$/templates/emails/admin/new_order.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/checkout.js" />
+        <option value="$PROJECT_DIR$/src/Entity/Billing.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/assets/css/pages/home.css" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/assets/css/app.css" />
+        <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/assets/css/pages/home.css" />
+        <option value="$PROJECT_DIR$/templates/pages/home/index.html.twig" />
+        <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/templates/pages/home/index.html.twig" />
+        <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/templates/pages/cart/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Formule.php" />
+        <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
+        <option value="$PROJECT_DIR$/templates/pages/formules/details.html.twig" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Service/CustomSessionService.php" />
+        <option value="$PROJECT_DIR$/src/Controller/HomepageController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/FormulesController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CartController.php" />
+        <option value="$PROJECT_DIR$/templates/pages/cart/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pages/checkout/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/emails/neworder.html.twig" />
+        <option value="$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig" />
+        <option value="$PROJECT_DIR$/templates/pdf/mypdf.html.twig" />
+        <option value="$PROJECT_DIR$/src/Events.php" />
+        <option value="$PROJECT_DIR$/templates/emails/customer/new_order.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/.env.local" />
+        <option value="$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="$USER_HOME$/AppData/Roaming/npm/node_modules/bower" />
+    <bower.json value="" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/webonyx/graphql-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+      <path value="$PROJECT_DIR$/vendor/liip/imagine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/imagine/imagine" />
+      <path value="$PROJECT_DIR$/vendor/notfloran/mjml-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/core" />
+      <path value="$PROJECT_DIR$/vendor/api-platform/api-pack" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-deploy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="645" />
+    <option name="width" value="666" />
+    <option name="height" value="775" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="emails" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pdf" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.2.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api_sweetandco" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projets\symfony\sweet_and_co\templates\admin" />
+      <recent name="E:\projets\symfony\sweet_and_co\assets\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projets\symfony\sweet_and_co\assets\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19b6468c-ca7e-4b7a-84ac-a58de9263d9c" name="Default Changelist" comment="" />
+      <created>1562239292715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562239292715</updated>
+      <workItem from="1562239305406" duration="33590000" />
+      <workItem from="1562520456165" duration="2566000" />
+      <workItem from="1562585294414" duration="40155000" />
+      <workItem from="1562747084209" duration="42552000" />
+      <workItem from="1562878025675" duration="50577000" />
+      <workItem from="1563185600249" duration="3142000" />
+      <workItem from="1563188859600" duration="21876000" />
+      <workItem from="1563353758101" duration="7722000" />
+      <workItem from="1563373556772" duration="27578000" />
+      <workItem from="1563461620414" duration="245694000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="475452000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.497545" visible="true" weight="0.16984127" />
+      <window_info id="Structure" order="2" sideWeight="0.502455" weight="0.055555556" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.41321045" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Database Console" order="4" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32718894" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3986711" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
+      <window_info anchor="right" id="Remote Host" weight="0.52970296" />
+      <window_info anchor="right" id="Database" order="0" weight="0.26349208" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.497545" visible="true" weight="0.22777778" />
+      <window_info id="Structure" order="2" sideWeight="0.502455" weight="0.055555556" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.1843318" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Database Console" order="4" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.32718894" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.3986711" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.52970296" />
+      <window_info anchor="right" id="Database" order="1" weight="0.26349208" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons_base">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons_ingredient">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/Sidenav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/billing_show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_partials/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle/src/Resources/views/default/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="e#1012#3432#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/admin/new_order.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#339#9032#0#Twig" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#td#0;n#tr#3;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="e#3002#3773#0#Twig" />
+            <element signature="e#3789#4563#0#Twig" />
+            <element signature="e#4579#5356#0#Twig" />
+            <element signature="n#td#0;n#tr#6;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="e#5372#6149#0#Twig" />
+            <element signature="e#6165#8484#0#Twig" />
+            <element signature="n#tr#11;n#tbody#0;n#table#0;n#!!top" />
+            <element signature="n#tr#0;n#tfoot#0;n#table#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/PaymentGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="67" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="88" selection-start-line="88" selection-end-line="138" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#2184#2245#0" />
+            <element signature="e#2293#2356#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="123" column="77" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="103" column="1" selection-end-line="177" />
+          <folding>
+            <element signature="e#1867#1902#0" />
+            <element signature="e#1924#1958#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/pages/success.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/pages/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="38" column="1" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/formule">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/formules/details.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#344#381#0#Twig" />
+            <element signature="n#section#0;n#form#0;n#!!top" />
+            <element signature="n#section#1;n#form#0;n#!!top" />
+            <element signature="n#section#2;n#form#0;n#!!top" />
+            <element signature="e#3110#4095#0#Twig" />
+            <element signature="e#4103#5098#0#Twig" />
+            <element signature="e#5106#6111#0#Twig" />
+            <element signature="e#6119#7124#0#Twig" />
+            <element signature="n#section#7;n#form#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Formule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="141" column="7" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#63#89#0#Twig" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/CustomSessionService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#31#84#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HomepageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/FormulesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#945#2026#0#PHP" />
+            <element signature="e#2644#2813#0#PHP" />
+            <element signature="e#2816#2991#0#PHP" />
+            <element signature="e#2994#3169#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#1036#1042#1#PHP" expanded="true" />
+            <element signature="e#1330#1358#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/cart/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="273" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#div#0;n#section#0;n#!!top" />
+            <element signature="e#901#907#0#HTML" expanded="true" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#0;n#section#0;n#!!top" />
+            <element signature="e#9428#9434#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/CustomMailService.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/prod/deploy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/framework.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/debug.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/web_profiler.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/prod/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/prod/mjml.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/prod/monolog.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/checkout/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="34" selection-start-line="34" selection-end-line="298" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
+            <element signature="e#1398#10791#0#Twig" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
+            <element signature="e#1757#1763#0#HTML" expanded="true" />
+            <element signature="e#2026#4544#0#Twig" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
+            <element signature="e#4559#5354#0#Twig" />
+            <element signature="e#10494#10500#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/neworder.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="11" selection-end-line="264" />
+          <folding>
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="e#682#688#0#HTML" expanded="true" />
+            <element signature="e#963#3649#0#Twig" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="e#3666#4495#0#Twig" />
+            <element signature="e#9837#9843#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pdf/mypdf.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/registration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="282" column="9" selection-end-line="287" />
+          <folding>
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="e#1271#1277#0#HTML" expanded="true" />
+            <element signature="e#1516#3866#0#Twig" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#0;n#!!top" />
+            <element signature="e#3877#4604#0#Twig" />
+            <element signature="e#9280#9286#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/knp_snappy.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="103" selection-start-line="103" selection-end-line="118" selection-end-column="11" />
+          <folding>
+            <element signature="e#34#56#0#PHP" expanded="true" />
+            <element signature="e#1047#2344#0#PHP" />
+            <element signature="e#2347#2578#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.local">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="e#39#54#0#PHP" expanded="true" />
+            <element signature="e#1352#1712#0#PHP" />
+            <element signature="e#1833#2458#0#PHP" />
+            <element signature="e#2775#2796#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

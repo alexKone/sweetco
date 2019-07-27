@@ -1,0 +1,177 @@
+/*@import "_reset.css";*/
+/*@import "~bootstrap/dist/css/bootstrap-reboot.min.css";*/
+/*@import "~bootstrap/dist/css/bootstrap-grid.min.css";*/
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/*@import "~bootstrap/dist/css/bootstrap-grid.min.css";*/
+@import "_variables.css";
+@import "components/header.css";
+@import "components/sidenav.css";
+@import "formules.details.css";
+
+@import "pages/home.css";
+@import "pages/checkout.css";
+@import "pages/cart.css";
+@import "pages/success.css";
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+}
+#main {
+  padding-top: 56px;
+}
+.text-primary {
+  color: var(--green-color)!important;
+  font-weight: lighter;
+}
+.jumbotron {
+  background-color: inherit;
+}
+.content {
+  margin-bottom: 56px;
+}
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+li {
+  /*border: 1px solid #2d2d2d;*/
+  margin: 3px;
+}
+li.is-active {
+  border: 2px solid var(--green-color);
+  border-radius: 10px;
+  /*border: 2px solid rgba(81,176,84,0.1);*/
+}
+.content__items > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.content__items > ul > li {
+  position: relative;
+}
+.bg-gradient-danger {
+  background: var(--color-danger);
+  border-radius: 10px;
+}
+.bg-gradient-danger > p {
+  color: #ffffff;
+  padding: 15px;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.content__items > ul > li label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+}
+input[type="radio"] {
+  visibility: hidden;
+}
+
+.content__title {
+  text-align: center;
+}
+
+ul.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+ul.grid>li {
+  position: relative;
+  margin: 20px 5px;
+}
+ul.grid>li>.image-product {
+  width: 100%;
+  height: 150px;
+}
+.image-product > img {
+  width: 100%;
+  height: 100%;
+}
+.clear_item {
+  border: 1px solid black;
+  background: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+@media (min-width: 480px) {
+  .content__items > ul, ul.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 720px) {
+  .content__items > ul, ul.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+#main {
+  margin: auto;
+}
+@media (min-width: 576px) {
+  #main {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  #main {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  #main {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #main {
+    max-width: 1140px;
+  }
+}
+
+.titre-deco {
+  text-align: center;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+table,thead {
+  border: 1px solid black;
+}
+
+summary {
+  font-weight: 500;
+  margin: 10px 0;
+  display: list-item;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 36px;
+  text-align: center;
+}
