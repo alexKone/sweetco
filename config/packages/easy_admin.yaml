@@ -18,7 +18,7 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'price' }
+                    - { property: 'total_price', label: 'Montant de la commande' }
 
         Formule:
             class: App\Entity\Formule

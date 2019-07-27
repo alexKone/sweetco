@@ -24,13 +24,97 @@
       <div class="mode-delivery">
         <h3>Mode de livraison</h3>
         <div class="delivery">
-          <button type="button" class="border-radius" id="btn-pickup">Retrait</button>
-          <button type="button" class="border-radius" id="btn-delivery">livraison</button>
+          <label>
+            <input type="radio" name="delivery_method" value="retrait" checked required/>
+            <span>Retrait</span>
+          </label>
+          <label>
+            <input type="radio" name="delivery_method" value="livraison" />
+            <span>Livraison</span>
+          </label>
+          {#<button type="button" class="border-radius" id="btn-pickup">Retrait</button>#}
+          {#<button type="button" class="border-radius" id="btn-delivery">livraison</button>#}
         </div>
-
       </div>
 
-      <section id="tmpl"></section>
+      <section>
+
+
+        <div class="row">
+          <div class="col-12 billing-fields">
+            <h3 class="h4">Détails de facturation</h3>
+            <div>
+              <div>
+                <label>
+                  <span>Prenom</span>
+                  <input type="text" name="first_name" />
+                </label>
+                <label>
+                  <span>Nom</span>
+                  <input type="text" name="last_name" />
+                </label>
+              </div>
+              <div>
+                <label>
+                  <span>Telephone</span>
+                  <input type="tel" name="tel" />
+                </label>
+              </div>
+              <div>
+                <label>
+                  <span>Adresse mail</span>
+                  <input type="email" name="email" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="tmpl">
+          <div class="col-12 hour-delivery">
+            <h3>Horaire de retrait</h3>
+            <div>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="12_00" />
+                  <span>de 11h30 a 12h</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="12_00" />
+                  <span>de 12h a 12h30</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="12_30" />
+                  <span>de 12h30 a 13h</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="13_00" />
+                  <span>de 13h a 13h30</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="13_30" />
+                  <span>de 13h30 a 14h</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="radio" name="hour_delivery" value="14_00" />
+                  <span>de 14h a 14h30</span>
+                </label>
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </section>
 
       <div class="order">
         <h3>Votre commande</h3>
@@ -300,26 +384,21 @@
 
       <div class="payment-gateway">
 
-        <div class="form-row">
-          <label for="card-element">
-            Credit or debit card
-          </label>
-          <div id="card-element">
-            <!-- A Stripe Element will be inserted here. -->
+        <div class="mode-payment">
+          <h3>Mode de paiement</h3>
+          <div class="payment-method">
+            <label>
+              <input type="radio" name="payment_method" value="cash" required/>
+              <span>Cash</span>
+            </label>
+            <label>
+              <input type="radio" name="payment_method" value="card" checked />
+              <span>CB</span>
+            </label>
+            {#<button type="button" class="border-radius" id="btn-pickup">Retrait</button>#}
+            {#<button type="button" class="border-radius" id="btn-delivery">livraison</button>#}
           </div>
-
-          <!-- Used to display Element errors. -->
-          <div id="card-errors" role="alert"></div>
         </div>
-
-        {#<button type="button" id="pay-stripe">Payer via stripe</button>#}
-
-        {#<input id="cardholder-name" type="hidden" value="{{ cart_value }}" />#}
-        {#<!-- placeholder for Elements -->#}
-        {#<div id="card-element"></div>#}
-        {#<button type="button" id="card-button" data-secret="{{ intent_client_secret }}">#}
-        {#Submit Payment#}
-        {#</button>#}
       </div>
 
 
@@ -338,6 +417,9 @@
   <script src="https://js.stripe.com/v3/"></script>
   {{ parent() }}
   {{ encore_entry_script_tags('checkout') }}
+  <script>
+
+  </script>
   <script>
     const stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
     const elements = stripe.elements();

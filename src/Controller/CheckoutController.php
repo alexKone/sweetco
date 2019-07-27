@@ -97,34 +97,12 @@ class CheckoutController extends AbstractController
 		$session = new Session(new NativeSessionStorage());
 		$em = $this->getDoctrine()->getManager();
 
-		$event = new GenericEvent($session->get('items'));
-		$dispatcher->dispatch(Events::CUSTOMER_NEW_ORDER, $event);
 
+		$datas = $request->request->all();
 
-//		$pdfOptions = new Options();
-//		$pdfOptions->set('defaultFont', 'Arial');
-//
-//		$dompdf = new Dompdf($pdfOptions);
-//
-//		$html = $this->renderView('pdf/mypdf.html.twig', [
-//			'title' => 'Welcome to our PDF Test'
-//		]);
-//
-//		$dompdf->loadHtml($html);
-//		$dompdf->setPaper('A4', 'portrait');
-//		$dompdf->render();
-//
-//		$dompdf->stream('mypdf.pdf', [
-//			'Attachment' => true
-//		]);
-
-		return $this->redirectToRoute('homepage');
 
 //		$event = new GenericEvent($session->get('items'));
 //		$dispatcher->dispatch(Events::CUSTOMER_NEW_ORDER, $event);
-//
-//		return $this->redirectToRoute('checkout');
-
 
 		$totalPrice = 0;
 
@@ -133,12 +111,14 @@ class CheckoutController extends AbstractController
 		$billing->setLastName($request->request->get('last_name'));
 		$billing->setPhoneNumber($request->request->get('tel'));
 		$billing->setEmail($request->request->get('email'));
-		$billing->setPaymentMethod('cart');
-		$billing->setBillingAddress('4 residence des oiseaux');
-		$billing->setBillingCity('chilly mazarin');
-		$billing->setBillingZipcode('91380');
+		$billing->setPaymentMethod($request->request->get('payment_method'));
 
-		if ($request->request->get('hour_delivery')) {
+		// if delivery_method livraison
+		if ($datas['delivery_method'] === 'livraison') {
+			$billing->setBillingAddress($request->request->get('billing_address'));
+			$billing->setBillingCity($request->request->get('billing_city'));
+			$billing->setBillingZipcode($request->request->get('billing_zipcode'));
+		} else {
 			$billing->setPickupHour($request->request->get('hour_delivery'));
 		}
 
@@ -152,7 +132,6 @@ class CheckoutController extends AbstractController
 						break;
 					case 'panini':
 						$panini = $this->getDoctrine()->getRepository(Panini::class)->find($item['panini']->getId());
-						dump($panini);
 						$billing->addPanini($panini);
 						break;
 					case 'boisson':
@@ -166,84 +145,37 @@ class CheckoutController extends AbstractController
 				}
 			}
 			if ($item['name'] === 'formule') {
+				$formule = $this->getDoctrine()->getRepository(Formule::class)->find($item['id']);
 				$salade = new Salade();
 				$addons = new Addons();
 
-				if (array_key_exists('base', $item['addons']) && !empty($item['addons']['base'])) {
-					$addons->addBasis($this->getDoctrine()->getRepository(Base::class)->find($item['addons']['base']->getId()));
-				}
-				if (array_key_exists('ingredients', $item['addons']) && !empty($item['addons']['ingredients'])) {
-					foreach ($item['addons']['ingredients'] as $ingredient) {
-						$addons->addIngredient($ingredient);
+				if (array_key_exists('addons', $item)) {
+					if (array_key_exists('base', $item['addons'])) {
+						$addons->addBasis($this->getDoctrine()->getRepository(Base::class)->find($item['addons']['base']->getId()));
+					}
+					if (array_key_exists('ingredients', $item['addons'])) {
+						foreach ($item['addons']['ingredients'] as $ingredient) {
+							$addons->addIngredient($this->getDoctrine()->getRepository(Ingredient::class)->find($ingredient->getId()));
+						}
 					}
 				}
 
-				$formule = $this->getDoctrine()->getRepository(Formule::class)->find($item['id']);
-				$salade->setBase($this->getDoctrine()->getRepository(Base::class)->find($item['salade']->getBase()->getId()));
-				$salade->setSauce($this->getDoctrine()->getRepository(Sauce::class)->find($item['salade']->getSauce()->getId()));
-
-				foreach ($item['salade']->getIngredients() as $ingredient) {
-					$salade->addIngredient($this->getDoctrine()->getRepository(Ingredient::class)->find($ingredient->getId()));
-				}
-
 				$salade->setAddons($addons);
-				$billing->addSalade($salade);
 				$billing->addFormule($formule);
+				$billing->addSalade($salade);
 			}
 		}
-
-
-
-//		foreach ($session->get('items') as $item) {
-//			$totalPrice += $item['total_price'];
-//			dump($item);
-////			$addons = new Addons();
-////			if (array_key_exists('addons', $item)) {
-////				if ($item['addons']['price'] >= 0) {
-////					if (!empty($item['addons']['base'])) {
-////						$addons->addBasis($this->getDoctrine()->getRepository(Base::class)->find($item['addons']['base']->getId()));
-////					}
-////					if (!empty($item['addons']['ingredients'])) {
-////						foreach ($item['addons']['ingredients'] as $ingredient) {
-////							$addons->addIngredient($this->getDoctrine()->getRepository(Ingredient::class)->find($ingredient->getId()));
-////						}
-////					}
-////				}
-////			}
-////			$formule = null;
-////			if ($item['name'] === 'formule') {
-////				$formule = $this->getDoctrine()->getRepository(Formule::class)->find($item['id']);
-////			}
-////			$salade = new Salade();
-////			$salade->setBase($this->getDoctrine()->getRepository(Base::class)->find($item['salade']->getBase()->getId()));
-////			$salade->setSauce($this->getDoctrine()->getRepository(Sauce::class)->find($item['salade']->getSauce()->getId()));
-////			$salade->setAddons($addons);
-////			foreach ($item['salade']->getIngredients() as $ingredient) {
-////				$salade->addIngredient($this->getDoctrine()->getRepository(Ingredient::class)->find($ingredient->getId()));
-////			}
-////
-////
-////			$billing->addSalade($salade);
-////			$billing->addFormule($formule);
-//		}
-
 		$billing->setTotalPrice($totalPrice);
 
 		$em->persist($billing);
 		$em->flush();
 
-		$items = $session->get('items');
+		$session->set('billing', $billing);
 
-//		$session->remove('items');
 
 		return $this->redirectToRoute('success_payment',[
-			'items' => $items,
 			'billing' => $billing->getId()
 		]);
-
-//		$billing = new Billing();
-		// sauvagarder session en db
-		//  salade
 	}
 
 	/**
@@ -254,9 +186,10 @@ class CheckoutController extends AbstractController
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
 	public function success( Request $request, EventDispatcherInterface $event_dispatcher ) {
+		$session = new Session(new NativeSessionStorage());
 
-		$event = new GenericEvent(['firstName' => 'Alexandre', 'lastName' => 'Kone']);
-		$event_dispatcher->dispatch(Events::PAYMENT_CONFIRMED, $event);
+		$event = new GenericEvent(['billing' => $session->get('billing'), 'session' => $session->get('items')]);
+		$event_dispatcher->dispatch(Events::CUSTOMER_NEW_ORDER, $event);
 
 		return $this->render('pages/checkout/success.html.twig', [
 			'billing' => $this->getDoctrine()->getRepository(Billing::class)->find($request->query->get('billing'))

@@ -14,6 +14,10 @@ use Symfony\Component\Serializer\Annotation\Groups;
  */
 class Billing
 {
+
+	const PICK_UP = 'pick-up';
+	const DELIVERY = 'delivery';
+
     /**
      * @Groups({"billing"})
      * @ORM\Id()
@@ -80,13 +84,13 @@ class Billing
 
     /**
      * @Groups({"billing"})
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $billingAddress;
 
     /**
      * @Groups({"billing"})
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $billingCity;
 

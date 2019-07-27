@@ -1,3 +1,89 @@
-<h3>You did it! You registered!</h3>
+<div style="font-family: sans-serif">
+  <h2 style="text-align: center">Bonjour {{ name }}</h2>
 
-total price {{ total_price|number_format(2) }}! You're successfully registered.
+
+  <p>Bonne nouvelle ! Votre commande est en cours de préparation.</p>
+  <p>Elle sera disponible dans 20 minutes au 167 boulevard Victor Hugo 93400 Saint Ouen.</p>
+
+
+  <h3 style="margin-bottom: 50px;padding: 25px 0 15px;">Commande №: {{ order_nb }}</h3>
+
+
+  {% for key, item in items %}
+    {% if item.name is same as ('formule') %}
+      <h4>{{ key + 1 }} - 1 × {{ item.title }} - {{ item.total_price|number_format(2) }}€</h4>
+
+      <ul>
+        {% if item.salade is defined %}
+          <li>Salade</li>
+          <ul>
+            <li>Base</li>
+            <ul>
+              <li>{{ item.salade.base.name }}</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Ingredients</li>
+            <ul>
+              {% for ingredient in item.salade.ingredients %}
+                <li>{{ ingredient.name }}</li>
+              {% endfor %}
+            </ul>
+          </ul>
+          <ul>
+            <li>Sauce</li>
+            <ul>
+              <li>item.salade.sauce.name</li>
+            </ul>
+          </ul>
+          {% if item.addons is defined %}
+            <li>Supplements: </li>
+            <ul>
+              {% if item.addons.base is defined %}
+                <li>{{ item.addons.base.name }} (base) - 2.30€</li>
+              {% endif %}
+              {% if item.addons.ingredients is defined %}
+                {% for addonIng in item.addons.ingredients %}
+                  <li>{{ addonIng.name }} - 1.30€</li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          {% endif %}
+        {% endif %}
+        {% if item.bagel is defined %}
+          <li>Bagel</li>
+          <ul>
+            <li>1 × {{ item.bagel.name }}</li>
+          </ul>
+        {% endif %}
+        {% if item.panini is defined %}
+          <li>Panini</li>
+          <ul>
+            <li>1 × {{ item.panini.name }}</li>
+          </ul>
+        {% endif %}
+        {% if item.boisson is defined %}
+          <li>Boisson</li>
+          <ul>
+            <li>1 × {{ boisson.name }}</li>
+          </ul>
+        {% endif %}
+        {% if item.dessert is defined %}
+          <li>Dessert</li>
+          <ul>
+            <li>1 × {{ item.dessert.name }}</li>
+          </ul>
+        {% endif %}
+
+      </ul>
+
+    {% else %}
+
+      <h4>{{ key + 1 }} - 1 × {{ item.product_name }} - {{ item.total_price|number_format(2) }}€</h4>
+
+    {% endif %}
+  {% endfor %}
+
+  <h4>Total: {{ total_price|number_format(2) }}€</h4>
+
+</div>

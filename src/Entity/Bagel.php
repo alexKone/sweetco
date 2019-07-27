@@ -81,7 +81,11 @@ class Bagel
         $this->billings = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function __toString() {
+		return $this->getName();
+    }
+
+	public function getId(): ?int
     {
         return $this->id;
     }

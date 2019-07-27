@@ -81,7 +81,11 @@ class Panini
         $this->billings = new ArrayCollection();
     }
 
-    public function getId(): ?int
+	public function __toString() {
+		return $this->getName();
+	}
+
+	public function getId(): ?int
     {
         return $this->id;
     }
@@ -130,7 +134,7 @@ class Panini
 	public function setFilename(?string $filename): self
                                     	{
                                     		$this->filename = $filename;
-                        
+
                                     		return $this;
                                     	}
 
@@ -161,7 +165,7 @@ class Panini
 	public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
                                     	{
                                     		$this->updatedAt = $updatedAt;
-                        
+
                                     		return $this;
                                     	}
 

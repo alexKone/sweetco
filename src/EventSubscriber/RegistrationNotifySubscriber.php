@@ -83,6 +83,9 @@ class RegistrationNotifySubscriber extends AbstractController implements EventSu
 	}
 
 	public function onCustomerNewOrder( GenericEvent $event ) {
+
+		$billing = $event->getSubject()['billing'];
+
 		$pdfOptions = new Options();
 		$pdfOptions->set('defaultFont', 'Arial');
 
@@ -91,35 +94,26 @@ class RegistrationNotifySubscriber extends AbstractController implements EventSu
 		$html = $this->renderView('pdf/mypdf.html.twig', [
 			'title' => 'Welcome to our PDF Test'
 		]);
+		$filename = 'myfilename.pdf';
 
 		$dompdf->loadHtml($html);
 		$dompdf->setPaper('A4', 'portrait');
 		$dompdf->render();
 
 		$pdf = $dompdf->output();
-
-//		$dompdf->stream('mypdf.pdf', [
-//			'Attachment' => true
-//		]);
-
-
-
-		$total_price = 0;
-		foreach ( $event->getSubject() as $item ) {
-			$total_price += $item['total_price'];
-		}
-
-		$subject = "Nouvelle commande";
+		$subject = "[Sweet & Co] Nouvelle commande №" . $billing->getId();
 		$message = ( new \Swift_Message() )
 			->setSubject( $subject )
-			->setTo( 'mail@mail.com' )
+			->setTo( $billing->getEmail() )
 			->setFrom( $this->sender )
 			->setBody( $this->templating->render( 'emails/customer/new_order.html.twig', [
-//				'items' => $event->getSubject(),
-				'total_price' => $total_price
+				'name' => $billing->getFirstName(),
+				'order_nb' => $billing->getId(),
+				'items' => $event->getSubject()['session'],
+				'total_price' => $billing->getTotalPrice()
 			] ), 'text/html' );
 
-		$attachment = new \Swift_Attachment( $pdf, 'my_filename.pdf', 'application/pdf' );
+		$attachment = new \Swift_Attachment( $pdf, $filename, 'application/pdf' );
 		$message->attach( $attachment );
 
 		$this->mailer->send( $message );

@@ -359,64 +359,176 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env.local">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="103" selection-start-line="103" selection-end-line="118" selection-end-column="11" />
-              <folding>
-                <element signature="e#34#56#0#PHP" expanded="true" />
-                <element signature="e#1047#2344#0#PHP" />
-                <element signature="e#2347#2578#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="e#39#54#0#PHP" expanded="true" />
-                <element signature="e#1352#1712#0#PHP" />
-                <element signature="e#1833#2458#0#PHP" />
-                <element signature="e#2775#2796#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4984127">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Bagel.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="343">
+                  <caret line="82" selection-start-line="82" selection-end-line="85" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Billing.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="92" column="59" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="59" />
+                  <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="190" selection-start-line="190" selection-end-line="190" />
+                  <folding>
+                    <element signature="e#34#56#0#PHP" expanded="true" />
+                    <element signature="e#1047#2344#0#PHP" />
+                    <element signature="e#2347#2578#0#PHP" />
+                    <element signature="e#2580#7060#0#PHP" />
+                    <element signature="e#4186#4964#0#PHP" />
+                    <element signature="e#7747#7764#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="498">
+                  <caret line="166" selection-start-line="166" selection-end-line="166" />
+                  <folding>
+                    <element signature="e#383#573#0" />
+                    <element signature="e#583#1711#0" />
+                    <element signature="e#1706#2223#0" />
+                    <element signature="e#2233#2808#0" />
+                    <element signature="e#2818#3379#0" />
+                    <element signature="e#3391#3445#0" />
+                    <element signature="e#3455#4119#0" />
+                    <element signature="e#4128#4750#0" />
+                    <element signature="e#4759#5327#0" />
+                    <element signature="e#5336#5903#0" />
+                    <element signature="e#5913#6088#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/pages/checkout/index.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="44">
+                  <caret line="347" column="71" selection-start-line="347" selection-start-column="66" selection-end-line="347" selection-end-column="71" />
+                  <folding>
+                    <element signature="e#12#26#0#Twig" expanded="true" />
+                    <element signature="n#div#0;n#div#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="n#label#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="n#div#0;n#section#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+                    <element signature="e#4721#5550#0#Twig" />
+                    <element signature="e#5566#6398#0#Twig" />
+                    <element signature="e#6414#7249#0#Twig" />
+                    <element signature="e#7265#8100#0#Twig" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/pdf/mypdf.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-125" />
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Entity/Panini.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="332">
+                  <caret line="86" selection-start-line="86" selection-end-line="86" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="95">
+                  <caret line="103" column="52" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#39#54#0#PHP" expanded="true" />
+                    <element signature="e#508#1123#0#PHP" />
+                    <element signature="e#1279#1507#0#PHP" />
+                    <element signature="e#1352#1712#0#PHP" />
+                    <element signature="e#1833#2458#0#PHP" />
+                    <element signature="e#2775#2796#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/billing">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="e#381#2495#0#Twig" />
+                    <element signature="n#ul#0;n#div#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="n#div#0;n#!!top" />
+                    <element signature="e#1516#3866#0#Twig" />
+                    <element signature="e#3877#4604#0#Twig" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -458,8 +570,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/formule.css" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/js/formule.js" />
@@ -469,7 +579,6 @@
         <option value="$PROJECT_DIR$/templates/pages/products/panini.html.twig" />
         <option value="$PROJECT_DIR$/templates/pages/products/dessert.html.twig" />
         <option value="$PROJECT_DIR$/templates/pages/products/boisson.html.twig" />
-        <option value="$PROJECT_DIR$/assets/css/pages/checkout.css" />
         <option value="$PROJECT_DIR$/src/Controller/SessionController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Addons.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
@@ -481,8 +590,6 @@
         <option value="$PROJECT_DIR$/templates/admin/billing/show.html.twig" />
         <option value="$PROJECT_DIR$/templates/_partials/header.html.twig" />
         <option value="$PROJECT_DIR$/templates/emails/admin/new_order.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/checkout.js" />
-        <option value="$PROJECT_DIR$/src/Entity/Billing.php" />
         <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/assets/css/pages/home.css" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
@@ -492,7 +599,6 @@
         <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/templates/pages/home/index.html.twig" />
         <option value="&lt;0bec47ab-b41d-4693-aa97-805b361bdc8d&gt;/sweetandco/delivery/templates/pages/cart/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Formule.php" />
-        <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
         <option value="$PROJECT_DIR$/templates/pages/formules/details.html.twig" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Service/CustomSessionService.php" />
@@ -500,15 +606,21 @@
         <option value="$PROJECT_DIR$/src/Controller/FormulesController.php" />
         <option value="$PROJECT_DIR$/src/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/templates/pages/cart/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/pages/checkout/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/emails/neworder.html.twig" />
-        <option value="$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig" />
-        <option value="$PROJECT_DIR$/templates/pdf/mypdf.html.twig" />
         <option value="$PROJECT_DIR$/src/Events.php" />
-        <option value="$PROJECT_DIR$/templates/emails/customer/new_order.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/CheckoutController.php" />
         <option value="$PROJECT_DIR$/.env.local" />
+        <option value="$PROJECT_DIR$/assets/css/pages/checkout.css" />
+        <option value="$PROJECT_DIR$/templates/pages/checkout/index.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/checkout.js" />
+        <option value="$PROJECT_DIR$/src/Entity/Bagel.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Panini.php" />
+        <option value="$PROJECT_DIR$/config/packages/easy_admin.yaml" />
+        <option value="$PROJECT_DIR$/templates/pdf/mypdf.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Billing.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig" />
         <option value="$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php" />
+        <option value="$PROJECT_DIR$/templates/emails/customer/new_order.html.twig" />
       </list>
     </option>
   </component>
@@ -662,8 +774,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="645" />
-    <option name="width" value="666" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="779" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -699,7 +812,7 @@
               <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
@@ -710,14 +823,14 @@
               <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="emails" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweet_and_co" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="emails" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="checkout" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sweet_and_co" type="b2602c69:ProjectViewProjectNode" />
@@ -812,12 +925,12 @@
       <workItem from="1563188859600" duration="21876000" />
       <workItem from="1563353758101" duration="7722000" />
       <workItem from="1563373556772" duration="27578000" />
-      <workItem from="1563461620414" duration="245694000" />
+      <workItem from="1563461620414" duration="266874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="475452000" />
+    <option name="totallyTimeSpent" value="496632000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,9 +946,9 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.497545" visible="true" weight="0.16984127" />
-      <window_info id="Structure" order="2" sideWeight="0.502455" weight="0.055555556" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.41321045" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.497545" weight="0.3515873" />
+      <window_info id="Structure" order="2" sideWeight="0.502455" weight="0.31023103" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.41781875" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -849,16 +962,16 @@
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Remote Host" weight="0.52970296" />
-      <window_info anchor="right" id="Database" order="0" weight="0.26349208" />
+      <window_info anchor="right" id="Database" order="0" weight="0.15" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.497545" visible="true" weight="0.22777778" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.497545" visible="true" weight="0.16984127" />
       <window_info id="Structure" order="2" sideWeight="0.502455" weight="0.055555556" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.1843318" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.41321045" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -882,34 +995,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons_base">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/addons_ingredient">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/Sidenav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/billing_show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -967,25 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="88" selection-start-line="88" selection-end-line="138" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="e#2184#2245#0" />
-            <element signature="e#2293#2356#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Billing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="123" column="77" selection-start-line="123" selection-start-column="77" selection-end-line="123" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -1021,13 +1087,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1184,26 +1243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/checkout/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="34" selection-start-line="34" selection-end-line="298" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
-            <element signature="e#1398#10791#0#Twig" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
-            <element signature="e#1757#1763#0#HTML" expanded="true" />
-            <element signature="e#2026#4544#0#Twig" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#1;n#form#0;n#section#0;n#!!top" />
-            <element signature="e#4559#5354#0#Twig" />
-            <element signature="e#10494#10500#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/emails/neworder.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1228,13 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pdf/mypdf.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/emails/registration.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1242,46 +1274,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="282" column="9" selection-end-line="287" />
-          <folding>
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#0;n#!!top" />
-            <element signature="e#1271#1277#0#HTML" expanded="true" />
-            <element signature="e#1516#3866#0#Twig" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#0;n#!!top" />
-            <element signature="e#3877#4604#0#Twig" />
-            <element signature="e#9280#9286#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/knp_snappy.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="103" selection-start-line="103" selection-end-line="118" selection-end-column="11" />
-          <folding>
-            <element signature="e#34#56#0#PHP" expanded="true" />
-            <element signature="e#1047#2344#0#PHP" />
-            <element signature="e#2347#2578#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1295,19 +1291,156 @@
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/pages/checkout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="99" column="73" selection-start-line="99" selection-start-column="73" selection-end-line="99" selection-end-column="73" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#2360#2377#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Bagel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="82" selection-start-line="82" selection-end-line="85" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Panini.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://628aaf31-b6bb-4c93-ab32-332daa82ba88/schema/sweet_db/table/billing">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/easy_admin.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="166" selection-start-line="166" selection-end-line="166" />
+          <folding>
+            <element signature="e#383#573#0" />
+            <element signature="e#583#1711#0" />
+            <element signature="e#1706#2223#0" />
+            <element signature="e#2233#2808#0" />
+            <element signature="e#2818#3379#0" />
+            <element signature="e#3391#3445#0" />
+            <element signature="e#3455#4119#0" />
+            <element signature="e#4128#4750#0" />
+            <element signature="e#4759#5327#0" />
+            <element signature="e#5336#5903#0" />
+            <element signature="e#5913#6088#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pdf/mypdf.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="92" column="59" selection-start-line="92" selection-start-column="59" selection-end-line="92" selection-end-column="59" />
+          <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+          <folding>
+            <element signature="e#34#56#0#PHP" expanded="true" />
+            <element signature="e#1047#2344#0#PHP" />
+            <element signature="e#2347#2578#0#PHP" />
+            <element signature="e#2580#7060#0#PHP" />
+            <element signature="e#4186#4964#0#PHP" />
+            <element signature="e#7747#7764#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/checkout/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="347" column="71" selection-start-line="347" selection-start-column="66" selection-end-line="347" selection-end-column="71" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#label#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="n#div#0;n#section#0;n#section#0;n#form#0;n#section#0;n#!!top" />
+            <element signature="e#4721#5550#0#Twig" />
+            <element signature="e#5566#6398#0#Twig" />
+            <element signature="e#6414#7249#0#Twig" />
+            <element signature="e#7265#8100#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/payment_completed.mjml.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#1516#3866#0#Twig" />
+            <element signature="e#3877#4604#0#Twig" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EventSubscriber/RegistrationNotifySubscriber.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="95">
+          <caret line="103" column="52" selection-start-line="103" selection-start-column="51" selection-end-line="103" selection-end-column="52" />
           <folding>
             <element signature="e#39#54#0#PHP" expanded="true" />
+            <element signature="e#508#1123#0#PHP" />
+            <element signature="e#1279#1507#0#PHP" />
             <element signature="e#1352#1712#0#PHP" />
             <element signature="e#1833#2458#0#PHP" />
             <element signature="e#2775#2796#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/emails/customer/new_order.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#381#2495#0#Twig" />
+            <element signature="n#ul#0;n#div#0;n#!!top" />
           </folding>
         </state>
       </provider>
