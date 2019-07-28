@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource()
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\AddonsRepository")
  */
 class Addons
@@ -22,11 +24,15 @@ class Addons
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Base", inversedBy="addons")
+     * @Groups({"billing"})
+     * @ApiSubresource(maxDepth=6)
      */
     private $bases;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="addons", cascade={"persist"})
+     * @Groups({"billing"})
+     * @ApiSubresource(maxDepth=6)
      */
     private $ingredients;
 

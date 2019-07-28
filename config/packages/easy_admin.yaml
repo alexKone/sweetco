@@ -13,8 +13,12 @@ easy_admin:
 #        - App\Entity\Sauce
     site_name: 'Sweet & CO.'
     entities:
+        Salade:
+            class: App\Entity\Salade
         Billing:
             class: App\Entity\Billing
+            templates:
+                show: 'admin/billing/show.html.twig'
             list:
                 fields:
                     - { property: 'id' }

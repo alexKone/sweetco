@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,13 +12,13 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\IngredientRepository")
  * @Vich\Uploadable()
  */
 class Ingredient
 {
     /**
-     * @Groups({"ingredient", "subCategory"})
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -25,14 +26,14 @@ class Ingredient
     private $id;
 
     /**
-     * @Groups({"ingredient", "salade", "subCategory"})
+     * @Groups({"billing"})
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
 	/**
 	 * @var string|null
-	 * @Groups({"ingredient"})
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
     private $filename;
@@ -46,7 +47,7 @@ class Ingredient
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"ingredient"})
+	 * @Groups({"billing"})
 	 */
     private $updatedAt;
 
@@ -56,13 +57,14 @@ class Ingredient
     private $salades;
 
     /**
-     * @Groups({"ingredient"})
+     * @Groups({"billing"})
      * @ORM\ManyToOne(targetEntity="App\Entity\SubCategory", inversedBy="ingredients")
      */
     private $subCategory;
 
 	/**
 	 * @var bool
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;

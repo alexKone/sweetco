@@ -18,6 +18,7 @@ use App\Service\CustomMailService;
 use App\Service\PaymentGateway;
 use Dompdf\Dompdf;
 use Dompdf\Options;
+use function Sodium\add;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
@@ -160,9 +161,16 @@ class CheckoutController extends AbstractController
 					}
 				}
 
+
 				$salade->setAddons($addons);
+				$salade->setFormule($formule);
+
+				$em->persist($salade);
+				$em->persist($addons);
+
 				$billing->addFormule($formule);
 				$billing->addSalade($salade);
+
 			}
 		}
 		$billing->setTotalPrice($totalPrice);

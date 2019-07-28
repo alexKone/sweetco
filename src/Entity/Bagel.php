@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -12,6 +13,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\BagelRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
@@ -26,6 +28,7 @@ class Bagel
     private $id;
 
     /**
+     * @Groups({"billing"})
      * @ORM\Column(type="string", length=255)
      */
     private $name;
@@ -33,17 +36,19 @@ class Bagel
     /**
      * @Gedmo\Slug(fields={"name","id"})
      * @ORM\Column(type="string", length=255)
+     * @Groups({"billing"})
      */
     private $slug;
 
     /**
      * @ORM\Column(type="float")
+     * @Groups({"billing"})
      */
     private $price = 0;
 
 	/**
 	 * @var string|null
-	 * @Groups({"bagel"})
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
 	 */
     private $filename;
@@ -56,23 +61,28 @@ class Bagel
 
 	/**
 	 * @var
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="datetime", nullable=true)
 	 */
     private $updatedAt;
 
     /**
+     * @Groups({"billing"})
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $short_description;
 
 	/**
 	 * @var bool
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
     private $is_active = true;
 
     /**
+     * @Groups({"billing"})
      * @ORM\ManyToMany(targetEntity="App\Entity\Billing", mappedBy="bagels")
+     * @ApiSubresource(maxDepth=6)
      */
     private $billings;
 

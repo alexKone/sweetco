@@ -11,6 +11,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use App\Controller\ListSubCategories;
 
 /**
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\SubCategoryRepository")
  */
 class SubCategory
@@ -19,19 +20,19 @@ class SubCategory
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"subCategory"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Groups({"ingredient", "subCategory"})
+     * @Groups({"billing"})
      */
     private $name;
 
     /**
-     * @Groups({"subCategory"})
+     * @Groups({"billing"})
      * @ORM\OneToMany(targetEntity="App\Entity\Ingredient", mappedBy="subCategory")
+     * @ApiSubresource(maxDepth=1)
      */
     private $ingredients;
 

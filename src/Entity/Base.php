@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,28 +12,27 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\BaseRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
  */
-class Base
-{
-    /**
-     * @Groups({"base", "salade"})
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
-     * @Groups({"base", "salade"})
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
+class Base {
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 */
+	private $id;
 
 	/**
-	 * @Groups({"base", "salade"})
+	 * @Groups({"billing"})
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $name;
+
+	/**
+	 * @Groups({"billing"})
 	 * @var string|null
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
@@ -47,91 +47,87 @@ class Base
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"base"})
+	 * @Groups({"billing"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"base"})
+	 * @Groups({"billing"})
 	 */
 	private $is_active = true;
 
 	/**
-     * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="base")
-     */
-    private $salades;
+	 * @Groups({"billing"})
+	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="base")
+	 */
+	private $salades;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Addons", mappedBy="bases")
-     */
-    private $addons;
+	/**
+	 * @Groups({"billing"})
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Addons", mappedBy="bases")
+	 * @ApiSubresource(maxDepth=6)
+	 */
+	private $addons;
 
-    public function __construct()
-    {
-        $this->salades = new ArrayCollection();
-        $this->addons = new ArrayCollection();
-    }
+	public function __construct() {
+		$this->salades = new ArrayCollection();
+		$this->addons  = new ArrayCollection();
+	}
 
-	public function __toString(  ) {
-                  		return $this->name;
-                      }
+	public function __toString() {
+		return $this->name;
+	}
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	public function getId(): ?int {
+		return $this->id;
+	}
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
+	public function getName(): ?string {
+		return $this->name;
+	}
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
+	public function setName( string $name ): self {
+		$this->name = $name;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    /**
-     * @return Collection|Salade[]
-     */
-    public function getSalades(): Collection
-    {
-        return $this->salades;
-    }
+	/**
+	 * @return Collection|Salade[]
+	 */
+	public function getSalades(): Collection {
+		return $this->salades;
+	}
 
-    public function addSalade(Salade $salade): self
-    {
-        if (!$this->salades->contains($salade)) {
-            $this->salades[] = $salade;
-            $salade->setBase($this);
-        }
+	public function addSalade( Salade $salade ): self {
+		if ( ! $this->salades->contains( $salade ) ) {
+			$this->salades[] = $salade;
+			$salade->setBase( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeSalade(Salade $salade): self
-    {
-        if ($this->salades->contains($salade)) {
-            $this->salades->removeElement($salade);
-            // set the owning side to null (unless already changed)
-            if ($salade->getBase() === $this) {
-                $salade->setBase(null);
-            }
-        }
+	public function removeSalade( Salade $salade ): self {
+		if ( $this->salades->contains( $salade ) ) {
+			$this->salades->removeElement( $salade );
+			// set the owning side to null (unless already changed)
+			if ( $salade->getBase() === $this ) {
+				$salade->setBase( null );
+			}
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
 	/**
 	 * @return string|null
 	 */
 	public function getFilename(): ?string {
-                  		return $this->filename;
-                  	}
+		return $this->filename;
+	}
 
 	/**
 	 * @param string|null $filename
@@ -139,17 +135,17 @@ class Base
 	 * @return Base
 	 */
 	public function setFilename( ?string $filename ) {
-                  		$this->filename = $filename;
-               
-                  		return $this;
-                  	}
+		$this->filename = $filename;
+
+		return $this;
+	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-                  		return $this->imageFile;
-                  	}
+		return $this->imageFile;
+	}
 
 	/**
 	 * @param File|null $imageFile
@@ -158,18 +154,18 @@ class Base
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile = null ): void {
-                  		$this->imageFile = $imageFile;
-                  		if ($imageFile) {
-                  			$this->updatedAt = new \DateTime('now');
-                  		}
-                  	}
+		$this->imageFile = $imageFile;
+		if ( $imageFile ) {
+			$this->updatedAt = new \DateTime( 'now' );
+		}
+	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getUpdatedAt() {
-                  		return $this->updatedAt;
-                  	}
+		return $this->updatedAt;
+	}
 
 	/**
 	 * @param mixed $updatedAt
@@ -177,17 +173,17 @@ class Base
 	 * @return Base
 	 */
 	public function setUpdatedAt( $updatedAt ) {
-                  		$this->updatedAt = $updatedAt;
-               
-                  		return $this;
-                  	}
+		$this->updatedAt = $updatedAt;
+
+		return $this;
+	}
 
 	/**
 	 * @return bool
 	 */
 	public function isActive(): bool {
-                  		return $this->is_active;
-                  	}
+		return $this->is_active;
+	}
 
 	/**
 	 * @param bool $is_active
@@ -195,49 +191,45 @@ class Base
 	 * @return Base
 	 */
 	public function setIsActive( bool $is_active ): Base {
-                  		$this->is_active = $is_active;
-               
-                  		return $this;
-                  	}
+		$this->is_active = $is_active;
 
-    public function getIsActive(): ?bool
-    {
-        return $this->is_active;
-    }
+		return $this;
+	}
+
+	public function getIsActive(): ?bool {
+		return $this->is_active;
+	}
 
 	/**
 	 * @throws \Exception
 	 * @ORM\PreUpdate()
 	 */
-	public function updateDate(  ) {
-               		$this->setUpdatedAt(new \DateTime());
-                   }
+	public function updateDate() {
+		$this->setUpdatedAt( new \DateTime() );
+	}
 
-    /**
-     * @return Collection|Addons[]
-     */
-    public function getAddons(): Collection
-    {
-        return $this->addons;
-    }
+	/**
+	 * @return Collection|Addons[]
+	 */
+	public function getAddons(): Collection {
+		return $this->addons;
+	}
 
-    public function addAddon(Addons $addon): self
-    {
-        if (!$this->addons->contains($addon)) {
-            $this->addons[] = $addon;
-            $addon->addBasis($this);
-        }
+	public function addAddon( Addons $addon ): self {
+		if ( ! $this->addons->contains( $addon ) ) {
+			$this->addons[] = $addon;
+			$addon->addBasis( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeAddon(Addons $addon): self
-    {
-        if ($this->addons->contains($addon)) {
-            $this->addons->removeElement($addon);
-            $addon->removeBasis($this);
-        }
+	public function removeAddon( Addons $addon ): self {
+		if ( $this->addons->contains( $addon ) ) {
+			$this->addons->removeElement( $addon );
+			$addon->removeBasis( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 }

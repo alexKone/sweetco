@@ -11,13 +11,13 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\SauceRepository")
  * @Vich\Uploadable()
  */
 class Sauce
 {
     /**
-     * @Groups({"sauce"})
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -25,14 +25,14 @@ class Sauce
     private $id;
 
     /**
-     * @Groups({"sauce", "salade"})
+     * @Groups({"billing"})
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
 	/**
 	 * @var string|null
-	 * @Groups({"ingredient"})
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $filename;
@@ -46,18 +46,20 @@ class Sauce
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"ingredient"})
+	 * @Groups({"billing"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
+	 * @Groups({"billing"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
 
     /**
+     * @Groups({"billing"})
      * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="sauce")
      */
     private $salades;

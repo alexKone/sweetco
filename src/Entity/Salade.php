@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,11 +12,11 @@ use App\Controller\CreateSaladeBase;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SaladeRepository")
+ * @ApiResource(forceEager=false)
  */
 class Salade
 {
     /**
-     * @Groups({"salade"})
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -23,30 +24,33 @@ class Salade
     private $id;
 
     /**
-     * @Groups({"salade"})
+     * @Groups({"billing"})
      * @ORM\ManyToOne(targetEntity="App\Entity\Base", inversedBy="salades", cascade={"persist"})
      */
     private $base;
 
     /**
-     * @Groups({"salade"})
+     * @Groups({"billing"})
      * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="salades", cascade={"persist"})
+     * @ApiSubresource(maxDepth=3)
      */
     private $ingredients;
 
     /**
-     * @Groups({"salade"})
+     * @Groups({"billing"})
      * @ORM\ManyToOne(targetEntity="App\Entity\Sauce", inversedBy="salades", cascade={"persist"})
+     * @ApiSubresource(maxDepth=6)
      */
     private $sauce;
 
     /**
-     * @Groups({"salade"})
+     * @Groups({"billing"})
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
 
     /**
+     * @Groups({"billing"})
      * @ORM\ManyToOne(targetEntity="App\Entity\Formule", inversedBy="salade")
      */
     private $formule;
@@ -57,7 +61,9 @@ class Salade
     private $billing;
 
     /**
+     * @Groups({"billing"})
      * @ORM\OneToOne(targetEntity="App\Entity\Addons", cascade={"persist", "remove"})
+     * @ApiSubresource(maxDepth=6)
      */
     private $addons;
 

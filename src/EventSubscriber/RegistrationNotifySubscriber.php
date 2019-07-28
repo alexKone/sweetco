@@ -43,7 +43,8 @@ class RegistrationNotifySubscriber extends AbstractController implements EventSu
 		return [
 			Events::USER_REGISTERED    => 'onUserRegistrated',
 			Events::PAYMENT_CONFIRMED  => 'onPaymentValidated',
-			Events::CUSTOMER_NEW_ORDER => 'onCustomerNewOrder'
+			Events::CUSTOMER_NEW_ORDER => 'onCustomerNewOrder',
+			Events::ADMIN_NEW_ORDER => 'onAdminNewOrder'
 		];
 	}
 
@@ -113,8 +114,45 @@ class RegistrationNotifySubscriber extends AbstractController implements EventSu
 				'total_price' => $billing->getTotalPrice()
 			] ), 'text/html' );
 
-		$attachment = new \Swift_Attachment( $pdf, $filename, 'application/pdf' );
-		$message->attach( $attachment );
+//		$attachment = new \Swift_Attachment( $pdf, $filename, 'application/pdf' );
+//		$message->attach( $attachment );
+
+		$this->mailer->send( $message );
+	}
+
+	public function onAdminNewOrder( GenericEvent $event ) {
+
+		$billing = $event->getSubject()['billing'];
+
+		$pdfOptions = new Options();
+		$pdfOptions->set('defaultFont', 'Arial');
+
+		$dompdf = new Dompdf($pdfOptions);
+
+		$html = $this->renderView('pdf/mypdf.html.twig', [
+			'title' => 'Welcome to our PDF Test'
+		]);
+		$filename = 'myfilename.pdf';
+
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('A4', 'portrait');
+		$dompdf->render();
+
+		$pdf = $dompdf->output();
+		$subject = "[Sweet & Co] Nouvelle commande №" . $billing->getId();
+		$message = ( new \Swift_Message() )
+			->setSubject( $subject )
+			->setTo( $this->sender )
+			->setFrom( $this->sender )
+			->setBody( $this->templating->render( 'emails/admin/new_order.html.twig', [
+				'name' => $billing->getFirstName(),
+				'order_nb' => $billing->getId(),
+				'items' => $event->getSubject()['session'],
+				'total_price' => $billing->getTotalPrice()
+			] ), 'text/html' );
+
+//		$attachment = new \Swift_Attachment( $pdf, $filename, 'application/pdf' );
+//		$message->attach( $attachment );
 
 		$this->mailer->send( $message );
 	}
