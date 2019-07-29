@@ -51,12 +51,12 @@ class Salade
 
     /**
      * @Groups({"billing"})
-     * @ORM\ManyToOne(targetEntity="App\Entity\Formule", inversedBy="salade")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Formule", inversedBy="salade", cascade={"persist"})
      */
     private $formule;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Billing", inversedBy="salade")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Billing", inversedBy="salade", cascade={"persist"})
      */
     private $billing;
 

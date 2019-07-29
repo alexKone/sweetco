@@ -1,8 +1,21 @@
+
 .hour-delivery input[type="radio"] {
   visibility: visible;
 }
-.mode-delivery input[type="radio"], .payment-gateway input[type="radio"] {
-  visibility: visible;
+.mode-delivery input[type="radio"],
+.payment-gateway input[type="radio"] {
+  visibility: hidden;
+}
+.mode-delivery, .mode-payment {
+  text-align: center;
+}
+.mode-delivery > .delivery > label,
+.mode-payment > .payment-method > label {
+  /*border: 1px solid black;*/
+  padding: 15px;
+}
+.btn-is-active {
+  border: 2px solid var(--green-color);
 }
 section.checkout.container > div {
   margin: 25px 0;

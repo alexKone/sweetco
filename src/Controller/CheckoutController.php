@@ -161,8 +161,17 @@ class CheckoutController extends AbstractController
 					}
 				}
 
+				if (array_key_exists('salade', $item)) {
+					$salade->setSauce($this->getDoctrine()->getRepository(Sauce::class)->find($item['salade']->getSauce()->getId()));
+					$salade->setBase($this->getDoctrine()->getRepository(Base::class)->find($item['salade']->getBase()->getId()));
+//					$salade->setSauce($this->getDoctrine()->getRepository(Sauce::class)->find($item['salade']->getSauce()->getId()));
+					foreach ($item['salade']->getIngredients() as $ingredient) {
+						$salade->addIngredient($this->getDoctrine()->getRepository(Ingredient::class)->find($ingredient->getId()));
+					}
+					$salade->setAddons($addons);
+				}
 
-				$salade->setAddons($addons);
+
 				$salade->setFormule($formule);
 
 				$em->persist($salade);
@@ -198,6 +207,8 @@ class CheckoutController extends AbstractController
 
 		$event = new GenericEvent(['billing' => $session->get('billing'), 'session' => $session->get('items')]);
 		$event_dispatcher->dispatch(Events::CUSTOMER_NEW_ORDER, $event);
+
+		$session->remove('items');
 
 		return $this->render('pages/checkout/success.html.twig', [
 			'billing' => $this->getDoctrine()->getRepository(Billing::class)->find($request->query->get('billing'))

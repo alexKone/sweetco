@@ -107,6 +107,23 @@ radioElts.forEach(r => r.addEventListener('change', evt => {
     }
 }));
 
+
+const pickupMode = document.querySelectorAll('.mode-delivery>.delivery>label')
+pickupMode.forEach(elt => {
+  elt.addEventListener('click', evt => {
+    pickupMode.forEach(e => e.classList.remove('btn-is-active'))
+    // evt.preventDefault();
+    elt.classList.add('btn-is-active')
+  })
+})
+const paymentMethod = document.querySelectorAll('.mode-payment>.payment-method>label');
+paymentMethod.forEach(elt => {
+  elt.addEventListener('click', evt => {
+    paymentMethod.forEach(e => e.classList.remove('btn-is-active'))
+    // evt.preventDefault();
+    elt.classList.add('btn-is-active')
+  })
+})
 const stripeTmpl = ``;
 
 // STRIPE GATEWAY

@@ -23,7 +23,7 @@ class Addons
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Base", inversedBy="addons")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Base", inversedBy="addons", cascade={"persist"})
      * @Groups({"billing"})
      * @ApiSubresource(maxDepth=6)
      */
