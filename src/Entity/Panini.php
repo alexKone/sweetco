@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\PaniniRepository")
  * @Vich\Uploadable()
  */
@@ -22,17 +21,18 @@ class Panini
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"panini:read"})
      */
     private $id;
 
     /**
-     * @Groups({"billing"})
+     * @Groups({"panini:read", "billing"})
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
-     * @Groups({"billing"})
+     * @Groups({"panini:read", "billing"})
      * @ORM\Column(type="string", length=255)
      * @Gedmo\Slug(fields={"name","id"})
      */
@@ -40,20 +40,20 @@ class Panini
 
 	/**
 	 * @var
-	 * @Groups({"billing"})
+	 * @Groups({"panini:read", "billing"})
 	 * @ORM\Column(type="string")
 	 */
     private $short_description;
 
     /**
-     * @Groups({"billing"})
+     * @Groups({"panini:read", "billing"})
      * @ORM\Column(type="float")
      */
     private $price;
 
 	/**
 	 * @var string|null
-	 * @Groups({"billing"})
+	 * @Groups({"panini:read", "billing"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
 	 */
 	private $filename;
@@ -66,14 +66,14 @@ class Panini
 
 	/**
 	 * @var
-	 * @Groups({"billing"})
+	 * @Groups({"panini:read", "billing"})
 	 * @ORM\Column(type="datetime", nullable=true)
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
-	 * @Groups({"billing"})
+	 * @Groups({"panini:read", "billing"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;

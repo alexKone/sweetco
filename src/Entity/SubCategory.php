@@ -11,86 +11,76 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use App\Controller\ListSubCategories;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\SubCategoryRepository")
  */
-class SubCategory
-{
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+class SubCategory {
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 */
+	private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Groups({"billing"})
-     */
-    private $name;
+	/**
+	 * @ORM\Column(type="string", length=255)
+	 * @Groups({"billing"})
+	 */
+	private $name;
 
-    /**
-     * @Groups({"billing"})
-     * @ORM\OneToMany(targetEntity="App\Entity\Ingredient", mappedBy="subCategory")
-     * @ApiSubresource(maxDepth=1)
-     */
-    private $ingredients;
+	/**
+	 * @Groups({"billing"})
+	 * @ORM\OneToMany(targetEntity="App\Entity\Ingredient", mappedBy="subCategory")
+	 */
+	private $ingredients;
 
-    public function __construct()
-    {
-        $this->ingredients = new ArrayCollection();
-    }
+	public function __construct() {
+		$this->ingredients = new ArrayCollection();
+	}
 
-    public function __toString() {
+	public function __toString() {
 		return $this->getName();
-    }
+	}
 
-	public function getId(): ?int
-                   {
-                       return $this->id;
-                   }
+	public function getId(): ?int {
+		return $this->id;
+	}
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
+	public function getName(): ?string {
+		return $this->name;
+	}
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
+	public function setName( string $name ): self {
+		$this->name = $name;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    /**
-     * @return Collection|Ingredient[]
-     */
-    public function getIngredients(): Collection
-    {
-        return $this->ingredients;
-    }
+	/**
+	 * @return Collection|Ingredient[]
+	 */
+	public function getIngredients(): Collection {
+		return $this->ingredients;
+	}
 
-    public function addIngredient(Ingredient $ingredient): self
-    {
-        if (!$this->ingredients->contains($ingredient)) {
-            $this->ingredients[] = $ingredient;
-            $ingredient->setSubCategory($this);
-        }
+	public function addIngredient( Ingredient $ingredient ): self {
+		if ( ! $this->ingredients->contains( $ingredient ) ) {
+			$this->ingredients[] = $ingredient;
+			$ingredient->setSubCategory( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeIngredient(Ingredient $ingredient): self
-    {
-        if ($this->ingredients->contains($ingredient)) {
-            $this->ingredients->removeElement($ingredient);
-            // set the owning side to null (unless already changed)
-            if ($ingredient->getSubCategory() === $this) {
-                $ingredient->setSubCategory(null);
-            }
-        }
+	public function removeIngredient( Ingredient $ingredient ): self {
+		if ( $this->ingredients->contains( $ingredient ) ) {
+			$this->ingredients->removeElement( $ingredient );
+			// set the owning side to null (unless already changed)
+			if ( $ingredient->getSubCategory() === $this ) {
+				$ingredient->setSubCategory( null );
+			}
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
 }

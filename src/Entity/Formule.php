@@ -17,7 +17,6 @@ use App\Controller\FormuleCollectionController;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\BooleanFilter;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\FormuleRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
@@ -27,61 +26,62 @@ class Formule {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
+	 * @Groups({"formule:read"})
 	 */
 	private $id;
 
 	/**
 	 * @ORM\Column(type="string", length=255)
 	 * @ORM\OrderBy({"order"=""})
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $name;
 
 	/**
 	 * @ORM\Column(type="text", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $description;
 
 	/**
 	 * @ORM\Column(type="string", length=255, nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $short_description;
 
 	/**
 	 * @ORM\Column(type="integer")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $limit_base = 1;
 
 	/**
 	 * @ORM\Column(type="integer")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $limit_ingredient = 4;
 
 	/**
 	 * @ORM\Column(type="integer")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $limit_sauce = 1;
 
 	/**
 	 * @ORM\Column(type="boolean")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $has_bagel = false;
 
 	/**
 	 * @ORM\Column(type="boolean")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $has_panini = false;
 
 	/**
 	 * @var string|null
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 * @ORM\Column(type="string", length=255, nullable=true, name="formule_filename")
 	 */
 	private $formuleFilename;
@@ -95,52 +95,51 @@ class Formule {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $createdAt;
 
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $price;
 
 	/**
 	 * @Gedmo\Slug(fields={"name","id"})
 	 * @ORM\Column(type="string", length=255, nullable=false)
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 */
 	private $slug;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 * @ORM\Column(type="boolean", nullable=true, options={"default": false})
 	 */
 	private $has_boisson = false;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 * @ORM\Column(type="boolean", nullable=true)
 	 */
 	private $has_dessert = false;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="formule")
-	 * @ApiSubresource(maxDepth=6)
 	 */
 	private $salades;
 
 	/**
 	 * @var bool
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
@@ -148,12 +147,11 @@ class Formule {
 	/**
 	 * @Groups({"formule"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Billing", mappedBy="formules")
-	 * @ApiSubresource(maxDepth=6)
 	 */
 	private $billings;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"formule:read", "billing:read"})
 	 * @ORM\Column(type="boolean")
 	 */
 	private $has_salade = false;
@@ -161,7 +159,6 @@ class Formule {
 	public function __construct() {
 		$this->createdAt = new \DateTime();
 		$this->orders    = new ArrayCollection();
-		$this->salade    = new ArrayCollection();
 		$this->salades   = new ArrayCollection();
 		$this->billings  = new ArrayCollection();
 	}
@@ -357,34 +354,6 @@ class Formule {
 
 	public function setHasDessert( ?bool $has_dessert ): self {
 		$this->has_dessert = $has_dessert;
-
-		return $this;
-	}
-
-	/**
-	 * @return Collection|Salade[]
-	 */
-	public function getSalade(): Collection {
-		return $this->salade;
-	}
-
-	public function addSalade( Salade $salade ): self {
-		if ( ! $this->salade->contains( $salade ) ) {
-			$this->salade[] = $salade;
-			$salade->setFormule( $this );
-		}
-
-		return $this;
-	}
-
-	public function removeSalade( Salade $salade ): self {
-		if ( $this->salade->contains( $salade ) ) {
-			$this->salade->removeElement( $salade );
-			// set the owning side to null (unless already changed)
-			if ( $salade->getFormule() === $this ) {
-				$salade->setFormule( null );
-			}
-		}
 
 		return $this;
 	}

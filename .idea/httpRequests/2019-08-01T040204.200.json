@@ -1,0 +1,74 @@
+[
+  {
+    "id": 7,
+    "name": "Le Mustard",
+    "slug": "le-mustard",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": "2019-07-17T13:36:48+02:00",
+    "shortDescription": "Mousse de thon, avocat, crudites, moutarde au miel",
+    "isActive": true,
+    "billings": []
+  },
+  {
+    "id": 8,
+    "name": "The Avocat",
+    "slug": "the-avocat",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": null,
+    "shortDescription": "Dinde fumee, emental, avocat, mayonnaise",
+    "isActive": true,
+    "billings": []
+  },
+  {
+    "id": 9,
+    "name": "Le Thon",
+    "slug": "le-thon",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": null,
+    "shortDescription": "Dinde fumee, cheddar, tomate, mouardea l'ancienne",
+    "isActive": true,
+    "billings": []
+  },
+  {
+    "id": 10,
+    "name": "L'Italiano",
+    "slug": "litaliano",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": null,
+    "shortDescription": "Mozzarella, tomate, basilic, olives, pesto",
+    "isActive": true,
+    "billings": []
+  },
+  {
+    "id": 11,
+    "name": "Le Vegetable",
+    "slug": "le-vegetable",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": null,
+    "shortDescription": "Aubergines gillees,cream cheese, tomates confites",
+    "isActive": true,
+    "billings": []
+  },
+  {
+    "id": 12,
+    "name": "Le Salmon",
+    "slug": "le-salmon",
+    "price": 8.9,
+    "filename": null,
+    "imageFile": null,
+    "updatedAt": null,
+    "shortDescription": "Mousse de thon, avocat, crudites, moutarde au miel",
+    "isActive": true,
+    "billings": []
+  }
+]

@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\BoissonRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
@@ -22,25 +21,26 @@ class Boisson {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
+	 * @Groups({"boisson:read"})
 	 */
 	private $id;
 
 	/**
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $name;
 
 	/**
 	 * @Gedmo\Slug(fields={"name", "id"})
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $slug;
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $price;
 
@@ -48,7 +48,7 @@ class Boisson {
 	 * @var string|null
 	 * @Groups({"bagel"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $filename;
 
@@ -61,14 +61,14 @@ class Boisson {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"billing"})
+	 * @Groups({"boisson:read", "billing"})
 	 */
 	private $is_active = true;
 

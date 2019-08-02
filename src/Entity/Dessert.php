@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\DessertRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
@@ -22,32 +21,32 @@ class Dessert {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $id;
 
 	/**
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $name;
 
 	/**
 	 * @Gedmo\Slug(fields={"name", "id"})
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $slug;
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $price;
 
 	/**
 	 * @var string|null
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
 	 */
 	private $filename;
@@ -61,14 +60,14 @@ class Dessert {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"billing"})
+	 * @Groups({"dessert:read", "billing"})
 	 */
 	private $is_active = true;
 

@@ -1,0 +1,264 @@
+GET http://localhost:8000/api/desserts
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T041743.200.json
+
+###
+
+GET http://localhost:8000/api/ingredients
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T014603.200.json
+
+###
+
+GET http://localhost:8000/api/ingredients
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T014514.200.json
+
+###
+
+GET http://localhost:8000/api/ingredients
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T014437.200.json
+
+###
+
+GET http://localhost:8000/api/sauces
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T013813.200.json
+
+###
+
+GET http://localhost:8000/api/bases
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T011301.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T011237.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121902.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121756.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121545.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121519.500.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121405.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121256.500.html
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121246.500.html
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121209.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T121058.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T103018.404.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T103010.404.json
+
+###
+
+GET http://localhost:8000/api/formules
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T102728.200.json
+
+###
+
+GET http://localhost:8000/api/formules
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T102631.404.json
+
+###
+
+GET http://localhost:8000/api/bases/9
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101453.200.json
+
+###
+
+GET http://localhost:8000/api/bases
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101438.200.json
+
+###
+
+GET http://localhost:8000/api/bases
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101400.200.json
+
+###
+
+GET http://localhost:8000/api/sauces
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101348.200.json
+
+###
+
+GET http://localhost:8000/api/sauces
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101107.404.json
+
+###
+
+GET http://localhost:8000/api/paninis
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T101058.200.json
+
+###
+
+GET http://localhost:8000/api/paninis
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T040220.500.json
+
+###
+
+GET http://localhost:8000/api/bagels
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T040204.200.json
+
+###
+
+POST http://localhost:8000/api/bagels
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T040155.405.json
+
+###
+
+POST http://localhost:8000/api/boissons
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T040147.404.json
+
+###
+
+POST http://localhost:8000/api/desserts
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T040136.404.json
+
+###
+
+POST http://localhost:8000/salades/add
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T024222.500.html
+
+###
+
+POST http://localhost:8000/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-01T024145.500.html
+
+###
+

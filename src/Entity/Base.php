@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\BaseRepository")
  * @Vich\Uploadable()
  * @ORM\HasLifecycleCallbacks()
@@ -22,17 +21,18 @@ class Base {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
+	 * @Groups({"base:read"})
 	 */
 	private $id;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"base:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $name;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"base:read", "billing:read", "salade:post"})
 	 * @var string|null
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
@@ -47,27 +47,24 @@ class Base {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"base:read", "billing:read", "salade:post"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"billing"})
+	 * @Groups({"base:read", "billing:read", "salade:post"})
 	 */
 	private $is_active = true;
 
 	/**
-	 * @Groups({"billing"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="base")
 	 */
 	private $salades;
 
 	/**
-	 * @Groups({"billing"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Addons", mappedBy="bases")
-	 * @ApiSubresource(maxDepth=6)
 	 */
 	private $addons;
 

@@ -12,123 +12,116 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\IngredientRepository")
  * @Vich\Uploadable()
  */
-class Ingredient
-{
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+class Ingredient {
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 * @Groups({"ingredient:read"})
+	 */
+	private $id;
 
-    /**
-     * @Groups({"billing"})
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
+	/**
+	 * @Groups({"ingredient:read", "billing:read", "salade:post"})
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $name;
 
 	/**
 	 * @var string|null
-	 * @Groups({"billing"})
+	 * @Groups({"ingredient:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
-    private $filename;
+	private $filename;
 
 	/**
 	 * @var File|null
 	 * @Vich\UploadableField(mapping="products", fileNameProperty="filename")
 	 */
-    private $imageFile;
+	private $imageFile;
 
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"ingredient:read", "billing:read", "salade:post"})
 	 */
-    private $updatedAt;
+	private $updatedAt;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Salade", mappedBy="ingredients")
-     */
-    private $salades;
+	/**
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Salade", mappedBy="ingredients")
+	 */
+	private $salades;
 
-    /**
-     * @Groups({"billing"})
-     * @ORM\ManyToOne(targetEntity="App\Entity\SubCategory", inversedBy="ingredients")
-     */
-    private $subCategory;
+	/**
+	 * @Groups({"billing:read"})
+	 * @ORM\ManyToOne(targetEntity="App\Entity\SubCategory", inversedBy="ingredients")
+	 */
+	private $subCategory;
 
 	/**
 	 * @var bool
-	 * @Groups({"billing"})
+	 * @Groups({"ingredient:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
-    public function __construct()
-    {
-        $this->salades = new ArrayCollection();
-    }
+	public function __construct() {
+		$this->salades = new ArrayCollection();
+	}
 
-	public function __toString(  ) {
-                         	return $this->name;
-                         }
+	public function __toString() {
+		return $this->name;
+	}
 
 	public function getId(): ?int {
-                         	return $this->id;
-                         }
+		return $this->id;
+	}
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
+	public function getName(): ?string {
+		return $this->name;
+	}
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
+	public function setName( string $name ): self {
+		$this->name = $name;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    /**
-     * @return Collection|Salade[]
-     */
-    public function getSalades(): Collection
-    {
-        return $this->salades;
-    }
+	/**
+	 * @return Collection|Salade[]
+	 */
+	public function getSalades(): Collection {
+		return $this->salades;
+	}
 
-    public function addSalade(Salade $salade): self
-    {
-        if (!$this->salades->contains($salade)) {
-            $this->salades[] = $salade;
-            $salade->addIngredient($this);
-        }
+	public function addSalade( Salade $salade ): self {
+		if ( ! $this->salades->contains( $salade ) ) {
+			$this->salades[] = $salade;
+			$salade->addIngredient( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeSalade(Salade $salade): self
-    {
-        if ($this->salades->contains($salade)) {
-            $this->salades->removeElement($salade);
-            $salade->removeIngredient($this);
-        }
+	public function removeSalade( Salade $salade ): self {
+		if ( $this->salades->contains( $salade ) ) {
+			$this->salades->removeElement( $salade );
+			$salade->removeIngredient( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
 
 	/**
 	 * @return string|null
 	 */
 	public function getFilename(): ?string {
-                     		return $this->filename;
-                     	}
+		return $this->filename;
+	}
 
 	/**
 	 * @param string|null $filename
@@ -136,17 +129,17 @@ class Ingredient
 	 * @return Ingredient
 	 */
 	public function setFilename( ?string $filename ) {
-                     		$this->filename = $filename;
+		$this->filename = $filename;
 
-                     		return $this;
-                     	}
+		return $this;
+	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-                     		return $this->imageFile;
-                     	}
+		return $this->imageFile;
+	}
 
 	/**
 	 * @param File|null $imageFile
@@ -155,18 +148,18 @@ class Ingredient
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile = null ): void {
-                     		$this->imageFile = $imageFile;
-                     		if ($imageFile) {
-                     			$this->updatedAt = new \DateTime('now');
-                     		}
-                     	}
+		$this->imageFile = $imageFile;
+		if ( $imageFile ) {
+			$this->updatedAt = new \DateTime( 'now' );
+		}
+	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getUpdatedAt() {
-                     		return $this->updatedAt;
-                     	}
+		return $this->updatedAt;
+	}
 
 	/**
 	 * @param mixed $updatedAt
@@ -174,35 +167,30 @@ class Ingredient
 	 * @return Ingredient
 	 */
 	public function setUpdatedAt( $updatedAt ) {
-                     		$this->updatedAt = $updatedAt;
+		$this->updatedAt = $updatedAt;
 
-                     		return $this;
-                     	}
+		return $this;
+	}
 
 
+	public function getSubCategory(): ?SubCategory {
+		return $this->subCategory;
+	}
 
-	public function getSubCategory(): ?SubCategory
-                         {
-                             return $this->subCategory;
-                         }
+	public function setSubCategory( ?SubCategory $subCategory ): self {
+		$this->subCategory = $subCategory;
 
-    public function setSubCategory(?SubCategory $subCategory): self
-    {
-        $this->subCategory = $subCategory;
+		return $this;
+	}
 
-        return $this;
-    }
+	public function getIsActive(): ?bool {
+		return $this->is_active;
+	}
 
-    public function getIsActive(): ?bool
-    {
-        return $this->is_active;
-    }
+	public function setIsActive( bool $is_active ): self {
+		$this->is_active = $is_active;
 
-    public function setIsActive(bool $is_active): self
-    {
-        $this->is_active = $is_active;
-
-        return $this;
-    }
+		return $this;
+	}
 
 }

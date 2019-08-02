@@ -1,0 +1,1471 @@
+{
+  "error": {
+    "code": 500,
+    "message": "Internal Server Error",
+    "exception": [
+      {
+        "message": "A circular reference has been detected when serializing the object of class \"Proxies\\__CG__\\App\\Entity\\Base\" (configured limit: 1)",
+        "class": "Symfony\\Component\\Serializer\\Exception\\CircularReferenceException",
+        "trace": [
+          {
+            "namespace": "",
+            "short_class": "",
+            "class": "",
+            "type": "",
+            "function": "",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractNormalizer.php",
+            "line": 332,
+            "args": []
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractNormalizer",
+            "type": "->",
+            "function": "handleCircularReference",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 157,
+            "args": [
+              [
+                "object",
+                "Proxies\\__CG__\\App\\Entity\\Base"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038992e2000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "Proxies\\__CG__\\App\\Entity\\Base"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038992e2000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 206,
+            "args": [
+              [
+                "object",
+                "Proxies\\__CG__\\App\\Entity\\Base"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cb6000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038992e2000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Salade"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cb6000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038992e2000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 162,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Salade"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cb6000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 206,
+            "args": [
+              [
+                "object",
+                "Doctrine\\ORM\\PersistentCollection"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cb6000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "Proxies\\__CG__\\App\\Entity\\Base"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cb6000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 206,
+            "args": [
+              [
+                "object",
+                "Proxies\\__CG__\\App\\Entity\\Base"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Salade"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "0000000003899cd7000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 162,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Salade"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 206,
+            "args": [
+              [
+                "object",
+                "Doctrine\\ORM\\PersistentCollection"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Billing"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ],
+                      "00000000038998c8000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 162,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Billing"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Normalizer\\AbstractObjectNormalizer.php",
+            "line": 206,
+            "args": [
+              [
+                "object",
+                "Doctrine\\ORM\\PersistentCollection"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer\\Normalizer",
+            "short_class": "AbstractObjectNormalizer",
+            "class": "Symfony\\Component\\Serializer\\Normalizer\\AbstractObjectNormalizer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 152,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Panini"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ],
+                  "cache_key": [
+                    "string",
+                    "28621e2a39cc8aef56a331101d28266d"
+                  ],
+                  "circular_reference_limit_counters": [
+                    "array",
+                    {
+                      "0000000003899813000000000bd8b291": [
+                        "integer",
+                        1
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 162,
+            "args": [
+              [
+                "object",
+                "App\\Entity\\Panini"
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "normalize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\serializer\\Serializer.php",
+            "line": 125,
+            "args": [
+              [
+                "array",
+                [
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ]
+                ]
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\Serializer",
+            "short_class": "Serializer",
+            "class": "Symfony\\Component\\Serializer\\Serializer",
+            "type": "->",
+            "function": "serialize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\friendsofsymfony\\rest-bundle\\Serializer\\SymfonySerializerAdapter.php",
+            "line": 39,
+            "args": [
+              [
+                "array",
+                [
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ]
+                ]
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "array",
+                {
+                  "template_data": [
+                    "array",
+                    []
+                  ],
+                  "version": [
+                    "null",
+                    null
+                  ],
+                  "maxDepth": [
+                    "null",
+                    null
+                  ],
+                  "enable_max_depth": [
+                    "null",
+                    null
+                  ],
+                  "serializeNull": [
+                    "boolean",
+                    false
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "namespace": "FOS\\RestBundle\\Serializer",
+            "short_class": "SymfonySerializerAdapter",
+            "class": "FOS\\RestBundle\\Serializer\\SymfonySerializerAdapter",
+            "type": "->",
+            "function": "serialize",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\friendsofsymfony\\rest-bundle\\View\\ViewHandler.php",
+            "line": 463,
+            "args": [
+              [
+                "array",
+                [
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ],
+                  [
+                    "object",
+                    "App\\Entity\\Panini"
+                  ]
+                ]
+              ],
+              [
+                "string",
+                "json"
+              ],
+              [
+                "object",
+                "FOS\\RestBundle\\Context\\Context"
+              ]
+            ]
+          },
+          {
+            "namespace": "FOS\\RestBundle\\View",
+            "short_class": "ViewHandler",
+            "class": "FOS\\RestBundle\\View\\ViewHandler",
+            "type": "->",
+            "function": "initResponse",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\friendsofsymfony\\rest-bundle\\View\\ViewHandler.php",
+            "line": 426,
+            "args": [
+              [
+                "object",
+                "FOS\\RestBundle\\View\\View"
+              ],
+              [
+                "string",
+                "json"
+              ]
+            ]
+          },
+          {
+            "namespace": "FOS\\RestBundle\\View",
+            "short_class": "ViewHandler",
+            "class": "FOS\\RestBundle\\View\\ViewHandler",
+            "type": "->",
+            "function": "createResponse",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\friendsofsymfony\\rest-bundle\\View\\ViewHandler.php",
+            "line": 310,
+            "args": [
+              [
+                "object",
+                "FOS\\RestBundle\\View\\View"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpFoundation\\Request"
+              ],
+              [
+                "string",
+                "json"
+              ]
+            ]
+          },
+          {
+            "namespace": "FOS\\RestBundle\\View",
+            "short_class": "ViewHandler",
+            "class": "FOS\\RestBundle\\View\\ViewHandler",
+            "type": "->",
+            "function": "handle",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\friendsofsymfony\\rest-bundle\\EventListener\\ViewResponseListener.php",
+            "line": 132,
+            "args": [
+              [
+                "object",
+                "FOS\\RestBundle\\View\\View"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpFoundation\\Request"
+              ]
+            ]
+          },
+          {
+            "namespace": "FOS\\RestBundle\\EventListener",
+            "short_class": "ViewResponseListener",
+            "class": "FOS\\RestBundle\\EventListener\\ViewResponseListener",
+            "type": "->",
+            "function": "onKernelView",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\event-dispatcher\\Debug\\WrappedListener.php",
+            "line": 126,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ],
+              [
+                "string",
+                "kernel.view"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\EventDispatcher\\Debug",
+            "short_class": "WrappedListener",
+            "class": "Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener",
+            "type": "->",
+            "function": "__invoke",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\event-dispatcher\\EventDispatcher.php",
+            "line": 258,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ],
+              [
+                "string",
+                "kernel.view"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Debug\\TraceableEventDispatcher"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\EventDispatcher",
+            "short_class": "EventDispatcher",
+            "class": "Symfony\\Component\\EventDispatcher\\EventDispatcher",
+            "type": "->",
+            "function": "doDispatch",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\event-dispatcher\\EventDispatcher.php",
+            "line": 233,
+            "args": [
+              [
+                "array",
+                [
+                  [
+                    "object",
+                    "Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener"
+                  ],
+                  [
+                    "object",
+                    "Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener"
+                  ]
+                ]
+              ],
+              [
+                "string",
+                "kernel.view"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\EventDispatcher",
+            "short_class": "EventDispatcher",
+            "class": "Symfony\\Component\\EventDispatcher\\EventDispatcher",
+            "type": "->",
+            "function": "callListeners",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\event-dispatcher\\EventDispatcher.php",
+            "line": 73,
+            "args": [
+              [
+                "array",
+                [
+                  [
+                    "object",
+                    "Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener"
+                  ],
+                  [
+                    "object",
+                    "Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener"
+                  ]
+                ]
+              ],
+              [
+                "string",
+                "kernel.view"
+              ],
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\EventDispatcher",
+            "short_class": "EventDispatcher",
+            "class": "Symfony\\Component\\EventDispatcher\\EventDispatcher",
+            "type": "->",
+            "function": "dispatch",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\event-dispatcher\\Debug\\TraceableEventDispatcher.php",
+            "line": 168,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ],
+              [
+                "string",
+                "kernel.view"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\EventDispatcher\\Debug",
+            "short_class": "TraceableEventDispatcher",
+            "class": "Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcher",
+            "type": "->",
+            "function": "dispatch",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\http-kernel\\HttpKernel.php",
+            "line": 156,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpKernel\\Event\\ViewEvent"
+              ],
+              [
+                "string",
+                "kernel.view"
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\HttpKernel",
+            "short_class": "HttpKernel",
+            "class": "Symfony\\Component\\HttpKernel\\HttpKernel",
+            "type": "->",
+            "function": "handleRaw",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\http-kernel\\HttpKernel.php",
+            "line": 68,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpFoundation\\Request"
+              ],
+              [
+                "integer",
+                1
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\HttpKernel",
+            "short_class": "HttpKernel",
+            "class": "Symfony\\Component\\HttpKernel\\HttpKernel",
+            "type": "->",
+            "function": "handle",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\vendor\\symfony\\http-kernel\\Kernel.php",
+            "line": 198,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpFoundation\\Request"
+              ],
+              [
+                "integer",
+                1
+              ],
+              [
+                "boolean",
+                true
+              ]
+            ]
+          },
+          {
+            "namespace": "Symfony\\Component\\HttpKernel",
+            "short_class": "Kernel",
+            "class": "Symfony\\Component\\HttpKernel\\Kernel",
+            "type": "->",
+            "function": "handle",
+            "file": "E:\\projets\\symfony\\sweet_and_co\\public\\index.php",
+            "line": 25,
+            "args": [
+              [
+                "object",
+                "Symfony\\Component\\HttpFoundation\\Request"
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

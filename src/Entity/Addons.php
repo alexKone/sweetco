@@ -10,92 +10,80 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\AddonsRepository")
  */
-class Addons
-{
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+class Addons {
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 */
+	private $id;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Base", inversedBy="addons", cascade={"persist"})
-     * @Groups({"billing"})
-     * @ApiSubresource(maxDepth=6)
-     */
-    private $bases;
+	/**
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Base", inversedBy="addons", cascade={"persist"})
+	 * @Groups({"billing"})
+	 */
+	private $bases;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="addons", cascade={"persist"})
-     * @Groups({"billing"})
-     * @ApiSubresource(maxDepth=6)
-     */
-    private $ingredients;
+	/**
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="addons", cascade={"persist"})
+	 * @Groups({"billing"})
+	 */
+	private $ingredients;
 
-    public function __construct()
-    {
-        $this->bases = new ArrayCollection();
-        $this->ingredients = new ArrayCollection();
-    }
+	public function __construct() {
+		$this->bases       = new ArrayCollection();
+		$this->ingredients = new ArrayCollection();
+	}
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	public function getId(): ?int {
+		return $this->id;
+	}
 
-    /**
-     * @return Collection|Base[]
-     */
-    public function getBases(): Collection
-    {
-        return $this->bases;
-    }
+	/**
+	 * @return Collection|Base[]
+	 */
+	public function getBases(): Collection {
+		return $this->bases;
+	}
 
-    public function addBasis(Base $basis): self
-    {
-        if (!$this->bases->contains($basis)) {
-            $this->bases[] = $basis;
-        }
+	public function addBasis( Base $basis ): self {
+		if ( ! $this->bases->contains( $basis ) ) {
+			$this->bases[] = $basis;
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeBasis(Base $basis): self
-    {
-        if ($this->bases->contains($basis)) {
-            $this->bases->removeElement($basis);
-        }
+	public function removeBasis( Base $basis ): self {
+		if ( $this->bases->contains( $basis ) ) {
+			$this->bases->removeElement( $basis );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    /**
-     * @return Collection|Ingredient[]
-     */
-    public function getIngredients(): Collection
-    {
-        return $this->ingredients;
-    }
+	/**
+	 * @return Collection|Ingredient[]
+	 */
+	public function getIngredients(): Collection {
+		return $this->ingredients;
+	}
 
-    public function addIngredient(Ingredient $ingredient): self
-    {
-        if (!$this->ingredients->contains($ingredient)) {
-            $this->ingredients[] = $ingredient;
-        }
+	public function addIngredient( Ingredient $ingredient ): self {
+		if ( ! $this->ingredients->contains( $ingredient ) ) {
+			$this->ingredients[] = $ingredient;
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeIngredient(Ingredient $ingredient): self
-    {
-        if ($this->ingredients->contains($ingredient)) {
-            $this->ingredients->removeElement($ingredient);
-        }
+	public function removeIngredient( Ingredient $ingredient ): self {
+		if ( $this->ingredients->contains( $ingredient ) ) {
+			$this->ingredients->removeElement( $ingredient );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 }

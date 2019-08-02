@@ -11,13 +11,12 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 /**
- * @ApiResource(normalizationContext={"groups"="billing"}, forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\BillingRepository")
  */
 class Billing {
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
@@ -26,112 +25,112 @@ class Billing {
 
 	/**
 	 * @var string
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", name="first_name")
 	 */
 	private $first_name;
 
 	/**
 	 * @var string
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", name="last_name")
 	 */
 	private $last_name;
 
 	/**
 	 * @var string
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", name="phone_number")
 	 */
 	private $phone_number;
 
 	/**
 	 * @var string
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", name="email")
 	 */
 	private $email;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="billing", cascade={"persist", "remove"})
 	 */
 	private $salade;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Formule", inversedBy="billings")
 	 */
 	private $formules;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $paymentMethod;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="datetime")
 	 */
 	private $createdAt;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="float")
 	 */
 	private $totalPrice;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="text", nullable=true)
 	 */
 	private $billingAddress;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $billingCity;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $billingZipcode;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $deliveryMethod;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $pickupHour;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Boisson", inversedBy="billings")
 	 */
 	private $boissons;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Dessert", inversedBy="billings")
 	 */
 	private $dessert;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Bagel", inversedBy="billings")
 	 */
 	private $bagels;
 
 	/**
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Panini", inversedBy="billings")
 	 */
 	private $paninis;

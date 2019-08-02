@@ -35,17 +35,17 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
-const baseElts = document.querySelectorAll('.base .content__items>ul>li');
-const sauceElts = document.querySelectorAll('.sauce .content__items>ul>li');
-const boissonElts = document.querySelectorAll('.boisson .content__items>ul>li');
-const dessertElts = document.querySelectorAll('.dessert .content__items>ul>li');
-const ingredientElts = document.querySelectorAll('.ingredients .content__items li');
+const baseElts = document.querySelectorAll('.base .content__items>ul>li') || null;
+const sauceElts = document.querySelectorAll('.sauce .content__items>ul>li') || null;
+const boissonElts = document.querySelectorAll('.boisson .content__items>ul>li') || null;
+const dessertElts = document.querySelectorAll('.dessert .content__items>ul>li') || null;
+const ingredientElts = document.querySelectorAll('.ingredients .content__items li') || null;
 
 addClass(baseElts, '.ingredients');
 addClass(sauceElts, '');
 addClass(boissonElts, '');
 addClass(dessertElts, '');
-addClass(document.querySelectorAll('#opt-base>ul>li'), '')
+// addClass(document.querySelectorAll('#opt-base>ul>li'), '');
 
 
 let nbIngredients = Number(document.querySelector('input[name="details"]').getAttribute('data-ingredients'));
@@ -55,57 +55,40 @@ let arr = [];
 
 console.log(nbIngredients);
 
-// ingredientElts.forEach(ingredient => ingredient.addEventListener('click', evt => {
-//   console.log(evt.target)
-//   ingredient.classList.contains('is-active') ? ingredient.classList.remove('is-active') : ingredient.classList.remove('is-active')
-// }))
-inputElts.forEach(elt => elt.addEventListener('change', evt => addClassInItem(evt, nbIngredients, inputElts)))
-
-// inputElts.forEach(elt => elt.addEventListener('change', evt => {
-//   if (evt.path[2].classList.contains('is-active')) {
-//       evt.path[2].classList.remove('is-active');
-//   } else {
-//     evt.path[2].classList.add('is-active')
-//   }
-//   // console.log('evt', evt.path[2].classList.contains('is-active'));
-//   arr = [];
-//   for (let i = 0; i < inputElts.length; i++) {
-//     inputElts[i].checked ? arr = [...arr, inputElts[i].checked] : '';
-//   }
-//   count = arr.length;
-//   if (count === nbIngredients) {
-//     console.log('le conpte y est');
-//     inputElts.forEach(element => {
-//       console.log(element)
-//       if(!element.checked) {
-//         element.setAttribute('disabled', 'disabled')
-//       }
-//     })
-//     smoothScroll('.sauce', 1000)
-//   }
-//   if (count < nbIngredients) {
-//     inputElts.forEach(i => {
-//       if (i.getAttribute('disabled', 'disabled')) {
-//         i.removeAttribute('disabled');
-//       }
-//     })
-//   }
-// }));
-
-
-const resultElt = document.getElementById('result-order');
-const btnBase = document.getElementById('js-base');
-const btnIngredients = document.getElementById('js-ingredients');
-btnBase.addEventListener('click', evt => {
-  document.getElementById('base-tmpl').style.display = 'block';
-  document.getElementById('ingredients-tmpl').style.display = 'none';
-});
-btnIngredients.addEventListener('click', evt => {
-  document.getElementById('base-tmpl').style.display = 'none';
-  document.getElementById('ingredients-tmpl').style.display = 'block';
-});
-// const base =
-
+ingredientElts.forEach(ingredient => ingredient.addEventListener('click', evt => {
+  console.log(evt.target)
+  ingredient.classList.contains('is-active') ? ingredient.classList.remove('is-active') : ingredient.classList.remove('is-active')
+}))
+inputElts.forEach(elt => elt.addEventListener('change', evt => {
+  if (evt.path[2].classList.contains('is-active')) {
+      evt.path[2].classList.remove('is-active');
+  } else {
+    evt.path[2].classList.add('is-active')
+  }
+  // console.log('evt', evt.path[2].classList.contains('is-active'));
+  arr = [];
+  for (let i = 0; i < inputElts.length; i++) {
+    inputElts[i].checked ? arr = [...arr, inputElts[i].checked] : '';
+  }
+  count = arr.length;
+  if (count === nbIngredients) {
+    console.log('le conpte y est');
+    inputElts.forEach(element => {
+      console.log(element)
+      if(!element.checked) {
+        element.setAttribute('disabled', 'disabled')
+      }
+    })
+    smoothScroll('.sauce', 1000)
+  }
+  if (count < nbIngredients) {
+    inputElts.forEach(i => {
+      if (i.getAttribute('disabled', 'disabled')) {
+        i.removeAttribute('disabled');
+      }
+    })
+  }
+}));
 function quantityInput(element, options) {
   const spinner = element;
 

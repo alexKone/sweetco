@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -av u85590865@home633566534.1and1-data.host:~/sweetandco/app --include=.env --include=public/.htaccess --include=public/build --include=vendor --exclude-from=.gitignore --exclude=".*"

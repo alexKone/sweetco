@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Fruits frais de saison",
+    "slug": "fruits-frais-de-saison",
+    "price": 3.9,
+    "filename": "e1020ced58956dc4b82fd641cdccd12a677ac35b.jpg",
+    "updatedAt": "2019-07-24T15:16:24+02:00",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Yaourt Mamie nova",
+    "slug": "yaourt-mamie-nova-2",
+    "price": 3.9,
+    "filename": "3b898e7b72ac1fab8bdab0fcd9dd63e7d9440e59.jpg",
+    "updatedAt": "2019-07-24T15:16:52+02:00",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "Tarte aux pommes",
+    "slug": "tarte-aux-pommes",
+    "price": 3.9,
+    "filename": "0f76f1e5b949497d5c45a79bc6eb1febab6f6c02.jpg",
+    "updatedAt": "2019-07-24T15:15:25+02:00",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "Tiramisu",
+    "slug": "tiramisu-5",
+    "price": 3.9,
+    "filename": "ee8ceb358ec5bcd4b156f5992c5a073f0bc7f8eb.jpg",
+    "updatedAt": "2019-07-24T15:17:15+02:00",
+    "is_active": true
+  }
+]

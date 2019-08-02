@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Dinde",
+    "slug": "dinde",
+    "short_description": "Dinde fumee, roquette, mozzarella, tomate",
+    "price": 7.9,
+    "filename": null,
+    "updatedAt": null,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Fromage",
+    "slug": "fromage",
+    "short_description": "Mozzarella, chevre, emmental",
+    "price": 7.9,
+    "filename": null,
+    "updatedAt": null,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "Poulet",
+    "slug": "poulet",
+    "short_description": "Poulet, roquette, mozzarella, tomate",
+    "price": 7.9,
+    "filename": null,
+    "updatedAt": null,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "Thon",
+    "slug": "thon",
+    "short_description": "Thon, roquette, mozzarella, tomate",
+    "price": 7.9,
+    "filename": null,
+    "updatedAt": null,
+    "is_active": true
+  }
+]

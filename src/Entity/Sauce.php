@@ -11,28 +11,27 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ApiResource(forceEager=false)
  * @ORM\Entity(repositoryClass="App\Repository\SauceRepository")
  * @Vich\Uploadable()
  */
-class Sauce
-{
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+class Sauce {
+	/**
+	 * @ORM\Id()
+	 * @ORM\GeneratedValue()
+	 * @ORM\Column(type="integer")
+	 * @Groups({"sauce:read"})
+	 */
+	private $id;
 
-    /**
-     * @Groups({"billing"})
-     * @ORM\Column(type="string", length=255)
-     */
-    private $name;
+	/**
+	 * @Groups({"sauce:read", "billing", "salade:post"})
+	 * @ORM\Column(type="string", length=255)
+	 */
+	private $name;
 
 	/**
 	 * @var string|null
-	 * @Groups({"billing"})
+	 * @Groups({"sauce:read", "billing", "salade:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $filename;
@@ -46,56 +45,52 @@ class Sauce
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"billing"})
+	 * @Groups({"sauce:read", "billing", "salade:post"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
-	 * @Groups({"billing"})
+	 * @Groups({"sauce:read", "billing", "salade:post"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
 
-    /**
-     * @Groups({"billing"})
-     * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="sauce")
-     */
-    private $salades;
+	/**
+	 * @Groups({"billing"})
+	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="sauce")
+	 */
+	private $salades;
 
-    public function __construct()
-    {
-        $this->salades = new ArrayCollection();
-    }
+	public function __construct() {
+		$this->salades = new ArrayCollection();
+	}
 
-	public function __toString(  ) {
-      		return $this->name;
-      	}
+	public function __toString() {
+		return $this->name;
+	}
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	public function getId(): ?int {
+		return $this->id;
+	}
 
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
+	public function getName(): ?string {
+		return $this->name;
+	}
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
+	public function setName( string $name ): self {
+		$this->name = $name;
 
-        return $this;
-    }
+		return $this;
+	}
 
 	/**
 	 * @return string|null
 	 */
 	public function getFilename(): ?string {
-      		return $this->filename;
-      	}
+		return $this->filename;
+	}
 
 	/**
 	 * @param string|null $filename
@@ -103,17 +98,17 @@ class Sauce
 	 * @return Sauce
 	 */
 	public function setFilename( ?string $filename ) {
-      		$this->filename = $filename;
+		$this->filename = $filename;
 
-      		return $this;
-      	}
+		return $this;
+	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-      		return $this->imageFile;
-      	}
+		return $this->imageFile;
+	}
 
 	/**
 	 * @param File|null $imageFile
@@ -122,18 +117,18 @@ class Sauce
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile = null ): void {
-      		$this->imageFile = $imageFile;
-      		if ($imageFile) {
-      			$this->updatedAt = new \DateTime('now');
-      		}
-      	}
+		$this->imageFile = $imageFile;
+		if ( $imageFile ) {
+			$this->updatedAt = new \DateTime( 'now' );
+		}
+	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getUpdatedAt() {
-      		return $this->updatedAt;
-      	}
+		return $this->updatedAt;
+	}
 
 	/**
 	 * @param mixed $updatedAt
@@ -141,51 +136,46 @@ class Sauce
 	 * @return Sauce
 	 */
 	public function setUpdatedAt( $updatedAt ) {
-      		$this->updatedAt = $updatedAt;
+		$this->updatedAt = $updatedAt;
 
-      		return $this;
-      	}
+		return $this;
+	}
 
 	/**
-     * @return Collection|Salade[]
-     */
-    public function getSalades(): Collection
-    {
-        return $this->salades;
-    }
+	 * @return Collection|Salade[]
+	 */
+	public function getSalades(): Collection {
+		return $this->salades;
+	}
 
-    public function addSalade(Salade $salade): self
-    {
-        if (!$this->salades->contains($salade)) {
-            $this->salades[] = $salade;
-            $salade->setSauce($this);
-        }
+	public function addSalade( Salade $salade ): self {
+		if ( ! $this->salades->contains( $salade ) ) {
+			$this->salades[] = $salade;
+			$salade->setSauce( $this );
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function removeSalade(Salade $salade): self
-    {
-        if ($this->salades->contains($salade)) {
-            $this->salades->removeElement($salade);
-            // set the owning side to null (unless already changed)
-            if ($salade->getSauce() === $this) {
-                $salade->setSauce(null);
-            }
-        }
+	public function removeSalade( Salade $salade ): self {
+		if ( $this->salades->contains( $salade ) ) {
+			$this->salades->removeElement( $salade );
+			// set the owning side to null (unless already changed)
+			if ( $salade->getSauce() === $this ) {
+				$salade->setSauce( null );
+			}
+		}
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function getIsActive(): ?bool
-    {
-        return $this->is_active;
-    }
+	public function getIsActive(): ?bool {
+		return $this->is_active;
+	}
 
-    public function setIsActive(bool $is_active): self
-    {
-        $this->is_active = $is_active;
+	public function setIsActive( bool $is_active ): self {
+		$this->is_active = $is_active;
 
-        return $this;
-    }
+		return $this;
+	}
 }

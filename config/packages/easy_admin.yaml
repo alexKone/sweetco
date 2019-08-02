@@ -1,24 +1,36 @@
 easy_admin:
+    site_name: '<h2>Sweet & Co</h2><span>Salad bar</span>'
+    design:
+        brand_color: '#1ABC9C'
+        menu:
+            - label: 'Les Produits'
+              children: ['Bagel', 'Panini', 'Boisson', 'Dessert']
+
+            - label: 'Elements de salade'
+              children: ['Base', 'Ingredient', 'Sauce', 'Bread']
+
+            - label: 'Les Commandes'
+              icon: 'shopping-basket'
+              children: ['Billing']
+
+            - label: 'Les Formules'
+              children: ['Formule']
     formats:
         date:     'd/m/Y'
         time:     'H:i'
         datetime: 'd/m/Y H:i:s'
     list:
         actions: ['show']
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Salade
-#        - App\Entity\Base
-#        - App\Entity\Ingredient
-#        - App\Entity\Sauce
-    site_name: 'Sweet & CO.'
+
+
     entities:
         Salade:
             class: App\Entity\Salade
+
         Billing:
             class: App\Entity\Billing
-            templates:
-                show: 'admin/billing/show.html.twig'
+#            templates:
+#                show: 'admin/billing/show.html.twig'
             list:
                 fields:
                     - { property: 'id' }
@@ -29,7 +41,6 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
                     - { property: 'name' }
                     - { property: 'description' }
                     - { property: 'short_description' }
@@ -49,8 +60,6 @@ easy_admin:
                     - { property: 'has_panini' }
                     - { property: 'has_boisson' }
                     - { property: 'has_dessert' }
-                    - { property: 'imageFile', type: 'vich_image' }
-
 
 
         Base:
@@ -59,8 +68,8 @@ easy_admin:
                 fields:
                     - { property: 'id' }
                     - { property: 'is_active' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
                     - { property: 'name' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
             form:
                 fields:
                     - { property: 'name' }
@@ -72,9 +81,10 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
+                    - { property: 'is_active' }
                     - { property: 'name' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
                     - { property: 'subCategory' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
             form:
                 fields:
 #                    - { property: 'id' }
@@ -88,7 +98,7 @@ easy_admin:
                 fields:
                     - { property: 'id' }
                     - { property: 'name' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
                     - { property: 'is_active' }
             form:
                 fields:
@@ -97,12 +107,27 @@ easy_admin:
                     - { property: 'is_active' }
                     - { property: 'imageFile', type: 'vich_image' }
 
-
+        Bread:
+            class: App\Entity\Bread
+            form:
+                fields:
+                    - { property: 'name' }
+                    - { property: 'short_description' }
+                    - { property: 'price' }
+                    - { property: 'is_active' }
+                    - { property: 'imageFile', type: 'vich_image' }
+            list:
+                fields:
+                    - { property: 'id' }
+                    - { property: 'is_active' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
+                    - { property: 'name' }
+                    - { property: 'price' }
 
         SubCategory:
             class: App\Entity\SubCategory
 
-        Bagels:
+        Bagel:
             class: App\Entity\Bagel
             form:
                 fields:
@@ -114,11 +139,11 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
-                    - { property: 'name' }
                     - { property: 'is_active' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
+                    - { property: 'name' }
                     - { property: 'price' }
-        Paninis:
+        Panini:
             class: App\Entity\Panini
             form:
                 fields:
@@ -130,10 +155,10 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
-                    - { property: 'name' }
                     - { property: 'is_active' }
-        Boissons:
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
+                    - { property: 'name' }
+        Boisson:
             class: App\Entity\Boisson
             form:
                 fields:
@@ -144,9 +169,9 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
-                    - { property: 'name' }
                     - { property: 'is_active' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
+                    - { property: 'name' }
         Dessert:
             class: App\Entity\Dessert
             form:
@@ -158,9 +183,9 @@ easy_admin:
             list:
                 fields:
                     - { property: 'id' }
-                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%' }
-                    - { property: 'name' }
                     - { property: 'is_active' }
+                    - { property: 'filename', type: 'image', base_path: '%app.path.product_images%', label: 'image' }
+                    - { property: 'name' }
 
         Customer:
             class: App\Entity\Customer

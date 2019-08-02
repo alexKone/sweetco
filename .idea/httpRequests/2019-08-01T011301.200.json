@@ -1,0 +1,65 @@
+[
+  {
+    "id": 9,
+    "name": "Fusilli",
+    "filename": "2dcb3f3d570c04a0d585abcab85cdfda66c87a65.png",
+    "updatedAt": "2019-07-16T18:24:39+02:00",
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "Quinoa",
+    "filename": "043ec3dee9e4c3671d0f920bc87939be13ae8091.png",
+    "updatedAt": "2019-07-16T18:24:53+02:00",
+    "is_active": true
+  },
+  {
+    "id": 11,
+    "name": "Lentilles",
+    "filename": "0ddc284690227f6dbe7819831b2122bb854439ca.png",
+    "updatedAt": "2019-07-16T18:25:09+02:00",
+    "is_active": true
+  },
+  {
+    "id": 12,
+    "name": "Riz Basmati",
+    "filename": "f1bd9a2dce8c305bac9fa80dfa84f6873b5908c3.png",
+    "updatedAt": "2019-07-16T18:25:51+02:00",
+    "is_active": true
+  },
+  {
+    "id": 13,
+    "name": "Pousses d'epinard",
+    "filename": "fc163b10a5949e3467860b73fecf8d2d93b6db60.png",
+    "updatedAt": "2019-07-16T18:26:13+02:00",
+    "is_active": true
+  },
+  {
+    "id": 14,
+    "name": "Laitue Iceberg",
+    "filename": "433a174eb1726dc388ed31164a733d9ae17aacf4.png",
+    "updatedAt": "2019-07-16T18:26:34+02:00",
+    "is_active": true
+  },
+  {
+    "id": 15,
+    "name": "Roquette",
+    "filename": "ce3ddd2ed3e0a5d52a4317cdd845cc2cc46d9a0c.png",
+    "updatedAt": "2019-07-16T18:27:02+02:00",
+    "is_active": true
+  },
+  {
+    "id": 16,
+    "name": "Mâche",
+    "filename": "7dffe6d3bb7fd6a39c7586aa2c483a1efc26361a.png",
+    "updatedAt": "2019-07-16T18:27:22+02:00",
+    "is_active": true
+  },
+  {
+    "id": 17,
+    "name": "Mesclun",
+    "filename": "b4d635de6f33d3e3d5fcb7e2e0a3f70cc10a88c9.png",
+    "updatedAt": "2019-07-16T18:27:40+02:00",
+    "is_active": true
+  }
+]
