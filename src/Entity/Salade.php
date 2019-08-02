@@ -6,7 +6,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
-use App\Controller\Api\CreateSalade;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SaladeRepository")
@@ -21,19 +20,19 @@ class Salade {
 	private $id;
 
 	/**
-	 * @Groups({"billing:read", "salade:read",  "salade:post"})
+	 * @Groups({"billing:read", "salade:read",  "salade:post", "billing:post"})
 	 * @ORM\ManyToOne(targetEntity="App\Entity\Base", inversedBy="salades", cascade={"persist"})
 	 */
 	private $base;
 
 	/**
-	 * @Groups({"billing:read", "salade:read", "salade:post"})
+	 * @Groups({"billing:read", "salade:read", "salade:post", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="salades", cascade={"persist"})
 	 */
 	private $ingredients;
 
 	/**
-	 * @Groups({"billing:read", "salade:read", "salade:post"})
+	 * @Groups({"billing:read", "salade:read", "salade:post", "billing:post"})
 	 * @ORM\ManyToOne(targetEntity="App\Entity\Sauce", inversedBy="salades", cascade={"persist"})
 	 */
 	private $sauce;
@@ -45,6 +44,7 @@ class Salade {
 	private $createdAt;
 
 	/**
+	 * @Groups({"salade:post"})
 	 * @ORM\ManyToOne(targetEntity="App\Entity\Formule", inversedBy="salade", cascade={"persist"})
 	 */
 	private $formule;
@@ -55,16 +55,17 @@ class Salade {
 	private $billing;
 
 	/**
-	 * @Groups({"billing:read", "salade:post"})
+	 * @Groups({"billing:read", "salade:post", "billing:post"})
 	 * @ORM\OneToOne(targetEntity="App\Entity\Addons", cascade={"persist", "remove"})
 	 */
 	private $addons;
 
 	/**
-	 * @Groups({"salade:read", "salade:post"})
+	 * @Groups({"salade:read", "salade:post", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Bread", mappedBy="salades")
 	 */
 	private $breads;
+
 
 	public function __construct() {
 		$this->ingredients = new ArrayCollection();
@@ -187,4 +188,6 @@ class Salade {
 
 		return $this;
 	}
+
+
 }

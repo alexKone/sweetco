@@ -26,14 +26,14 @@ class Formule {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"formule:read"})
+	 * @Groups({"formule:read", "salade:post", "billing:post"})
 	 */
 	private $id;
 
 	/**
 	 * @ORM\Column(type="string", length=255)
 	 * @ORM\OrderBy({"order"=""})
-	 * @Groups({"formule:read", "billing:read"})
+	 * @Groups({"formule:read", "billing:read", "salade:post",  "billing:post"})
 	 */
 	private $name;
 
@@ -69,7 +69,7 @@ class Formule {
 
 	/**
 	 * @ORM\Column(type="boolean")
-	 * @Groups({"formule:read", "billing:read"})
+	 * @Groups({"formule:read", "billing:read",})
 	 */
 	private $has_bagel = false;
 
@@ -132,7 +132,7 @@ class Formule {
 	private $has_dessert = false;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read",  "billing:post"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="formule")
 	 */
 	private $salades;
@@ -156,108 +156,114 @@ class Formule {
 	 */
 	private $has_salade = false;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\FormuleContainer", mappedBy="formule")
+     */
+    private $formuleContainers;
+
 	public function __construct() {
-		$this->createdAt = new \DateTime();
-		$this->orders    = new ArrayCollection();
-		$this->salades   = new ArrayCollection();
-		$this->billings  = new ArrayCollection();
-	}
+               		$this->createdAt = new \DateTime();
+               		$this->orders    = new ArrayCollection();
+               		$this->salades   = new ArrayCollection();
+               		$this->billings  = new ArrayCollection();
+                 $this->formuleContainers = new ArrayCollection();
+               	}
 
 	public function __toString() {
-		return $this->getName();
-	}
+               		return $this->getName();
+               	}
 
 	public function getId(): ?int {
-		return $this->id;
-	}
+               		return $this->id;
+               	}
 
 	public function getName(): ?string {
-		return $this->name;
-	}
+               		return $this->name;
+               	}
 
 	public function setName( string $name ): self {
-		$this->name = $name;
-
-		return $this;
-	}
+               		$this->name = $name;
+               
+               		return $this;
+               	}
 
 	public function getDescription(): ?string {
-		return $this->description;
-	}
+               		return $this->description;
+               	}
 
 	public function setDescription( ?string $description ): self {
-		$this->description = $description;
-
-		return $this;
-	}
+               		$this->description = $description;
+               
+               		return $this;
+               	}
 
 	public function getShortDescription(): ?string {
-		return $this->short_description;
-	}
+               		return $this->short_description;
+               	}
 
 	public function setShortDescription( ?string $short_description ): self {
-		$this->short_description = $short_description;
-
-		return $this;
-	}
+               		$this->short_description = $short_description;
+               
+               		return $this;
+               	}
 
 	public function getLimitBase(): ?int {
-		return $this->limit_base;
-	}
+               		return $this->limit_base;
+               	}
 
 	public function setLimitBase( int $limit_base ): self {
-		$this->limit_base = $limit_base;
-
-		return $this;
-	}
+               		$this->limit_base = $limit_base;
+               
+               		return $this;
+               	}
 
 	public function getLimitIngredient(): ?int {
-		return $this->limit_ingredient;
-	}
+               		return $this->limit_ingredient;
+               	}
 
 	public function setLimitIngredient( int $limit_ingredient ): self {
-		$this->limit_ingredient = $limit_ingredient;
-
-		return $this;
-	}
+               		$this->limit_ingredient = $limit_ingredient;
+               
+               		return $this;
+               	}
 
 	public function getLimitSauce(): ?int {
-		return $this->limit_sauce;
-	}
+               		return $this->limit_sauce;
+               	}
 
 	public function setLimitSauce( int $limit_sauce ): self {
-		$this->limit_sauce = $limit_sauce;
-
-		return $this;
-	}
+               		$this->limit_sauce = $limit_sauce;
+               
+               		return $this;
+               	}
 
 	public function getHasBagel(): ?bool {
-		return $this->has_bagel;
-	}
+               		return $this->has_bagel;
+               	}
 
 	public function setHasBagel( bool $has_bagel ): self {
-		$this->has_bagel = $has_bagel;
-
-		return $this;
-	}
+               		$this->has_bagel = $has_bagel;
+               
+               		return $this;
+               	}
 
 	public function getHasPanini(): ?bool {
-		return $this->has_panini;
-	}
+               		return $this->has_panini;
+               	}
 
 	public function setHasPanini( bool $has_panini ): self {
-		$this->has_panini = $has_panini;
-
-		return $this;
-	}
+               		$this->has_panini = $has_panini;
+               
+               		return $this;
+               	}
 
 
 	/**
 	 * @return string|null
 	 */
 	public function getFormuleFilename(): ?string {
-		return $this->formuleFilename;
-	}
+               		return $this->formuleFilename;
+               	}
 
 	/**
 	 * @param string|null $filename
@@ -265,17 +271,17 @@ class Formule {
 	 * @return Formule
 	 */
 	public function setFormuleFilename( ?string $filename ) {
-		$this->formuleFilename = $filename;
-
-		return $this;
-	}
+               		$this->formuleFilename = $filename;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-		return $this->imageFile;
-	}
+               		return $this->imageFile;
+               	}
 
 	/**
 	 * @param File|null $imageFile
@@ -284,18 +290,18 @@ class Formule {
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile = null ): void {
-		$this->imageFile = $imageFile;
-		if ( $imageFile ) {
-			$this->updatedAt = new \DateTime( 'now' );
-		}
-	}
+               		$this->imageFile = $imageFile;
+               		if ( $imageFile ) {
+               			$this->updatedAt = new \DateTime( 'now' );
+               		}
+               	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getUpdatedAt() {
-		return $this->updatedAt;
-	}
+               		return $this->updatedAt;
+               	}
 
 	/**
 	 * @param mixed $updatedAt
@@ -303,119 +309,150 @@ class Formule {
 	 * @return Formule
 	 */
 	public function setUpdatedAt( $updatedAt ) {
-		$this->updatedAt = $updatedAt;
-
-		return $this;
-	}
+               		$this->updatedAt = $updatedAt;
+               
+               		return $this;
+               	}
 
 	public function getCreatedAt(): ?\DateTimeInterface {
-		return $this->createdAt;
-	}
+               		return $this->createdAt;
+               	}
 
 	public function setCreatedAt( \DateTimeInterface $createdAt ): self {
-		$this->createdAt = $createdAt;
-
-		return $this;
-	}
+               		$this->createdAt = $createdAt;
+               
+               		return $this;
+               	}
 
 	public function getPrice(): ?float {
-		return $this->price;
-	}
+               		return $this->price;
+               	}
 
 	public function setPrice( float $price ): self {
-		$this->price = $price;
-
-		return $this;
-	}
+               		$this->price = $price;
+               
+               		return $this;
+               	}
 
 	public function getSlug(): ?string {
-		return $this->slug;
-	}
+               		return $this->slug;
+               	}
 
 	public function setSlug( ?string $slug ): self {
-		$this->slug = $slug;
-
-		return $this;
-	}
+               		$this->slug = $slug;
+               
+               		return $this;
+               	}
 
 	public function getHasBoisson(): ?bool {
-		return $this->has_boisson;
-	}
+               		return $this->has_boisson;
+               	}
 
 	public function setHasBoisson( ?bool $has_boisson ): self {
-		$this->has_boisson = $has_boisson;
-
-		return $this;
-	}
+               		$this->has_boisson = $has_boisson;
+               
+               		return $this;
+               	}
 
 	public function getHasDessert(): ?bool {
-		return $this->has_dessert;
-	}
+               		return $this->has_dessert;
+               	}
 
 	public function setHasDessert( ?bool $has_dessert ): self {
-		$this->has_dessert = $has_dessert;
-
-		return $this;
-	}
+               		$this->has_dessert = $has_dessert;
+               
+               		return $this;
+               	}
 
 	public function getIsActive(): ?bool {
-		return $this->is_active;
-	}
+               		return $this->is_active;
+               	}
 
 	public function setIsActive( bool $is_active ): self {
-		$this->is_active = $is_active;
-
-		return $this;
-	}
+               		$this->is_active = $is_active;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @return Collection|Salade[]
 	 */
 	public function getSalades(): Collection {
-		return $this->salades;
-	}
+               		return $this->salades;
+               	}
 
 	/**
 	 * @throws \Exception
 	 * @ORM\PreUpdate()
 	 */
 	public function updateDate() {
-		$this->setUpdatedAt( new DateTime() );
-	}
+               		$this->setUpdatedAt( new DateTime() );
+               	}
 
 	/**
 	 * @return Collection|Billing[]
 	 */
 	public function getBillings(): Collection {
-		return $this->billings;
-	}
+               		return $this->billings;
+               	}
 
 	public function addBilling( Billing $billing ): self {
-		if ( ! $this->billings->contains( $billing ) ) {
-			$this->billings[] = $billing;
-			$billing->addFormule( $this );
-		}
-
-		return $this;
-	}
+               		if ( ! $this->billings->contains( $billing ) ) {
+               			$this->billings[] = $billing;
+               			$billing->addFormule( $this );
+               		}
+               
+               		return $this;
+               	}
 
 	public function removeBilling( Billing $billing ): self {
-		if ( $this->billings->contains( $billing ) ) {
-			$this->billings->removeElement( $billing );
-			$billing->removeFormule( $this );
-		}
-
-		return $this;
-	}
+               		if ( $this->billings->contains( $billing ) ) {
+               			$this->billings->removeElement( $billing );
+               			$billing->removeFormule( $this );
+               		}
+               
+               		return $this;
+               	}
 
 	public function getHasSalade(): ?bool {
-		return $this->has_salade;
-	}
+               		return $this->has_salade;
+               	}
 
 	public function setHasSalade( bool $has_salade ): self {
-		$this->has_salade = $has_salade;
+               		$this->has_salade = $has_salade;
+               
+               		return $this;
+               	}
 
-		return $this;
-	}
+    /**
+     * @return Collection|FormuleContainer[]
+     */
+    public function getFormuleContainers(): Collection
+    {
+        return $this->formuleContainers;
+    }
+
+    public function addFormuleContainer(FormuleContainer $formuleContainer): self
+    {
+        if (!$this->formuleContainers->contains($formuleContainer)) {
+            $this->formuleContainers[] = $formuleContainer;
+            $formuleContainer->setFormule($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFormuleContainer(FormuleContainer $formuleContainer): self
+    {
+        if ($this->formuleContainers->contains($formuleContainer)) {
+            $this->formuleContainers->removeElement($formuleContainer);
+            // set the owning side to null (unless already changed)
+            if ($formuleContainer->getFormule() === $this) {
+                $formuleContainer->setFormule(null);
+            }
+        }
+
+        return $this;
+    }
 
 }

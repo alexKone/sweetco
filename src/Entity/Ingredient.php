@@ -20,7 +20,7 @@ class Ingredient {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"ingredient:read"})
+	 * @Groups({"ingredient:read", "salade:post"})
 	 */
 	private $id;
 
@@ -64,7 +64,7 @@ class Ingredient {
 	/**
 	 * @var bool
 	 * @Groups({"ingredient:read", "billing:read", "salade:post"})
-	 * @ORM\Column(type="boolean", nullable=false)
+	 * @ORM\Column(type="boolean", nullable=false)formule
 	 */
 	private $is_active = true;
 

@@ -5,10 +5,7 @@ namespace App\Controller\Api;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Stripe\Error\Card;
-use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class ChargeController extends AbstractFOSRestController
 {
@@ -17,21 +14,8 @@ class ChargeController extends AbstractFOSRestController
 	 * @Rest\Post("/charge")
 	 */
 	public function postChargesAction( Request $request ) {
-//		$httpClient = HttpClient::create();
-//		$response = $httpClient->request('POST', 'https://...', [
-//			'json' => ['param1' => 'value1', '...'],
-//		]);
-
 		\Stripe\Stripe::setApiKey('sk_test_hpOkRt0eanTpgDugo3ikLSGb00oLULJyLi');
-		$token = $request->request->get('token');
-//		return $token;
-//		try {
-//			$customer = \Stripe\Customer::create([
-//				"source" => $request->get('token'),
-//				"description" => "customer example",
-//				"email" => "customer@mail.com"
-//			]);
-
+		try {
 			// Token is created using Checkout or Elements!
 			// Get the payment token ID submitted by the form:
 			$charge = \Stripe\Charge::create([
@@ -43,8 +27,8 @@ class ChargeController extends AbstractFOSRestController
 			]);
 			return $charge;
 
-//		} catch (Card $exception) {
-//			return $exception;
-//		}
+		} catch (Card $exception) {
+			return $exception;
+		}
 	}
 }

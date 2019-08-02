@@ -3,6 +3,7 @@
 namespace App\Controller\Api;
 
 use App\Entity\Billing;
+use App\Entity\Formule;
 use App\Entity\Salade;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -43,31 +44,46 @@ class BillingController extends AbstractFOSRestController
 	 * @Rest\View(serializerGroups={"billing:post"})
 	 * @Rest\Post("")
 	 * @param Request $request
+	 *
+	 * @return Billing
 	 */
 	public function postBillingsAction( Request $request ) {
 		$billing = new Billing();
-//		dump();
-//		die();
-		$salade = $this->getDoctrine()->getRepository(Salade::class)->find($request->get('salade'));
-		dump($salade);
-		die();
 
-		$request->get('first_name');
-		$request->get('last_name');
-		$request->get('phone_number');
-		$request->get('email');
-		$request->get('paymentMethod');
-		$request->get('createdAt');
-		$request->get('totalPrice');
-		$request->get('billingAddress');
-		$request->get('billingCity');
-		$request->get('billingZipcode');
-		$request->get('deliveryMethod');
-		$request->get('pickupHour');
-		$request->get('formules');
-		$request->get('boissons');
-		$request->get('dessert');
-		$request->get('bagels');
-		$request->get('paninis');
+		$body = json_decode($request->getContent(), true);
+
+
+		$billing->setFirstName('Alexandre');
+		$billing->setLastName('Kone');
+		$billing->setPhoneNumber('0608361161');
+		$billing->setEmail('admin@mail.com');
+		$billing->setPaymentMethod('cart');
+		$billing->setTotalPrice(23.58);
+		$billing->setBillingAddress('4 residence des oiseaux');
+		$billing->setBillingZipcode('91380');
+		$billing->setBillingCity('Chilly-Mazarin');
+		$billing->setDeliveryMethod('delivery');
+		$billing->setPickupHour('12');
+
+		foreach ($body['salades'] as $salade) {
+			$saladeElt = $this->getDoctrine()->getRepository(Salade::class)->find($salade);
+			$billing->addSalade($saladeElt);
+		}
+
+		$billing->addFormule($this->getDoctrine()->getRepository(Formule::class)->find(5));
+
+//		switch ($body['product'])
+
+
+		$em = $this->getDoctrine()->getManager();
+		$em->persist($billing);
+		$em->flush();
+
+		return $billing;
+
+//
+//		dump($billing);
+//		die();
+
 	}
 }

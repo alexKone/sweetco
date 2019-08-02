@@ -41,4 +41,13 @@ class FormuleController extends AbstractFOSRestController
 		return $formule;
 
 	}
+
+	/**
+	 * @Rest\View()
+	 * @Rest\Post("/{id}/salades")
+	 * @param Request $request
+	 */
+	public function postFormuleSaladesAction( Request $request ) {
+
+	}
 }

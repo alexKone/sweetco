@@ -16,7 +16,7 @@ use Symfony\Component\Serializer\Annotation\MaxDepth;
 class Billing {
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post", "billing:post"})
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
@@ -25,112 +25,112 @@ class Billing {
 
 	/**
 	 * @var string
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", name="first_name")
 	 */
 	private $first_name;
 
 	/**
 	 * @var string
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", name="last_name")
 	 */
 	private $last_name;
 
 	/**
 	 * @var string
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", name="phone_number")
 	 */
 	private $phone_number;
 
 	/**
 	 * @var string
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", name="email")
 	 */
 	private $email;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="billing", cascade={"persist", "remove"})
 	 */
 	private $salade;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Formule", inversedBy="billings")
 	 */
 	private $formules;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $paymentMethod;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="datetime")
 	 */
 	private $createdAt;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="float")
 	 */
 	private $totalPrice;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="text", nullable=true)
 	 */
 	private $billingAddress;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $billingCity;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $billingZipcode;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $deliveryMethod;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $pickupHour;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Boisson", inversedBy="billings")
 	 */
 	private $boissons;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Dessert", inversedBy="billings")
 	 */
 	private $dessert;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Bagel", inversedBy="billings")
 	 */
 	private $bagels;
 
 	/**
-	 * @Groups({"billing:read"})
+	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Panini", inversedBy="billings")
 	 */
 	private $paninis;
