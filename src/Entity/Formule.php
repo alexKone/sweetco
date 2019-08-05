@@ -26,26 +26,26 @@ class Formule {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"formule:read", "salade:post", "billing:post"})
+	 * @Groups({"formule:read", "salade:post", "billing:post", "formule.container:post"})
 	 */
 	private $id;
 
 	/**
 	 * @ORM\Column(type="string", length=255)
 	 * @ORM\OrderBy({"order"=""})
-	 * @Groups({"formule:read", "billing:read", "salade:post",  "billing:post"})
+	 * @Groups({"formule:read", "billing:read", "salade:post",  "billing:post",  "formule.container:post"})
 	 */
 	private $name;
 
 	/**
 	 * @ORM\Column(type="text", nullable=true)
-	 * @Groups({"formule:read", "billing:read"})
+	 * @Groups({"formule:read", "billing:read",  "formule.container:post"})
 	 */
 	private $description;
 
 	/**
 	 * @ORM\Column(type="string", length=255, nullable=true)
-	 * @Groups({"formule:read", "billing:read"})
+	 * @Groups({"formule:read", "billing:read",  "formule.container:post"})
 	 */
 	private $short_description;
 
@@ -108,7 +108,7 @@ class Formule {
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"formule:read", "billing:read"})
+	 * @Groups({"formule:read", "billing:read",  "formule.container:post"})
 	 */
 	private $price;
 
@@ -183,7 +183,7 @@ class Formule {
 
 	public function setName( string $name ): self {
                		$this->name = $name;
-               
+
                		return $this;
                	}
 
@@ -193,7 +193,7 @@ class Formule {
 
 	public function setDescription( ?string $description ): self {
                		$this->description = $description;
-               
+
                		return $this;
                	}
 
@@ -203,7 +203,7 @@ class Formule {
 
 	public function setShortDescription( ?string $short_description ): self {
                		$this->short_description = $short_description;
-               
+
                		return $this;
                	}
 
@@ -213,7 +213,7 @@ class Formule {
 
 	public function setLimitBase( int $limit_base ): self {
                		$this->limit_base = $limit_base;
-               
+
                		return $this;
                	}
 
@@ -223,7 +223,7 @@ class Formule {
 
 	public function setLimitIngredient( int $limit_ingredient ): self {
                		$this->limit_ingredient = $limit_ingredient;
-               
+
                		return $this;
                	}
 
@@ -233,7 +233,7 @@ class Formule {
 
 	public function setLimitSauce( int $limit_sauce ): self {
                		$this->limit_sauce = $limit_sauce;
-               
+
                		return $this;
                	}
 
@@ -243,7 +243,7 @@ class Formule {
 
 	public function setHasBagel( bool $has_bagel ): self {
                		$this->has_bagel = $has_bagel;
-               
+
                		return $this;
                	}
 
@@ -253,7 +253,7 @@ class Formule {
 
 	public function setHasPanini( bool $has_panini ): self {
                		$this->has_panini = $has_panini;
-               
+
                		return $this;
                	}
 
@@ -272,7 +272,7 @@ class Formule {
 	 */
 	public function setFormuleFilename( ?string $filename ) {
                		$this->formuleFilename = $filename;
-               
+
                		return $this;
                	}
 
@@ -310,7 +310,7 @@ class Formule {
 	 */
 	public function setUpdatedAt( $updatedAt ) {
                		$this->updatedAt = $updatedAt;
-               
+
                		return $this;
                	}
 
@@ -320,7 +320,7 @@ class Formule {
 
 	public function setCreatedAt( \DateTimeInterface $createdAt ): self {
                		$this->createdAt = $createdAt;
-               
+
                		return $this;
                	}
 
@@ -330,7 +330,7 @@ class Formule {
 
 	public function setPrice( float $price ): self {
                		$this->price = $price;
-               
+
                		return $this;
                	}
 
@@ -340,7 +340,7 @@ class Formule {
 
 	public function setSlug( ?string $slug ): self {
                		$this->slug = $slug;
-               
+
                		return $this;
                	}
 
@@ -350,7 +350,7 @@ class Formule {
 
 	public function setHasBoisson( ?bool $has_boisson ): self {
                		$this->has_boisson = $has_boisson;
-               
+
                		return $this;
                	}
 
@@ -360,7 +360,7 @@ class Formule {
 
 	public function setHasDessert( ?bool $has_dessert ): self {
                		$this->has_dessert = $has_dessert;
-               
+
                		return $this;
                	}
 
@@ -370,7 +370,7 @@ class Formule {
 
 	public function setIsActive( bool $is_active ): self {
                		$this->is_active = $is_active;
-               
+
                		return $this;
                	}
 
@@ -401,7 +401,7 @@ class Formule {
                			$this->billings[] = $billing;
                			$billing->addFormule( $this );
                		}
-               
+
                		return $this;
                	}
 
@@ -410,7 +410,7 @@ class Formule {
                			$this->billings->removeElement( $billing );
                			$billing->removeFormule( $this );
                		}
-               
+
                		return $this;
                	}
 
@@ -420,7 +420,7 @@ class Formule {
 
 	public function setHasSalade( bool $has_salade ): self {
                		$this->has_salade = $has_salade;
-               
+
                		return $this;
                	}
 

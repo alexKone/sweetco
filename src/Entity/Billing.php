@@ -15,6 +15,9 @@ use Symfony\Component\Serializer\Annotation\MaxDepth;
  */
 class Billing {
 
+	const STRIPE = 'stripe';
+	const CASH = 'cash';
+
 	/**
 	 * @Groups({"billing:read", "billing:post", "billing:post"})
 	 * @ORM\Id()
@@ -58,7 +61,6 @@ class Billing {
 	private $salade;
 
 	/**
-	 * @Groups({"billing:read", "billing:post"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Formule", inversedBy="billings")
 	 */
 	private $formules;
@@ -135,14 +137,21 @@ class Billing {
 	 */
 	private $paninis;
 
+	/**
+	 * @Groups({"billing:post", "billing:read"})
+	 * @ORM\OneToMany(targetEntity="App\Entity\FormuleContainer", mappedBy="billing", cascade={"persist", "remove"})
+	 */
+	private $formule_container;
+
 	public function __construct() {
-		$this->createdAt = new \DateTime();
-		$this->salade    = new ArrayCollection();
-		$this->formules  = new ArrayCollection();
-		$this->boissons  = new ArrayCollection();
-		$this->dessert   = new ArrayCollection();
-		$this->bagels    = new ArrayCollection();
-		$this->paninis   = new ArrayCollection();
+		$this->createdAt         = new \DateTime();
+		$this->salade            = new ArrayCollection();
+		$this->formules          = new ArrayCollection();
+		$this->boissons          = new ArrayCollection();
+		$this->dessert           = new ArrayCollection();
+		$this->bagels            = new ArrayCollection();
+		$this->paninis           = new ArrayCollection();
+		$this->formule_container = new ArrayCollection();
 	}
 
 	public function __toString() {
@@ -411,6 +420,34 @@ class Billing {
 	public function removePanini( Panini $panini ): self {
 		if ( $this->paninis->contains( $panini ) ) {
 			$this->paninis->removeElement( $panini );
+		}
+
+		return $this;
+	}
+
+	/**
+	 * @return Collection|FormuleContainer[]
+	 */
+	public function getFormuleContainer(): Collection {
+		return $this->formule_container;
+	}
+
+	public function addFormuleContainer( FormuleContainer $formuleContainer ): self {
+		if ( ! $this->formule_container->contains( $formuleContainer ) ) {
+			$this->formule_container[] = $formuleContainer;
+			$formuleContainer->setBilling( $this );
+		}
+
+		return $this;
+	}
+
+	public function removeFormuleContainer( FormuleContainer $formuleContainer ): self {
+		if ( $this->formule_container->contains( $formuleContainer ) ) {
+			$this->formule_container->removeElement( $formuleContainer );
+			// set the owning side to null (unless already changed)
+			if ( $formuleContainer->getBilling() === $this ) {
+				$formuleContainer->setBilling( null );
+			}
 		}
 
 		return $this;

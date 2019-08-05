@@ -68,60 +68,66 @@ class Ingredient {
 	 */
 	private $is_active = true;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Supplement", mappedBy="ingredients")
+     */
+    private $supplements;
+
 	public function __construct() {
-		$this->salades = new ArrayCollection();
-	}
+               		$this->salades = new ArrayCollection();
+                 $this->supplements = new ArrayCollection();
+               	}
 
 	public function __toString() {
-		return $this->name;
-	}
+               		return $this->name;
+               	}
 
 	public function getId(): ?int {
-		return $this->id;
-	}
+               		return $this->id;
+               	}
 
 	public function getName(): ?string {
-		return $this->name;
-	}
+               		return $this->name;
+               	}
 
 	public function setName( string $name ): self {
-		$this->name = $name;
-
-		return $this;
-	}
+               		$this->name = $name;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @return Collection|Salade[]
 	 */
 	public function getSalades(): Collection {
-		return $this->salades;
-	}
+               		return $this->salades;
+               	}
 
 	public function addSalade( Salade $salade ): self {
-		if ( ! $this->salades->contains( $salade ) ) {
-			$this->salades[] = $salade;
-			$salade->addIngredient( $this );
-		}
-
-		return $this;
-	}
+               		if ( ! $this->salades->contains( $salade ) ) {
+               			$this->salades[] = $salade;
+               			$salade->addIngredient( $this );
+               		}
+               
+               		return $this;
+               	}
 
 	public function removeSalade( Salade $salade ): self {
-		if ( $this->salades->contains( $salade ) ) {
-			$this->salades->removeElement( $salade );
-			$salade->removeIngredient( $this );
-		}
-
-		return $this;
-	}
+               		if ( $this->salades->contains( $salade ) ) {
+               			$this->salades->removeElement( $salade );
+               			$salade->removeIngredient( $this );
+               		}
+               
+               		return $this;
+               	}
 
 
 	/**
 	 * @return string|null
 	 */
 	public function getFilename(): ?string {
-		return $this->filename;
-	}
+               		return $this->filename;
+               	}
 
 	/**
 	 * @param string|null $filename
@@ -129,17 +135,17 @@ class Ingredient {
 	 * @return Ingredient
 	 */
 	public function setFilename( ?string $filename ) {
-		$this->filename = $filename;
-
-		return $this;
-	}
+               		$this->filename = $filename;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-		return $this->imageFile;
-	}
+               		return $this->imageFile;
+               	}
 
 	/**
 	 * @param File|null $imageFile
@@ -148,18 +154,18 @@ class Ingredient {
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile = null ): void {
-		$this->imageFile = $imageFile;
-		if ( $imageFile ) {
-			$this->updatedAt = new \DateTime( 'now' );
-		}
-	}
+               		$this->imageFile = $imageFile;
+               		if ( $imageFile ) {
+               			$this->updatedAt = new \DateTime( 'now' );
+               		}
+               	}
 
 	/**
 	 * @return mixed
 	 */
 	public function getUpdatedAt() {
-		return $this->updatedAt;
-	}
+               		return $this->updatedAt;
+               	}
 
 	/**
 	 * @param mixed $updatedAt
@@ -167,30 +173,58 @@ class Ingredient {
 	 * @return Ingredient
 	 */
 	public function setUpdatedAt( $updatedAt ) {
-		$this->updatedAt = $updatedAt;
-
-		return $this;
-	}
+               		$this->updatedAt = $updatedAt;
+               
+               		return $this;
+               	}
 
 
 	public function getSubCategory(): ?SubCategory {
-		return $this->subCategory;
-	}
+               		return $this->subCategory;
+               	}
 
 	public function setSubCategory( ?SubCategory $subCategory ): self {
-		$this->subCategory = $subCategory;
-
-		return $this;
-	}
+               		$this->subCategory = $subCategory;
+               
+               		return $this;
+               	}
 
 	public function getIsActive(): ?bool {
-		return $this->is_active;
-	}
+               		return $this->is_active;
+               	}
 
 	public function setIsActive( bool $is_active ): self {
-		$this->is_active = $is_active;
+               		$this->is_active = $is_active;
+               
+               		return $this;
+               	}
 
-		return $this;
-	}
+    /**
+     * @return Collection|Supplement[]
+     */
+    public function getSupplements(): Collection
+    {
+        return $this->supplements;
+    }
+
+    public function addSupplement(Supplement $supplement): self
+    {
+        if (!$this->supplements->contains($supplement)) {
+            $this->supplements[] = $supplement;
+            $supplement->addIngredient($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSupplement(Supplement $supplement): self
+    {
+        if ($this->supplements->contains($supplement)) {
+            $this->supplements->removeElement($supplement);
+            $supplement->removeIngredient($this);
+        }
+
+        return $this;
+    }
 
 }

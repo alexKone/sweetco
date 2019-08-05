@@ -27,7 +27,7 @@ class Bagel {
 	private $id;
 
 	/**
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $name;
@@ -35,19 +35,19 @@ class Bagel {
 	/**
 	 * @Gedmo\Slug(fields={"name","id"})
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 */
 	private $slug;
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 */
 	private $price = 0;
 
 	/**
 	 * @var string|null
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
 	 */
 	private $filename;
@@ -60,88 +60,88 @@ class Bagel {
 
 	/**
 	 * @var
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read"})
 	 * @ORM\Column(type="datetime", nullable=true)
 	 */
 	private $updatedAt;
 
 	/**
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $short_description;
 
 	/**
 	 * @var bool
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
 	/**
-	 * @Groups({"bagel:read", "billing"})
+	 * @Groups({"bagel:read"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Billing", mappedBy="bagels")
 	 */
 	private $billings;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\FormuleContainer", mappedBy="bagel")
-     */
-    private $formuleContainers;
+	/**
+	 * @ORM\OneToMany(targetEntity="App\Entity\FormuleContainer", mappedBy="bagel")
+	 */
+	private $formuleContainers;
 
 
 	public function __construct() {
-               		$this->billings = new ArrayCollection();
-                 $this->formuleContainers = new ArrayCollection();
-               	}
+		$this->billings          = new ArrayCollection();
+		$this->formuleContainers = new ArrayCollection();
+	}
 
 	public function __toString() {
-               		return $this->getName();
-               	}
+		return $this->getName();
+	}
 
 	public function getId(): ?int {
-               		return $this->id;
-               	}
+		return $this->id;
+	}
 
 	public function getName(): ?string {
-               		return $this->name;
-               	}
+		return $this->name;
+	}
 
 	public function setName( string $name ): self {
-               		$this->name = $name;
-               
-               		return $this;
-               	}
+		$this->name = $name;
+
+		return $this;
+	}
 
 	public function getSlug(): ?string {
-               		return $this->slug;
-               	}
+		return $this->slug;
+	}
 
 	public function setSlug( string $slug ): self {
-               		$this->slug = $slug;
-               
-               		return $this;
-               	}
+		$this->slug = $slug;
+
+		return $this;
+	}
 
 	public function getPrice(): ?float {
-               		return $this->price;
-               	}
+		return $this->price;
+	}
 
 	public function setPrice( float $price ): self {
-               		$this->price = $price;
-               
-               		return $this;
-               	}
+		$this->price = $price;
+
+		return $this;
+	}
 
 	public function getFilename(): ?string {
-               		return $this->filename;
-               	}
+		return $this->filename;
+	}
 
 	public function setFilename( ?string $filename ): self {
-               		$this->filename = $filename;
-               
-               		return $this;
-               	}
+		$this->filename = $filename;
+
+		return $this;
+	}
 
 	/**
 	 * @param File|null $imageFile
@@ -149,112 +149,109 @@ class Bagel {
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile ): void {
-               		$this->imageFile = $imageFile;
-               		if ( $imageFile ) {
-               			$this->updatedAt = new \DateTime( 'now' );
-               		}
-               	}
+		$this->imageFile = $imageFile;
+		if ( $imageFile ) {
+			$this->updatedAt = new \DateTime( 'now' );
+		}
+	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-               		return $this->imageFile;
-               	}
+		return $this->imageFile;
+	}
 
 	public function getUpdatedAt(): ?\DateTimeInterface {
-               		return $this->updatedAt;
-               	}
+		return $this->updatedAt;
+	}
 
 	public function setUpdatedAt( ?\DateTimeInterface $updatedAt ): self {
-               		$this->updatedAt = $updatedAt;
-               
-               		return $this;
-               	}
+		$this->updatedAt = $updatedAt;
+
+		return $this;
+	}
 
 	public function getShortDescription(): ?string {
-               		return $this->short_description;
-               	}
+		return $this->short_description;
+	}
 
 	public function setShortDescription( ?string $short_description ): self {
-               		$this->short_description = $short_description;
-               
-               		return $this;
-               	}
+		$this->short_description = $short_description;
+
+		return $this;
+	}
 
 	public function getIsActive(): ?bool {
-               		return $this->is_active;
-               	}
+		return $this->is_active;
+	}
 
 	public function setIsActive( bool $is_active ): self {
-               		$this->is_active = $is_active;
-               
-               		return $this;
-               	}
+		$this->is_active = $is_active;
+
+		return $this;
+	}
 
 	/**
 	 * @throws \Exception
 	 * @ORM\PreUpdate()
 	 */
 	public function updateDate() {
-               		$this->setUpdatedAt( new \DateTime() );
-               	}
+		$this->setUpdatedAt( new \DateTime() );
+	}
 
 	/**
 	 * @return Collection|Billing[]
 	 */
 	public function getBillings(): Collection {
-               		return $this->billings;
-               	}
+		return $this->billings;
+	}
 
 	public function addBilling( Billing $billing ): self {
-               		if ( ! $this->billings->contains( $billing ) ) {
-               			$this->billings[] = $billing;
-               			$billing->addBagel( $this );
-               		}
-               
-               		return $this;
-               	}
+		if ( ! $this->billings->contains( $billing ) ) {
+			$this->billings[] = $billing;
+			$billing->addBagel( $this );
+		}
+
+		return $this;
+	}
 
 	public function removeBilling( Billing $billing ): self {
-               		if ( $this->billings->contains( $billing ) ) {
-               			$this->billings->removeElement( $billing );
-               			$billing->removeBagel( $this );
-               		}
-               
-               		return $this;
-               	}
+		if ( $this->billings->contains( $billing ) ) {
+			$this->billings->removeElement( $billing );
+			$billing->removeBagel( $this );
+		}
 
-    /**
-     * @return Collection|FormuleContainer[]
-     */
-    public function getFormuleContainers(): Collection
-    {
-        return $this->formuleContainers;
-    }
+		return $this;
+	}
 
-    public function addFormuleContainer(FormuleContainer $formuleContainer): self
-    {
-        if (!$this->formuleContainers->contains($formuleContainer)) {
-            $this->formuleContainers[] = $formuleContainer;
-            $formuleContainer->setBagel($this);
-        }
+	/**
+	 * @return Collection|FormuleContainer[]
+	 */
+	public function getFormuleContainers(): Collection {
+		return $this->formuleContainers;
+	}
 
-        return $this;
-    }
+	public function addFormuleContainer( FormuleContainer $formuleContainer ): self {
+		if ( ! $this->formuleContainers->contains( $formuleContainer ) ) {
+			$this->formuleContainers[] = $formuleContainer;
+			$formuleContainer->setBagel( $this );
+		}
 
-    public function removeFormuleContainer(FormuleContainer $formuleContainer): self
-    {
-        if ($this->formuleContainers->contains($formuleContainer)) {
-            $this->formuleContainers->removeElement($formuleContainer);
-            // set the owning side to null (unless already changed)
-            if ($formuleContainer->getBagel() === $this) {
-                $formuleContainer->setBagel(null);
-            }
-        }
+		return $this;
+	}
 
-        return $this;
-    }
+	public function removeFormuleContainer( FormuleContainer $formuleContainer ): self {
+		if ( $this->formuleContainers->contains( $formuleContainer ) ) {
+			$this->formuleContainers->removeElement( $formuleContainer );
+			// set the owning side to null (unless already changed)
+			if ( $formuleContainer->getBagel() === $this ) {
+				$formuleContainer->setBagel( null );
+			}
+		}
+
+		return $this;
+	}
 
 
 }

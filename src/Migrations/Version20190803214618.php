@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190711211955 extends AbstractMigration
+final class Version20190803214618 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,9 @@ final class Version20190711211955 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE formule ADD has_boisson TINYINT(1) DEFAULT NULL, ADD has_dessert TINYINT(1) DEFAULT NULL');
+        $this->addSql('CREATE TABLE supplement_bread (supplement_id INT NOT NULL, bread_id INT NOT NULL, INDEX IDX_3B1CF1457793FA21 (supplement_id), INDEX IDX_3B1CF1455D3405CF (bread_id), PRIMARY KEY(supplement_id, bread_id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE supplement_bread ADD CONSTRAINT FK_3B1CF1457793FA21 FOREIGN KEY (supplement_id) REFERENCES supplement (id) ON DELETE CASCADE');
+        $this->addSql('ALTER TABLE supplement_bread ADD CONSTRAINT FK_3B1CF1455D3405CF FOREIGN KEY (bread_id) REFERENCES bread (id) ON DELETE CASCADE');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +32,6 @@ final class Version20190711211955 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE formule DROP has_boisson, DROP has_dessert');
+        $this->addSql('DROP TABLE supplement_bread');
     }
 }

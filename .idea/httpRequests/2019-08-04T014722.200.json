@@ -1,0 +1,111 @@
+{
+  "id": 68,
+  "first_name": "Alexandre",
+  "last_name": "Kone",
+  "phone_number": "+33608361161",
+  "email": "kone.alexandr@gmail.com",
+  "salade": [],
+  "paymentMethod": "stripe",
+  "createdAt": "2019-08-04T13:33:21+02:00",
+  "totalPrice": 25,
+  "billingAddress": null,
+  "billingCity": null,
+  "billingZipcode": null,
+  "deliveryMethod": "retrait",
+  "pickupHour": "11_30",
+  "boissons": [],
+  "dessert": [],
+  "bagels": [
+    {
+      "name": "L'Italiano",
+      "slug": "litaliano",
+      "price": 8.9,
+      "filename": null,
+      "updatedAt": null,
+      "short_description": "Mozzarella, tomate, basilic, olives, pesto",
+      "is_active": true
+    }
+  ],
+  "paninis": [],
+  "formule_container": [
+    {
+      "id": 68,
+      "salade": {
+        "createdAt": "2019-08-04T13:33:15+02:00",
+        "base": {
+          "name": "Fusilli",
+          "filename": "2dcb3f3d570c04a0d585abcab85cdfda66c87a65.png",
+          "updatedAt": "2019-07-16T18:24:39+02:00",
+          "is_active": true
+        },
+        "ingredients": [
+          {
+            "name": "Brocoli",
+            "filename": "159185bdb5020ddcb29d9e0593e3b93e9b19b7bb.png",
+            "updatedAt": "2019-07-16T18:31:04+02:00",
+            "subCategory": [],
+            "is_active": true
+          },
+          {
+            "name": "Chou blanc",
+            "filename": "89dc6682297a73f53fa2074531bb9d89d343f187.png",
+            "updatedAt": "2019-07-16T18:33:02+02:00",
+            "subCategory": [],
+            "is_active": true
+          },
+          {
+            "name": "Concombre",
+            "filename": "9f3c00ead1416f32c7bf0151a1d065ec918cde25.png",
+            "updatedAt": "2019-07-16T18:34:49+02:00",
+            "subCategory": [],
+            "is_active": true
+          },
+          {
+            "name": "Soja",
+            "filename": "5992b2adf1ff498cc731b78f73cc0073bb0c6f89.png",
+            "updatedAt": "2019-07-16T18:40:06+02:00",
+            "subCategory": [],
+            "is_active": true
+          },
+          {
+            "name": "Fromage de chevre",
+            "filename": "d61e065c2eacac7e2d103e7c37be4cfb79936994.png",
+            "updatedAt": "2019-07-16T18:44:28+02:00",
+            "subCategory": [],
+            "is_active": true
+          },
+          {
+            "name": "Jambon de Dinde",
+            "filename": "0a9402ab6f60fa883a66f52f798984c4b0a1195d.png",
+            "updatedAt": "2019-07-16T18:46:29+02:00",
+            "subCategory": [],
+            "is_active": true
+          }
+        ],
+        "sauce": {
+          "name": "Ranch",
+          "filename": "477cb7cee534c98231b11587ed29ecb8a4915523.png",
+          "updatedAt": "2019-07-16T18:23:56+02:00",
+          "is_active": true
+        }
+      },
+      "bagel": null,
+      "panini": null,
+      "boisson": {
+        "name": "Smoothies",
+        "slug": "smoothies",
+        "price": 4,
+        "filename": null,
+        "updatedAt": null,
+        "billings": [],
+        "is_active": true
+      },
+      "supplement": {
+        "id": 29,
+        "bases": [],
+        "ingredients": [],
+        "breads": []
+      }
+    }
+  ]
+}

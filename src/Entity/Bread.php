@@ -75,9 +75,15 @@ class Bread
      */
     private $short_description;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Supplement", mappedBy="breads")
+     */
+    private $supplements;
+
     public function __construct()
     {
         $this->salades = new ArrayCollection();
+        $this->supplements = new ArrayCollection();
     }
 
     public function __toString() {
@@ -85,9 +91,9 @@ class Bread
     }
 
 	public function getId(): ?int
-             {
-                 return $this->id;
-             }
+                            {
+                                return $this->id;
+                            }
 
     public function getName(): ?string
     {
@@ -126,14 +132,14 @@ class Bread
     }
 
 	public function getFilename(): ?string {
-         		return $this->filename;
-         	}
+                        		return $this->filename;
+                        	}
 
 	public function setFilename( ?string $filename ): self {
-         		$this->filename = $filename;
-
-         		return $this;
-         	}
+                        		$this->filename = $filename;
+               
+                        		return $this;
+                        	}
 
 	/**
 	 * @param File|null $imageFile
@@ -141,28 +147,28 @@ class Bread
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile ): void {
-         		$this->imageFile = $imageFile;
-         		if ( $imageFile ) {
-         			$this->updatedAt = new \DateTime( 'now' );
-         		}
-         	}
+                        		$this->imageFile = $imageFile;
+                        		if ( $imageFile ) {
+                        			$this->updatedAt = new \DateTime( 'now' );
+                        		}
+                        	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-         		return $this->imageFile;
-         	}
+                        		return $this->imageFile;
+                        	}
 
 	public function getUpdatedAt(): ?\DateTimeInterface {
-         		return $this->updatedAt;
-         	}
+                        		return $this->updatedAt;
+                        	}
 
 	public function setUpdatedAt( ?\DateTimeInterface $updatedAt ): self {
-         		$this->updatedAt = $updatedAt;
-
-         		return $this;
-         	}
+                        		$this->updatedAt = $updatedAt;
+               
+                        		return $this;
+                        	}
 
 	/**
      * @return Collection|Salade[]
@@ -210,6 +216,34 @@ class Bread
     public function setShortDescription(?string $short_description): self
     {
         $this->short_description = $short_description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Supplement[]
+     */
+    public function getSupplements(): Collection
+    {
+        return $this->supplements;
+    }
+
+    public function addSupplement(Supplement $supplement): self
+    {
+        if (!$this->supplements->contains($supplement)) {
+            $this->supplements[] = $supplement;
+            $supplement->addBread($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSupplement(Supplement $supplement): self
+    {
+        if ($this->supplements->contains($supplement)) {
+            $this->supplements->removeElement($supplement);
+            $supplement->removeBread($this);
+        }
 
         return $this;
     }

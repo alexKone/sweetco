@@ -24,14 +24,14 @@ class Sauce {
 	private $id;
 
 	/**
-	 * @Groups({"sauce:read", "billing", "salade:post"})
+	 * @Groups({"sauce:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $name;
 
 	/**
 	 * @var string|null
-	 * @Groups({"sauce:read", "billing", "salade:post"})
+	 * @Groups({"sauce:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
 	private $filename;
@@ -45,20 +45,19 @@ class Sauce {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"sauce:read", "billing", "salade:post"})
+	 * @Groups({"sauce:read", "billing:read", "salade:post"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
-	 * @Groups({"sauce:read", "billing", "salade:post"})
+	 * @Groups({"sauce:read", "billing:read", "salade:post"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
 
 	/**
-	 * @Groups({"billing"})
 	 * @ORM\OneToMany(targetEntity="App\Entity\Salade", mappedBy="sauce")
 	 */
 	private $salades;

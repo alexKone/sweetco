@@ -21,18 +21,18 @@ class Base {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"base:read"})
+	 * @Groups({"base:read", "formule.container:post"})
 	 */
 	private $id;
 
 	/**
-	 * @Groups({"base:read", "billing:read", "salade:post"})
+	 * @Groups({"base:read", "billing:read", "salade:post", "formule.container:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $name;
 
 	/**
-	 * @Groups({"base:read", "billing:read", "salade:post"})
+	 * @Groups({"base:read", "billing:read", "salade:post", "formule.container:post"})
 	 * @var string|null
 	 * @ORM\Column(type="string", length=255, nullable=true)
 	 */
@@ -54,7 +54,7 @@ class Base {
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"base:read", "billing:read", "salade:post"})
+	 * @Groups({"base:read", "billing:read", "salade:post", "formule.container:post"})
 	 */
 	private $is_active = true;
 
@@ -68,9 +68,15 @@ class Base {
 	 */
 	private $addons;
 
+	/**
+	 * @ORM\ManyToMany(targetEntity="App\Entity\Supplement", mappedBy="bases")
+	 */
+	private $supplements;
+
 	public function __construct() {
-		$this->salades = new ArrayCollection();
-		$this->addons  = new ArrayCollection();
+		$this->salades     = new ArrayCollection();
+		$this->addons      = new ArrayCollection();
+		$this->supplements = new ArrayCollection();
 	}
 
 	public function __toString() {
@@ -225,6 +231,31 @@ class Base {
 		if ( $this->addons->contains( $addon ) ) {
 			$this->addons->removeElement( $addon );
 			$addon->removeBasis( $this );
+		}
+
+		return $this;
+	}
+
+	/**
+	 * @return Collection|Supplement[]
+	 */
+	public function getSupplements(): Collection {
+		return $this->supplements;
+	}
+
+	public function addSupplement( Supplement $supplement ): self {
+		if ( ! $this->supplements->contains( $supplement ) ) {
+			$this->supplements[] = $supplement;
+			$supplement->addBasis( $this );
+		}
+
+		return $this;
+	}
+
+	public function removeSupplement( Supplement $supplement ): self {
+		if ( $this->supplements->contains( $supplement ) ) {
+			$this->supplements->removeElement( $supplement );
+			$supplement->removeBasis( $this );
 		}
 
 		return $this;

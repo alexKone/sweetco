@@ -20,18 +20,18 @@ class Panini {
 	 * @ORM\Id()
 	 * @ORM\GeneratedValue()
 	 * @ORM\Column(type="integer")
-	 * @Groups({"panini:read"})
+	 * @Groups({"panini:read", "formule.container:post"})
 	 */
 	private $id;
 
 	/**
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string", length=255)
 	 */
 	private $name;
 
 	/**
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string", length=255)
 	 * @Gedmo\Slug(fields={"name","id"})
 	 */
@@ -39,20 +39,20 @@ class Panini {
 
 	/**
 	 * @var
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string")
 	 */
 	private $short_description;
 
 	/**
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="float")
 	 */
 	private $price;
 
 	/**
 	 * @var string|null
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
 	 */
 	private $filename;
@@ -65,20 +65,19 @@ class Panini {
 
 	/**
 	 * @var
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="datetime", nullable=true)
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
-	 * @Groups({"panini:read", "billing"})
+	 * @Groups({"panini:read", "billing:read", "formule.container:post"})
 	 * @ORM\Column(type="boolean", nullable=false)
 	 */
 	private $is_active = true;
 
 	/**
-	 * @Groups({"billing"})
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Billing", mappedBy="paninis")
 	 */
 	private $billings;
@@ -108,7 +107,7 @@ class Panini {
 
 	public function setName( string $name ): self {
       		$this->name = $name;
-      
+
       		return $this;
       	}
 
@@ -118,7 +117,7 @@ class Panini {
 
 	public function setSlug( string $slug ): self {
       		$this->slug = $slug;
-      
+
       		return $this;
       	}
 
@@ -128,7 +127,7 @@ class Panini {
 
 	public function setPrice( float $price ): self {
       		$this->price = $price;
-      
+
       		return $this;
       	}
 
@@ -138,7 +137,7 @@ class Panini {
 
 	public function setFilename( ?string $filename ): self {
       		$this->filename = $filename;
-      
+
       		return $this;
       	}
 
@@ -167,7 +166,7 @@ class Panini {
 
 	public function setUpdatedAt( ?\DateTimeInterface $updatedAt ): self {
       		$this->updatedAt = $updatedAt;
-      
+
       		return $this;
       	}
 
@@ -177,7 +176,7 @@ class Panini {
 
 	public function setIsActive( bool $is_active ): self {
       		$this->is_active = $is_active;
-      
+
       		return $this;
       	}
 
@@ -187,7 +186,7 @@ class Panini {
 
 	public function setShortDescription( string $short_description ): self {
       		$this->short_description = $short_description;
-      
+
       		return $this;
       	}
 
@@ -203,7 +202,7 @@ class Panini {
       			$this->billings[] = $billing;
       			$billing->addPanini( $this );
       		}
-      
+
       		return $this;
       	}
 
@@ -212,7 +211,7 @@ class Panini {
       			$this->billings->removeElement( $billing );
       			$billing->removePanini( $this );
       		}
-      
+
       		return $this;
       	}
 
@@ -228,7 +227,7 @@ class Panini {
       			$this->formuleContainers[] = $formuleContainer;
       			$formuleContainer->setPaninis( $this );
       		}
-      
+
       		return $this;
       	}
 
@@ -240,7 +239,7 @@ class Panini {
       				$formuleContainer->setPaninis( null );
       			}
       		}
-      
+
       		return $this;
       	}
 

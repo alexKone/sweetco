@@ -27,20 +27,20 @@ class Boisson {
 
 	/**
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read", "formule.container:post"})
 	 */
 	private $name;
 
 	/**
 	 * @Gedmo\Slug(fields={"name", "id"})
 	 * @ORM\Column(type="string", length=255)
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read", "formule.container:post"})
 	 */
 	private $slug;
 
 	/**
 	 * @ORM\Column(type="float")
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read", "formule.container:post"})
 	 */
 	private $price;
 
@@ -48,7 +48,7 @@ class Boisson {
 	 * @var string|null
 	 * @Groups({"bagel"})
 	 * @ORM\Column(type="string",length=255, nullable=true, name="filename")
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read", "formule.container:post"})
 	 */
 	private $filename;
 
@@ -61,20 +61,20 @@ class Boisson {
 	/**
 	 * @var
 	 * @ORM\Column(type="datetime", nullable=true)
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read"})
 	 */
 	private $updatedAt;
 
 	/**
 	 * @var bool
 	 * @ORM\Column(type="boolean", nullable=false)
-	 * @Groups({"boisson:read", "billing"})
+	 * @Groups({"boisson:read", "billing:read"})
 	 */
 	private $is_active = true;
 
 	/**
 	 * @ORM\ManyToMany(targetEntity="App\Entity\Billing", mappedBy="boissons")
-	 * @Groups({"billing"})
+	 * @Groups({"billing:read"})
 	 */
 	private $billings;
 
@@ -102,7 +102,7 @@ class Boisson {
 
 	public function setName( string $name ): self {
                		$this->name = $name;
-               
+
                		return $this;
                	}
 
@@ -112,7 +112,7 @@ class Boisson {
 
 	public function setSlug( string $slug ): self {
                		$this->slug = $slug;
-               
+
                		return $this;
                	}
 
@@ -122,7 +122,7 @@ class Boisson {
 
 	public function setPrice( float $price ): self {
                		$this->price = $price;
-               
+
                		return $this;
                	}
 
@@ -132,7 +132,7 @@ class Boisson {
 
 	public function setFilename( ?string $filename ): self {
                		$this->filename = $filename;
-               
+
                		return $this;
                	}
 
@@ -161,7 +161,7 @@ class Boisson {
 
 	public function setUpdatedAt( ?\DateTimeInterface $updatedAt ): self {
                		$this->updatedAt = $updatedAt;
-               
+
                		return $this;
                	}
 
@@ -171,7 +171,7 @@ class Boisson {
 
 	public function setIsActive( bool $is_active ): self {
                		$this->is_active = $is_active;
-               
+
                		return $this;
                	}
 
@@ -195,7 +195,7 @@ class Boisson {
                			$this->billings[] = $billing;
                			$billing->addBoisson( $this );
                		}
-               
+
                		return $this;
                	}
 
@@ -204,7 +204,7 @@ class Boisson {
                			$this->billings->removeElement( $billing );
                			$billing->removeBoisson( $this );
                		}
-               
+
                		return $this;
                	}
 

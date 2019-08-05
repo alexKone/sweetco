@@ -1,0 +1,68 @@
+[
+  {
+    "id": 66,
+    "first_name": "Alexandre",
+    "last_name": "Kone",
+    "phone_number": "0102030405",
+    "email": "mon@mail.com",
+    "salade": [],
+    "paymentMethod": "stripe",
+    "createdAt": "2019-08-04T01:47:06+02:00",
+    "totalPrice": 25,
+    "billingAddress": null,
+    "billingCity": null,
+    "billingZipcode": null,
+    "deliveryMethod": "retrait",
+    "pickupHour": null,
+    "boissons": [],
+    "dessert": [],
+    "bagels": [
+      []
+    ],
+    "paninis": []
+  },
+  {
+    "id": 67,
+    "first_name": "Alexandre",
+    "last_name": "Kone",
+    "phone_number": "0102030405",
+    "email": "mon@mail.com",
+    "salade": [],
+    "paymentMethod": "stripe",
+    "createdAt": "2019-08-04T01:58:00+02:00",
+    "totalPrice": 25,
+    "billingAddress": null,
+    "billingCity": null,
+    "billingZipcode": null,
+    "deliveryMethod": "retrait",
+    "pickupHour": "11_30",
+    "boissons": [],
+    "dessert": [],
+    "bagels": [
+      []
+    ],
+    "paninis": []
+  },
+  {
+    "id": 68,
+    "first_name": "Alexandre",
+    "last_name": "Kone",
+    "phone_number": "+33608361161",
+    "email": "kone.alexandr@gmail.com",
+    "salade": [],
+    "paymentMethod": "stripe",
+    "createdAt": "2019-08-04T13:33:21+02:00",
+    "totalPrice": 25,
+    "billingAddress": null,
+    "billingCity": null,
+    "billingZipcode": null,
+    "deliveryMethod": "retrait",
+    "pickupHour": "11_30",
+    "boissons": [],
+    "dessert": [],
+    "bagels": [
+      []
+    ],
+    "paninis": []
+  }
+]

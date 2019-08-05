@@ -1,3 +1,115 @@
+GET http://localhost:8000/api/billings/71
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T085248.200.json
+
+###
+
+GET http://localhost:8000/api/billings/69
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T035137.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T020157.404.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014746.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014722.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014641.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014558.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014455.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014251.200.json
+
+###
+
+GET http://localhost:8000/api/billings/68
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014057.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T014036.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T013812.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T013642.200.json
+
+###
+
+GET http://localhost:8000/api/billings
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-08-04T013440.200.json
+
+###
+
 GET http://localhost:8000/api/desserts
 Accept: */*
 Cache-Control: no-cache

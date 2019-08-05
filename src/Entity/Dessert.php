@@ -76,57 +76,63 @@ class Dessert {
 	 */
 	private $billings;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\FormuleContainer", mappedBy="desserts")
+     */
+    private $formuleContainers;
+
 	public function __construct() {
-		$this->billings = new ArrayCollection();
-	}
+               		$this->billings = new ArrayCollection();
+                 $this->formuleContainers = new ArrayCollection();
+               	}
 
 	public function __toString() {
-		return $this->getName();
-	}
+               		return $this->getName();
+               	}
 
 	public function getId(): ?int {
-		return $this->id;
-	}
+               		return $this->id;
+               	}
 
 	public function getName(): ?string {
-		return $this->name;
-	}
+               		return $this->name;
+               	}
 
 	public function setName( string $name ): self {
-		$this->name = $name;
-
-		return $this;
-	}
+               		$this->name = $name;
+               
+               		return $this;
+               	}
 
 	public function getSlug(): ?string {
-		return $this->slug;
-	}
+               		return $this->slug;
+               	}
 
 	public function setSlug( string $slug ): self {
-		$this->slug = $slug;
-
-		return $this;
-	}
+               		$this->slug = $slug;
+               
+               		return $this;
+               	}
 
 	public function getPrice(): ?float {
-		return $this->price;
-	}
+               		return $this->price;
+               	}
 
 	public function setPrice( float $price ): self {
-		$this->price = $price;
-
-		return $this;
-	}
+               		$this->price = $price;
+               
+               		return $this;
+               	}
 
 	public function getFilename(): ?string {
-		return $this->filename;
-	}
+               		return $this->filename;
+               	}
 
 	public function setFilename( ?string $filename ): self {
-		$this->filename = $filename;
-
-		return $this;
-	}
+               		$this->filename = $filename;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @param File|null $imageFile
@@ -134,70 +140,98 @@ class Dessert {
 	 * @throws \Exception
 	 */
 	public function setImageFile( ?File $imageFile ): void {
-		$this->imageFile = $imageFile;
-		if ( $imageFile ) {
-			$this->updatedAt = new \DateTime( 'now' );
-		}
-	}
+               		$this->imageFile = $imageFile;
+               		if ( $imageFile ) {
+               			$this->updatedAt = new \DateTime( 'now' );
+               		}
+               	}
 
 	/**
 	 * @return File|null
 	 */
 	public function getImageFile(): ?File {
-		return $this->imageFile;
-	}
+               		return $this->imageFile;
+               	}
 
 	public function getUpdatedAt(): ?\DateTimeInterface {
-		return $this->updatedAt;
-	}
+               		return $this->updatedAt;
+               	}
 
 	public function setUpdatedAt( ?\DateTimeInterface $updatedAt ): self {
-		$this->updatedAt = $updatedAt;
-
-		return $this;
-	}
+               		$this->updatedAt = $updatedAt;
+               
+               		return $this;
+               	}
 
 	public function getIsActive(): ?bool {
-		return $this->is_active;
-	}
+               		return $this->is_active;
+               	}
 
 	public function setIsActive( bool $is_active ): self {
-		$this->is_active = $is_active;
-
-		return $this;
-	}
+               		$this->is_active = $is_active;
+               
+               		return $this;
+               	}
 
 	/**
 	 * @throws \Exception
 	 * @ORM\PreUpdate()
 	 */
 	public function updateDate() {
-		$this->setUpdatedAt( new \DateTime() );
-	}
+               		$this->setUpdatedAt( new \DateTime() );
+               	}
 
 	/**
 	 * @return Collection|Billing[]
 	 */
 	public function getBillings(): Collection {
-		return $this->billings;
-	}
+               		return $this->billings;
+               	}
 
 	public function addBilling( Billing $billing ): self {
-		if ( ! $this->billings->contains( $billing ) ) {
-			$this->billings[] = $billing;
-			$billing->addDessert( $this );
-		}
-
-		return $this;
-	}
+               		if ( ! $this->billings->contains( $billing ) ) {
+               			$this->billings[] = $billing;
+               			$billing->addDessert( $this );
+               		}
+               
+               		return $this;
+               	}
 
 	public function removeBilling( Billing $billing ): self {
-		if ( $this->billings->contains( $billing ) ) {
-			$this->billings->removeElement( $billing );
-			$billing->removeDessert( $this );
-		}
+               		if ( $this->billings->contains( $billing ) ) {
+               			$this->billings->removeElement( $billing );
+               			$billing->removeDessert( $this );
+               		}
+               
+               		return $this;
+               	}
 
-		return $this;
-	}
+    /**
+     * @return Collection|FormuleContainer[]
+     */
+    public function getFormuleContainers(): Collection
+    {
+        return $this->formuleContainers;
+    }
+
+    public function addFormuleContainer(FormuleContainer $formuleContainer): self
+    {
+        if (!$this->formuleContainers->contains($formuleContainer)) {
+            $this->formuleContainers[] = $formuleContainer;
+            $formuleContainer->addDessert($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFormuleContainer(FormuleContainer $formuleContainer): self
+    {
+        if ($this->formuleContainers->contains($formuleContainer)) {
+            $this->formuleContainers->removeElement($formuleContainer);
+            $formuleContainer->removeDessert($this);
+        }
+
+        return $this;
+    }
 
 }
